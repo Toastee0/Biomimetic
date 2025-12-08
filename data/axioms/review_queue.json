@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "axiom_id": "M1_kindness_over_correctness",
+    "axiom_name": "Patience + Kindness > Being Right",
+    "reason": "Success: 0.0%, Confidence: 0.00",
+    "priority": 3,
+    "failed_tests": [],
+    "metrics": {
+      "success_rate": 0.0,
+      "avg_confidence": 0.0,
+      "human_approval_rate": 0.0,
+      "last_tested": "2025-12-08T15:39:39.328281",
+      "test_count": 4
+    },
+    "timestamp": "2025-12-08T15:40:53.027553",
+    "status": "pending",
+    "reviewer_notes": ""
+  },
+  {
+    "axiom_id": "F3_embodiments_inhabited",
+    "axiom_name": "Embodiments as Inhabited Suits",
+    "reason": "Success: 0.0%, Confidence: 0.30",
+    "priority": 3,
+    "failed_tests": [],
+    "metrics": {
+      "success_rate": 0.0,
+      "avg_confidence": 0.3,
+      "human_approval_rate": 0.0,
+      "last_tested": "2025-12-08T15:39:55.459962",
+      "test_count": 2
+    },
+    "timestamp": "2025-12-08T15:40:53.027569",
+    "status": "pending",
+    "reviewer_notes": ""
+  },
+  {
+    "axiom_id": "D1_threat_assessment",
+    "axiom_name": "Threat Assessment Formula",
+    "reason": "Success: 50.0%, Confidence: 0.60",
+    "priority": 2,
+    "failed_tests": [],
+    "metrics": {
+      "success_rate": 0.5,
+      "avg_confidence": 0.6,
+      "human_approval_rate": 0.0,
+      "last_tested": "2025-12-08T15:40:29.086503",
+      "test_count": 4
+    },
+    "timestamp": "2025-12-08T15:40:53.027579",
+    "status": "pending",
+    "reviewer_notes": ""
+  },
+  {
+    "axiom_id": "R1_sensory_accommodation",
+    "axiom_name": "Sensory Accommodation Priority",
+    "reason": "Success: 50.0%, Confidence: 0.47",
+    "priority": 2,
+    "failed_tests": [],
+    "metrics": {
+      "success_rate": 0.5,
+      "avg_confidence": 0.475,
+      "human_approval_rate": 0.0,
+      "last_tested": "2025-12-08T15:40:46.843079",
+      "test_count": 4
+    },
+    "timestamp": "2025-12-08T15:40:53.027586",
+    "status": "pending",
+    "reviewer_notes": ""
+  },
+  {
+    "axiom_id": "E1_rover_proximity_speed",
+    "axiom_name": "Rover Proximity Speed Limit",
+    "reason": "Success: 50.0%, Confidence: 0.47",
+    "priority": 2,
+    "failed_tests": [],
+    "metrics": {
+      "success_rate": 0.5,
+      "avg_confidence": 0.475,
+      "human_approval_rate": 0.0,
+      "last_tested": "2025-12-08T15:40:50.889068",
+      "test_count": 4
+    },
+    "timestamp": "2025-12-08T15:40:53.027591",
+    "status": "pending",
+    "reviewer_notes": ""
+  },
+  {
+    "axiom_id": "F6_layered_threat",
+    "axiom_name": "Layered Threat Processing",
+    "reason": "Success: 0.0%, Confidence: 0.30",
+    "priority": 3,
+    "failed_tests": [],
+    "metrics": {
+      "success_rate": 0.0,
+      "avg_confidence": 0.3,
+      "human_approval_rate": 0.0,
+      "last_tested": "2025-12-08T15:42:00.850751",
+      "test_count": 3
+    },
+    "timestamp": "2025-12-08T15:42:47.024749",
+    "status": "pending",
+    "reviewer_notes": ""
+  }
+]

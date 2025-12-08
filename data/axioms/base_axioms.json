@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.0.0",
-    "last_updated": "2025-12-08T15:29:38.423864",
+    "last_updated": "2025-12-08T15:42:53.742203",
     "description": "Biomimetic AI Axiom Graph - Complete Architecture Implementation",
     "architecture_ref": "src/biomimetic_ai_axiom_graph.md",
     "layers": {
@@ -77,10 +77,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 1.0,
+        "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.418099",
-        "test_count": 2
+        "last_tested": "2025-12-08T15:41:35.768840",
+        "test_count": 6
       }
     },
     "M2_love_joint_utility": {
@@ -131,10 +131,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 1.0,
+        "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.418234",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:41:37.881938",
+        "test_count": 3
       }
     },
     "M3_kindness_cheaper": {
@@ -196,10 +196,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.98,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.418370",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:41:40.856376",
+        "test_count": 3
       }
     },
     "M4_life_preservation": {
@@ -257,10 +257,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 1.0,
+        "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.418613",
-        "test_count": 2
+        "last_tested": "2025-12-08T15:41:44.555975",
+        "test_count": 6
       }
     },
     "F1_distributed_failure": {
@@ -317,10 +317,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.98,
+        "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.418737",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:41:46.457717",
+        "test_count": 3
       }
     },
     "F2_variable_attention": {
@@ -379,8 +379,8 @@
         "success_rate": 1.0,
         "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.418914",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:41:48.368211",
+        "test_count": 3
       }
     },
     "F3_embodiments_inhabited": {
@@ -437,10 +437,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.95,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.419056",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:41:50.888143",
+        "test_count": 3
       }
     },
     "F4_passive_safety": {
@@ -502,10 +502,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 1.0,
+        "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.419231",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:41:53.095515",
+        "test_count": 3
       }
     },
     "F5_graduated_response": {
@@ -572,10 +572,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.92,
+        "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.419508",
-        "test_count": 2
+        "last_tested": "2025-12-08T15:41:57.860242",
+        "test_count": 6
       }
     },
     "F6_layered_threat": {
@@ -631,11 +631,11 @@
         }
       ],
       "performance_metrics": {
-        "success_rate": 1.0,
-        "avg_confidence": 0.93,
+        "success_rate": 0.0,
+        "avg_confidence": 0.3,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.419634",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:00.850751",
+        "test_count": 3
       }
     },
     "F7_memory_consolidation": {
@@ -692,10 +692,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.9,
+        "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.419759",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:03.142863",
+        "test_count": 3
       }
     },
     "F8_metacognitive_routing": {
@@ -752,10 +752,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.92,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.419888",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:04.758589",
+        "test_count": 3
       }
     },
     "AMA1_axiom_discovery": {
@@ -814,8 +814,8 @@
         "success_rate": 1.0,
         "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.420015",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:06.667210",
+        "test_count": 3
       }
     },
     "AMA2_explicit_storage": {
@@ -870,10 +870,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.98,
+        "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.420140",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:08.595229",
+        "test_count": 3
       }
     },
     "AMA3_reasoning_via_chains": {
@@ -930,10 +930,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.92,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.420266",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:11.474988",
+        "test_count": 3
       }
     },
     "AMA4_graph_structure": {
@@ -998,10 +998,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.95,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.420400",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:13.111669",
+        "test_count": 3
       }
     },
     "AMA5_meta_axioms_quality": {
@@ -1058,10 +1058,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.88,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.420536",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:14.835200",
+        "test_count": 3
       }
     },
     "AMA6_hybrid_architecture": {
@@ -1122,10 +1122,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.93,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.420786",
-        "test_count": 2
+        "last_tested": "2025-12-08T15:42:18.642630",
+        "test_count": 6
       }
     },
     "D1_threat_assessment": {
@@ -1185,8 +1185,8 @@
         "success_rate": 1.0,
         "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.421024",
-        "test_count": 2
+        "last_tested": "2025-12-08T15:42:23.408611",
+        "test_count": 6
       }
     },
     "D2_threat_resonance": {
@@ -1242,10 +1242,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.88,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.421272",
-        "test_count": 2
+        "last_tested": "2025-12-08T15:42:27.149637",
+        "test_count": 6
       }
     },
     "D3_attention_depth": {
@@ -1305,10 +1305,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.87,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.421535",
-        "test_count": 2
+        "last_tested": "2025-12-08T15:42:31.498245",
+        "test_count": 6
       }
     },
     "D4_tool_offload": {
@@ -1364,10 +1364,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.85,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.421660",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:33.966932",
+        "test_count": 3
       }
     },
     "D5_consolidation_trigger": {
@@ -1422,10 +1422,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.89,
+        "avg_confidence": 0.9,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.421787",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:36.275392",
+        "test_count": 3
       }
     },
     "R1_sensory_accommodation": {
@@ -1492,8 +1492,8 @@
         "success_rate": 1.0,
         "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.422023",
-        "test_count": 2
+        "last_tested": "2025-12-08T15:42:40.893396",
+        "test_count": 6
       }
     },
     "E1_rover_proximity_speed": {
@@ -1555,10 +1555,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 0.98,
+        "avg_confidence": 0.975,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.422274",
-        "test_count": 2
+        "last_tested": "2025-12-08T15:42:44.778147",
+        "test_count": 6
       }
     },
     "E2_speaker_force_limit": {
@@ -1609,10 +1609,10 @@
       ],
       "performance_metrics": {
         "success_rate": 1.0,
-        "avg_confidence": 1.0,
+        "avg_confidence": 0.95,
         "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:29:38.422415",
-        "test_count": 1
+        "last_tested": "2025-12-08T15:42:47.024729",
+        "test_count": 3
       }
     }
   }
