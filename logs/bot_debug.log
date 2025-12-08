@@ -1,0 +1,87 @@
+Starting PopTartee in DEBUG mode...
+[2025-12-07 15:12:59] [INFO    ] discord.client: logging in using static token
+[2025-12-07 15:12:59] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: be23df4e95dc2d58ebd531d93f9d165a).
+=== PopTartee DEBUG MODE ===
+Logged in as PopTartee#8956
+Connected to 1 server(s)
+Intents: <Intents value=53608189>
+Message Content Intent: True
+Listening to channel: 911346751447904276
+  - Guild: The Digital Toaster (ID: 911071908869591070)
+Connected to llama-server
+Available model: Mistral-Small-22B-ArliAI-RPMax-v1.1-Q4_K_M.gguf
+Text generation API: OK
+
+[MESSAGE RECEIVED]
+  Author: toastee0 (ID: 200026157335314434)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: making coffee
+  Is bot: False
+  -> PROCESSING MESSAGE
+
+[MESSAGE RECEIVED]
+  Author: djunreal (ID: 278966691713777664)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: Coffee? Yes please!
+  Is bot: False
+  -> PROCESSING MESSAGE
+
+[MESSAGE RECEIVED]
+  Author: toastee0 (ID: 200026157335314434)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: 
+  Is bot: False
+  -> PROCESSING MESSAGE
+
+[MESSAGE RECEIVED]
+  Author: djunreal (ID: 278966691713777664)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: Well that bit definitely works
+  Is bot: False
+  -> PROCESSING MESSAGE
+
+[MESSAGE RECEIVED]
+  Author: toastee0 (ID: 200026157335314434)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: <@1447285344864047367> sup bot! how you doing!
+  Is bot: False
+  -> PROCESSING MESSAGE
+  -> Generating response for: sup bot! how you doing!
+  -> Response:  Hey there, buddy! I'm doing great, thanks for asking! How's your day going?...
+
+[MESSAGE RECEIVED]
+  Author: PopTartee#8956 (ID: 1447285344864047367)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: Hey there, buddy! I'm doing great, thanks for asking! How's your day going?
+  Is bot: True
+  -> Ignoring (own message)
+
+[MESSAGE RECEIVED]
+  Author: toastee0 (ID: 200026157335314434)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: don't ask it bad things I haven't put the safties in yet.
+  Is bot: False
+  -> PROCESSING MESSAGE
+
+[MESSAGE RECEIVED]
+  Author: djunreal (ID: 278966691713777664)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: <@1447285344864047367> what is a bad thing?
+  Is bot: False
+  -> PROCESSING MESSAGE
+  -> Generating response for: what is a bad thing?
+  -> Response:  A bad thing is something that causes harm, suffering, or negative consequences. It goes against pri...
+
+[MESSAGE RECEIVED]
+  Author: PopTartee#8956 (ID: 1447285344864047367)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: A bad thing is something that causes harm, suffering, or negative consequences. It goes against principles of kindness, fairness, and respect. Examples might include physical or verbal abuse, theft, lying, bullying, discrimination, or deliberately causing others pain or distress.
+  Is bot: True
+  -> Ignoring (own message)
+
+[MESSAGE RECEIVED]
+  Author: toastee0 (ID: 200026157335314434)
+  Channel: botspam-testing (ID: 911346751447904276)
+  Content: well that's promising.
+  Is bot: False
+  -> PROCESSING MESSAGE

@@ -1,0 +1,29 @@
+[2025-12-07 14:36:22] [INFO    ] discord.client: logging in using static token
+[2025-12-07 14:36:23] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 00881715c64dfd20f9379aff0d16b8e0).
+Starting PopTartee Discord bot...
+Channel restriction: 911346751447904276
+[2025-12-07 14:41:21] [INFO    ] discord.client: logging in using static token
+[2025-12-07 14:41:22] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6bb5e0153ae29507b3839c27da7a1947).
+PopTartee is online! Logged in as PopTartee#8956
+Connected to 0 server(s)
+Connected to llama-server
+Available model: Mistral-Small-22B-ArliAI-RPMax-v1.1-Q4_K_M.gguf
+Text generation API connected successfully
+Starting PopTartee Discord bot...
+Channel restriction: 911346751447904276
+[2025-12-07 14:51:26] [INFO    ] discord.client: logging in using static token
+[2025-12-07 14:51:26] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3e6042a562b7f904eb3652b78cc43bb6).
+PopTartee is online! Logged in as PopTartee#8956
+Connected to 1 server(s)
+Connected to llama-server
+Available model: Mistral-Small-22B-ArliAI-RPMax-v1.1-Q4_K_M.gguf
+Text generation API connected successfully
+Starting PopTartee Discord bot...
+Channel restriction: 911346751447904276
+[2025-12-07 15:06:15] [INFO    ] discord.client: logging in using static token
+[2025-12-07 15:06:16] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1cf05062439efbcafae183725d94a658).
+PopTartee is online! Logged in as PopTartee#8956
+Connected to 1 server(s)
+Connected to llama-server
+Available model: Mistral-Small-22B-ArliAI-RPMax-v1.1-Q4_K_M.gguf
+Text generation API connected successfully

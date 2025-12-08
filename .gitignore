@@ -1,0 +1,3 @@
+config/.env
+config/discord_bot_token.secret
+config/*.secret
