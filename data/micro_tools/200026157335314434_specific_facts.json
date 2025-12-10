@@ -1,0 +1,14 @@
+{
+  "type": "specific_facts",
+  "user_id": "200026157335314434",
+  "data": {
+    "name_details": "Adrian's middle name is Dawson.",
+    "personal_preferences": "Adrian's favorite color is green.",
+    "background": "Adrian is a developer working on AI memory systems.",
+    "goals": "Adrian is working on implementing episodic memory in the AI."
+  },
+  "created_at": 1765378807,
+  "last_used": null,
+  "use_count": 0,
+  "confidence": 0.7
+}

@@ -1,0 +1,280 @@
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Serving Flask app 'vision_api'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.2.137:8000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+192.168.2.137 - - [09/Dec/2025 20:38:57] "GET /api/vision/status HTTP/1.1" 200 -
+192.168.2.137 - - [09/Dec/2025 20:40:33] "GET /api/vision/events HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 20:40:41] "[31m[1mPOST /api/vision/status HTTP/1.1[0m" 405 -
+192.168.2.134 - - [09/Dec/2025 20:40:53] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.137 - - [09/Dec/2025 20:41:02] "GET /api/vision/events HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:01:33] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:01:37] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:01:38] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:01:43] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:01:46] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:01:52] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:01:56] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:02:14] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:02:33] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:02:38] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:02:41] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:02:47] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:02:58] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:03:07] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:03:11] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:03:20] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:03:23] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:03:39] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:03:42] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:03:56] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:00] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:07] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:08] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:12] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:15] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:34] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:37] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:45] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:48] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:04:55] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:05:00] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:05:08] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:05:17] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:05:25] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:05:31] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:05:51] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:05:54] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:06:11] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:06:14] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:06:44] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:06:48] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:06:59] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:07:02] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:07:05] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:07:08] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:07:10] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:07:13] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:07:37] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:07:43] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:08:24] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:08:27] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:08:48] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:08:51] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:09:36] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:09:39] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:09:52] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:09:55] "POST /api/vision/event HTTP/1.1" 200 -
+192.168.2.134 - - [09/Dec/2025 21:10:01] "POST /api/vision/event HTTP/1.1" 200 -
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+[VISION EVENT] Vision: test entered the scene
+[VISION EVENT] Vision: clock entered the scene
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 4.1s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 4.1s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 18.5s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.5s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 11.0s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.1s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: person entered the scene (scene now has: clock, bottle, person)
+[VISION EVENT] Vision: person left the scene (was present for 3.2s) (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 8.3s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 4.8s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 9.1s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 4.7s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 4.7s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: tv entered the scene (scene now has: clock, tv)
+[VISION EVENT] Vision: tv left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 5.4s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: tv entered the scene (scene now has: clock, tv)
+[VISION EVENT] Vision: tv left the scene (was present for 3.2s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.3s) (scene now has: clock)
+[VISION EVENT] Vision: bottle entered the scene (scene now has: clock, bottle)
+[VISION EVENT] Vision: bottle left the scene (was present for 3.1s) (scene now has: clock)
+[VISION EVENT] Vision: clock left the scene (was present for 509.4s)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+[VISION PROCESSOR] Initialized
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+[VISION PROCESSOR] Initialized
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/model_manager.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/person_analyzer.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/vision_api.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093
+ * Detected change in '/home/toastee/BioMimeticAi/src/core/person_analyzer.py', reloading
+[RTSP] Initialized - Stream: rtsp://192.168.2.140:8554/stream
+[RTSP] Snapshots will be saved to: /home/toastee/BioMimeticAi/data/vision/snapshots
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-344-093

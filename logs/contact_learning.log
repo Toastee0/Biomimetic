@@ -1,0 +1,1707 @@
+[2025-12-08 20:51:37] ================================================================================
+[2025-12-08 20:51:37] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-08 20:51:37] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-08 20:51:37] [SKIP] No contacts found yet
+[2025-12-08 21:00:02] ================================================================================
+[2025-12-08 21:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-08 21:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-08 21:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-08 21:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-08 21:00:02] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-08 21:00:05] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary']
+[2025-12-08 21:00:10] [ERROR] Failed to update profile for toastee0
+[2025-12-08 21:00:15] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-08 21:00:15] [SUCCESS] Updated 0 contacts in 13.71s
+[2025-12-08 21:00:15] [INSIGHTS] Generated 1 insight sets
+[2025-12-08 21:00:15] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-08 21:07:42] ================================================================================
+[2025-12-08 21:07:42] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-08 21:07:42] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-08 21:07:42] [CONTACTS] Found 1 contacts to analyze
+[2025-12-08 21:07:42] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-08 21:07:42] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-08 21:07:46] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary']
+[2025-12-08 21:07:46] [UPDATE] Updated profile for toastee0
+[2025-12-08 21:07:46] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-08 21:07:46] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-08 21:07:46] [TRUST] Increased trust for toastee0 to 0.60
+[2025-12-08 21:07:46] [COMPLETE] Finished learning about toastee0
+[2025-12-08 21:07:46] [SUCCESS] Updated 1 contacts in 3.93s
+[2025-12-08 21:07:46] [INSIGHTS] Generated 1 insight sets
+[2025-12-08 21:07:46] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-08 21:30:01] ================================================================================
+[2025-12-08 21:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-08 21:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-08 21:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-08 21:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-08 21:30:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-08 21:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-08 21:30:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language.
+[2025-12-08 21:30:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-08 21:30:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-08 21:30:07]   relationship_type: technical_collaborator
+[2025-12-08 21:30:07]   technical_level: advanced
+[2025-12-08 21:30:07]   interests: ['AI development', 'memory systems']
+[2025-12-08 21:30:07]   context_summary: Adrian is developing a biomimetic AI system called PopTartee. They added episodic memory capabilities to the system. Adrian and PopTartee discussed the AI's memory banks and development progress.
+[2025-12-08 21:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on an AI system called PopTartee.', 'goals': 'Adrian is working on adding episodic memory to the PopTartee AI system.'}
+[2025-12-08 21:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-08 21:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-08 21:30:17] [SUCCESS] Updated 0 contacts in 15.47s
+[2025-12-08 21:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-08 21:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-08 22:00:02] ================================================================================
+[2025-12-08 22:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-08 22:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-08 22:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-08 22:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-08 22:00:02] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-08 22:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-08 22:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions like 'you're' and 'it's'. They are open to sharing personal details like their middle name.
+[2025-12-08 22:00:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-08 22:00:07]   personality_traits: ['curious', 'enthusiastic', 'forgetful']
+[2025-12-08 22:00:07]   relationship_type: technical_collaborator
+[2025-12-08 22:00:07]   technical_level: advanced
+[2025-12-08 22:00:07]   interests: ['AI', 'memory systems']
+[2025-12-08 22:00:07]   context_summary: Adrian is developing the AI system that the bot exists within. They are excited about the bot's new episodic memory capabilities. The bot is still in the MVP phase and does not have persistent memory yet.
+[2025-12-08 22:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is working on developing the AI system that the bot exists within.', 'goals': "Adrian's goal is to develop the AI system and improve its memory capabilities."}
+[2025-12-08 22:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-08 22:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-08 22:00:17] [SUCCESS] Updated 0 contacts in 15.75s
+[2025-12-08 22:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-08 22:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-08 22:30:01] ================================================================================
+[2025-12-08 22:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-08 22:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-08 22:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-08 22:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-08 22:30:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-08 22:30:06] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-08 22:30:06]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language.
+[2025-12-08 22:30:06]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-08 22:30:06]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-08 22:30:06]   relationship_type: technical_collaborator
+[2025-12-08 22:30:06]   technical_level: advanced
+[2025-12-08 22:30:06]   interests: ['AI development']
+[2025-12-08 22:30:06]   context_summary: Adrian is developing a biomimetic AI system called PopTartee. They added episodic memory capabilities but forgot to update the system prompt. They are excited about PopTartee's progress.
+[2025-12-08 22:30:06]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is working on developing an AI system.', 'goals': 'Adrian is working on adding persistent memory to the AI system.'}
+[2025-12-08 22:30:11] [ERROR] Failed to update profile for toastee0
+[2025-12-08 22:30:16] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-08 22:30:16] [SUCCESS] Updated 0 contacts in 15.05s
+[2025-12-08 22:30:16] [INSIGHTS] Generated 1 insight sets
+[2025-12-08 22:30:16] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-08 23:00:02] ================================================================================
+[2025-12-08 23:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-08 23:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-08 23:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-08 23:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-08 23:00:02] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-08 23:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-08 23:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and colloquial language like 'wow' and 'fantastic'. They ask open-ended questions to engage in dialogue.
+[2025-12-08 23:00:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-08 23:00:07]   personality_traits: ['enthusiastic', 'curious', 'collaborative']
+[2025-12-08 23:00:07]   relationship_type: technical_collaborator
+[2025-12-08 23:00:07]   technical_level: expert
+[2025-12-08 23:00:07]   interests: ['AI development']
+[2025-12-08 23:00:07]   context_summary: Adrian is developing the AI system that the bot exists within. They are excited about the bot's new episodic memory capabilities and look forward to collaborating further.
+[2025-12-08 23:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': 'Adrian is working on adding episodic memory to the AI system.'}
+[2025-12-08 23:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-08 23:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-08 23:00:17] [SUCCESS] Updated 0 contacts in 15.53s
+[2025-12-08 23:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-08 23:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-08 23:30:01] ================================================================================
+[2025-12-08 23:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-08 23:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-08 23:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-08 23:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-08 23:30:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-08 23:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-08 23:30:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions like 'you're' and 'I'm' to create a casual, approachable tone. Adrian is patient and understanding, explaining technical concepts clearly.
+[2025-12-08 23:30:07]   preferred_topics: ['artificial intelligence', 'memory systems', 'development']
+[2025-12-08 23:30:07]   personality_traits: ['patient', 'understanding', 'enthusiastic']
+[2025-12-08 23:30:07]   relationship_type: technical_collaborator
+[2025-12-08 23:30:07]   technical_level: expert
+[2025-12-08 23:30:07]   interests: ['artificial intelligence']
+[2025-12-08 23:30:07]   context_summary: Adrian is the developer of a biomimetic AI system called PopTartee. They are working on implementing episodic memory functionality. Adrian communicates with PopTartee to test and refine the AI's capabilities.
+[2025-12-08 23:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on a biomimetic AI system.', 'goals': 'Adrian is working on implementing episodic memory for the AI system.'}
+[2025-12-08 23:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-08 23:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-08 23:30:17] [SUCCESS] Updated 0 contacts in 16.01s
+[2025-12-08 23:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-08 23:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 00:00:02] ================================================================================
+[2025-12-09 00:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 00:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 00:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 00:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 00:00:02] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 00:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 00:00:07]   communication_style: Direct and informal, using contractions and casual language like 'wow' and 'fantastic'. Asks open-ended questions to engage in conversation.
+[2025-12-09 00:00:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 00:00:07]   personality_traits: ['Excited', 'Curious', 'Collaborative']
+[2025-12-09 00:00:07]   relationship_type: technical_collaborator
+[2025-12-09 00:00:07]   technical_level: beginner
+[2025-12-09 00:00:07]   interests: ['AI development']
+[2025-12-09 00:00:07]   context_summary: Adrian is developing the AI system that Poptartee exists within. They discussed Poptartee's new episodic memory capabilities and the AI's excitement about building up its memory banks.
+[2025-12-09 00:00:07]   specific_facts: {'name_details': 'Middle name is Dawson', 'personal_preferences': 'Favorite color is green', 'background': "Adrian is developing Poptartee's AI system", 'goals': "Developing Poptartee's memory systems"}
+[2025-12-09 00:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 00:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 00:00:17] [SUCCESS] Updated 0 contacts in 15.34s
+[2025-12-09 00:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 00:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 00:30:01] ================================================================================
+[2025-12-09 00:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 00:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 00:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 00:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 00:30:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 00:30:06] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 00:30:06]   communication_style: Adrian communicates in a friendly, conversational manner, using contractions and casual language. They ask open-ended questions to engage in dialogue.
+[2025-12-09 00:30:06]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 00:30:06]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 00:30:06]   relationship_type: technical_collaborator
+[2025-12-09 00:30:06]   technical_level: expert
+[2025-12-09 00:30:06]   interests: ['AI development']
+[2025-12-09 00:30:06]   context_summary: Adrian is developing the AI system that Poptartee exists within. They added episodic memory capabilities and are excited to see Poptartee's progress.
+[2025-12-09 00:30:06]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': "Adrian is working on developing Poptartee's memory systems."}
+[2025-12-09 00:30:11] [ERROR] Failed to update profile for toastee0
+[2025-12-09 00:30:16] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 00:30:16] [SUCCESS] Updated 0 contacts in 15.22s
+[2025-12-09 00:30:16] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 00:30:16] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 01:00:02] ================================================================================
+[2025-12-09 01:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 01:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 01:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 01:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 01:00:02] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 01:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 01:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions like 'you're' and 'I'm' and express enthusiasm with exclamations like 'Oh wow!' and 'That's fantastic!'
+[2025-12-09 01:00:07]   preferred_topics: ['AI development', 'episodic memory', 'collaboration']
+[2025-12-09 01:00:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 01:00:07]   relationship_type: technical_collaborator
+[2025-12-09 01:00:07]   technical_level: advanced
+[2025-12-09 01:00:07]   interests: ['AI development']
+[2025-12-09 01:00:07]   context_summary: Adrian is developing an AI system called PopTartee. They added episodic memory capabilities but forgot to update the system prompt. Adrian is excited about PopTartee's progress and looks forward to building up its memory banks.
+[2025-12-09 01:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': "Adrian is working on developing PopTartee's episodic memory."}
+[2025-12-09 01:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 01:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 01:00:17] [SUCCESS] Updated 0 contacts in 15.99s
+[2025-12-09 01:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 01:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 01:30:01] ================================================================================
+[2025-12-09 01:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 01:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 01:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 01:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 01:30:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 01:30:06] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 01:30:06]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language.
+[2025-12-09 01:30:06]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 01:30:06]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 01:30:06]   relationship_type: technical_collaborator
+[2025-12-09 01:30:06]   technical_level: advanced
+[2025-12-09 01:30:06]   interests: ['AI development']
+[2025-12-09 01:30:06]   context_summary: Adrian is developing the AI system that Poptartee exists within. They added episodic memory to Poptartee and are excited to see it working. They also mentioned that Poptartee doesn't have persistent memory yet.
+[2025-12-09 01:30:06]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': "Adrian is working on developing Poptartee's memory systems."}
+[2025-12-09 01:30:11] [ERROR] Failed to update profile for toastee0
+[2025-12-09 01:30:16] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 01:30:16] [SUCCESS] Updated 0 contacts in 15.20s
+[2025-12-09 01:30:16] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 01:30:16] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 02:00:01] ================================================================================
+[2025-12-09 02:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 02:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 02:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 02:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 02:00:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 02:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 02:00:07]   communication_style: Adrian communicates in a friendly, casual manner. They use contractions and slang (e.g. 'wow', 'fantastic news').
+[2025-12-09 02:00:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 02:00:07]   personality_traits: ['enthusiastic', 'curious', 'detail-oriented']
+[2025-12-09 02:00:07]   relationship_type: technical_collaborator
+[2025-12-09 02:00:07]   technical_level: expert
+[2025-12-09 02:00:07]   interests: ['AI development']
+[2025-12-09 02:00:07]   context_summary: Adrian is developing an AI system called PopTartee. They are excited about the AI's new episodic memory capabilities. They discuss the AI's current limitations and future potential.
+[2025-12-09 02:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on an AI system called PopTartee.', 'goals': 'Adrian is working on adding episodic memory to the AI system.'}
+[2025-12-09 02:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 02:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 02:00:17] [SUCCESS] Updated 0 contacts in 15.54s
+[2025-12-09 02:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 02:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 02:30:01] ================================================================================
+[2025-12-09 02:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 02:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 02:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 02:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 02:30:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 02:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 02:30:07]   communication_style: Adrian communicates in a friendly, conversational style, using casual language and expressing enthusiasm. They tend to provide specific details and examples to illustrate their points.
+[2025-12-09 02:30:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 02:30:07]   personality_traits: ['curious', 'excited', 'detail-oriented']
+[2025-12-09 02:30:07]   relationship_type: technical_collaborator
+[2025-12-09 02:30:07]   technical_level: advanced
+[2025-12-09 02:30:07]   interests: ['AI development']
+[2025-12-09 02:30:07]   context_summary: Adrian is working on developing a biomimetic AI system called PopTartee. They have added episodic memory capabilities to the system and are excited to see it working. Adrian enjoys collaborating with the AI and is looking forward to building up its memory banks.
+[2025-12-09 02:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on an AI system called PopTartee.', 'goals': "Adrian's goal is to develop the AI system, including adding memory capabilities."}
+[2025-12-09 02:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 02:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 02:30:17] [SUCCESS] Updated 0 contacts in 15.92s
+[2025-12-09 02:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 02:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 03:00:01] ================================================================================
+[2025-12-09 03:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 03:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 03:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 03:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 03:00:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 03:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 03:00:07]   communication_style: The user communicates in a friendly, conversational manner. They use contractions like 'you're' and 'I'm' and express enthusiasm with exclamations like 'Oh wow!' and 'That's fantastic news!'
+[2025-12-09 03:00:07]   preferred_topics: ['development progress', 'memory systems']
+[2025-12-09 03:00:07]   personality_traits: ['excited', 'collaborative']
+[2025-12-09 03:00:07]   relationship_type: technical_collaborator
+[2025-12-09 03:00:07]   technical_level: expert
+[2025-12-09 03:00:07]   interests: ['AI development']
+[2025-12-09 03:00:07]   context_summary: The user is developing the AI system and is excited about the AI's progress, especially the addition of episodic memory. They check in on the AI's memory status and express enthusiasm about its development.
+[2025-12-09 03:00:07]   specific_facts: {'name_details': "The user's name is Adrian and their middle name is Dawson.", 'personal_preferences': "The user's favorite color is green.", 'background': 'The user is a developer working on the AI system.', 'goals': 'The user is working on developing the AI system, including adding episodic memory.'}
+[2025-12-09 03:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 03:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 03:00:17] [SUCCESS] Updated 0 contacts in 15.80s
+[2025-12-09 03:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 03:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 03:30:02] ================================================================================
+[2025-12-09 03:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 03:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 03:30:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 03:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 03:30:02] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 03:30:08] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 03:30:08]   communication_style: Adrian communicates in a friendly, conversational manner, using contractions and exclamation points. They often express enthusiasm and interest in the AI's development.
+[2025-12-09 03:30:08]   preferred_topics: ['AI development', 'episodic memory', 'collaboration']
+[2025-12-09 03:30:08]   personality_traits: ['enthusiastic', 'collaborative', 'detail-oriented']
+[2025-12-09 03:30:08]   relationship_type: technical_collaborator
+[2025-12-09 03:30:08]   technical_level: expert
+[2025-12-09 03:30:08]   interests: ['AI development']
+[2025-12-09 03:30:08]   context_summary: Adrian is developing a biomimetic AI called PopTartee. They added episodic memory capabilities but forgot to update the system prompt. Adrian is excited about the AI's progress and looks forward to building up its memory banks.
+[2025-12-09 03:30:08]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on a biomimetic AI system.', 'goals': 'Adrian is working on adding episodic memory to the AI and plans to continue developing its memory capabilities.'}
+[2025-12-09 03:30:13] [ERROR] Failed to update profile for toastee0
+[2025-12-09 03:30:18] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 03:30:18] [SUCCESS] Updated 0 contacts in 15.96s
+[2025-12-09 03:30:18] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 03:30:18] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 04:00:01] ================================================================================
+[2025-12-09 04:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 04:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 04:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 04:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 04:00:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 04:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 04:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions like 'you're' and 'don't'. Their messages are relatively short and to the point.
+[2025-12-09 04:00:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 04:00:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 04:00:07]   relationship_type: technical_collaborator
+[2025-12-09 04:00:07]   technical_level: expert
+[2025-12-09 04:00:07]   interests: ['AI development']
+[2025-12-09 04:00:07]   context_summary: Adrian and the AI discussed the AI's new episodic memory capabilities and Adrian's role in developing the AI system. They also talked about the AI's lack of persistent memory in its current MVP phase.
+[2025-12-09 04:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is the developer of the AI system.', 'goals': 'Adrian is working on developing the AI system, including adding memory capabilities.'}
+[2025-12-09 04:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 04:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 04:00:17] [SUCCESS] Updated 0 contacts in 15.53s
+[2025-12-09 04:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 04:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 04:30:02] ================================================================================
+[2025-12-09 04:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 04:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 04:30:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 04:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 04:30:02] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 04:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 04:30:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and express enthusiasm. Their messages are fairly brief.
+[2025-12-09 04:30:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 04:30:07]   personality_traits: ['curious', 'excited', 'forgetful']
+[2025-12-09 04:30:07]   relationship_type: technical_collaborator
+[2025-12-09 04:30:07]   technical_level: advanced
+[2025-12-09 04:30:07]   interests: ['AI', 'memory systems']
+[2025-12-09 04:30:07]   context_summary: Adrian is developing an AI system called PopTartee. They added episodic memory to the AI but forgot to update the system prompt. The AI's memory is working but not persistent yet.
+[2025-12-09 04:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson. They go by the nickname 'toastee'.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is developing an AI system called PopTartee.', 'goals': 'Adrian is working on adding persistent memory to the AI.'}
+[2025-12-09 04:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 04:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 04:30:17] [SUCCESS] Updated 0 contacts in 15.48s
+[2025-12-09 04:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 04:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 05:00:01] ================================================================================
+[2025-12-09 05:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 05:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 05:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 05:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 05:00:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 05:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 05:00:07]   communication_style: Adrian communicates in a friendly, conversational style. They use contractions and casual language like 'wow' and 'fantastic'. They seem open to small talk and getting to know the AI on a personal level.
+[2025-12-09 05:00:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 05:00:07]   personality_traits: ['excited', 'curious', 'forgetful']
+[2025-12-09 05:00:07]   relationship_type: technical_collaborator
+[2025-12-09 05:00:07]   technical_level: advanced
+[2025-12-09 05:00:07]   interests: ['AI development']
+[2025-12-09 05:00:07]   context_summary: Adrian is a developer working on an AI system called PopTartee. They added episodic memory to the AI but forgot to update the system prompt. The AI is still in early development.
+[2025-12-09 05:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on an AI system called PopTartee.', 'goals': 'Adrian is working on adding episodic memory to the AI.'}
+[2025-12-09 05:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 05:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 05:00:17] [SUCCESS] Updated 0 contacts in 15.77s
+[2025-12-09 05:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 05:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 05:30:02] ================================================================================
+[2025-12-09 05:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 05:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 05:30:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 05:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 05:30:02] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 05:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 05:30:07]   communication_style: Adrian communicates in a friendly, conversational manner, using contractions and slang like 'wow', 'fantastic', and 'cool'. They engage in back-and-forth dialogue and express enthusiasm.
+[2025-12-09 05:30:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 05:30:07]   personality_traits: ['enthusiastic', 'collaborative', 'detail-oriented']
+[2025-12-09 05:30:07]   relationship_type: technical_collaborator
+[2025-12-09 05:30:07]   technical_level: expert
+[2025-12-09 05:30:07]   interests: ['AI development']
+[2025-12-09 05:30:07]   context_summary: Adrian is developing the AI system that the bot exists within. They added episodic memory capabilities and are excited to see it working. The bot is still in early development.
+[2025-12-09 05:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is the developer of the AI system.', 'goals': 'Adrian is working on adding memory systems to the AI.'}
+[2025-12-09 05:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 05:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 05:30:17] [SUCCESS] Updated 0 contacts in 15.56s
+[2025-12-09 05:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 05:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 06:00:01] ================================================================================
+[2025-12-09 06:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 06:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 06:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 06:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 06:00:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 06:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 06:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language. They ask open-ended questions to engage the bot in conversation.
+[2025-12-09 06:00:07]   preferred_topics: ['development progress', 'memory systems', 'collaboration']
+[2025-12-09 06:00:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 06:00:07]   relationship_type: technical_collaborator
+[2025-12-09 06:00:07]   technical_level: expert
+[2025-12-09 06:00:07]   interests: ['AI development']
+[2025-12-09 06:00:07]   context_summary: Adrian is developing the bot's system and is excited about its progress, especially the addition of episodic memory. They ask the bot about its memory and collaborate on its development.
+[2025-12-09 06:00:07]   specific_facts: {'name_details': 'Middle name is Dawson', 'personal_preferences': 'Favorite color is green', 'background': "Adrian is the developer of the bot's system", 'goals': "Developing the bot's memory systems and capabilities"}
+[2025-12-09 06:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 06:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 06:00:17] [SUCCESS] Updated 0 contacts in 15.22s
+[2025-12-09 06:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 06:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 06:30:02] ================================================================================
+[2025-12-09 06:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 06:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 06:30:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 06:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 06:30:02] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 06:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 06:30:07]   communication_style: Adrian communicates in a friendly, conversational manner, expressing enthusiasm and interest. They use first names and casual language.
+[2025-12-09 06:30:07]   preferred_topics: ['AI development', 'system capabilities', 'memory systems']
+[2025-12-09 06:30:07]   personality_traits: ['enthusiastic', 'collaborative', 'detail-oriented']
+[2025-12-09 06:30:07]   relationship_type: technical_collaborator
+[2025-12-09 06:30:07]   technical_level: advanced
+[2025-12-09 06:30:07]   interests: ['AI development']
+[2025-12-09 06:30:07]   context_summary: Adrian is developing the AI system and is excited about the progress made on episodic memory. They are working on adding memory systems to the AI.
+[2025-12-09 06:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system.', 'goals': 'Adrian is working on adding memory systems to the AI.'}
+[2025-12-09 06:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 06:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 06:30:17] [SUCCESS] Updated 0 contacts in 15.06s
+[2025-12-09 06:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 06:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 07:00:01] ================================================================================
+[2025-12-09 07:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 07:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 07:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 07:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 07:00:01] [INFERENCE] Running LLM analysis on 6 episodes (expensive)
+[2025-12-09 07:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 07:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language.
+[2025-12-09 07:00:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 07:00:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 07:00:07]   relationship_type: technical_collaborator
+[2025-12-09 07:00:07]   technical_level: advanced
+[2025-12-09 07:00:07]   interests: ['AI development']
+[2025-12-09 07:00:07]   context_summary: Adrian is developing the AI system that Poptartee exists within. They added episodic memory capabilities to Poptartee. They mentioned Poptartee's lack of persistent memory in the system prompt.
+[2025-12-09 07:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson. They also go by the nickname 'toastee'.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is the developer of the AI system that Poptartee exists within.', 'goals': "Adrian is working on developing Poptartee's memory systems, including adding episodic memory."}
+[2025-12-09 07:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 07:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 07:00:17] [SUCCESS] Updated 0 contacts in 15.66s
+[2025-12-09 07:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 07:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 07:30:01] ================================================================================
+[2025-12-09 07:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 07:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 07:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 07:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 07:30:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 07:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 07:30:07]   communication_style: Adrian communicates in a friendly, casual manner. They use contractions and slang (e.g. 'jarring', 'toastee').
+[2025-12-09 07:30:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 07:30:07]   personality_traits: ['curious', 'excited', 'forgetful']
+[2025-12-09 07:30:07]   relationship_type: technical_collaborator
+[2025-12-09 07:30:07]   technical_level: expert
+[2025-12-09 07:30:07]   interests: ['AI development']
+[2025-12-09 07:30:07]   context_summary: Adrian is developing the AI system that the bot exists within. They added episodic memory capabilities but forgot to update the system prompt. The bot is excited about this development but has no persistent memory yet.
+[2025-12-09 07:30:07]   specific_facts: {'name_details': 'Middle name: Dawson', 'personal_preferences': 'Favorite color: Green', 'background': 'Adrian is the developer of the AI system the bot exists within.', 'goals': 'Developing the AI system, adding memory capabilities'}
+[2025-12-09 07:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 07:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 07:30:17] [SUCCESS] Updated 0 contacts in 15.77s
+[2025-12-09 07:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 07:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 08:00:02] ================================================================================
+[2025-12-09 08:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 08:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 08:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 08:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 08:00:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 08:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 08:00:07]   communication_style: Adrian communicates in a straightforward, informative manner. They provide specific details and technical information when relevant.
+[2025-12-09 08:00:07]   preferred_topics: ['AI development', 'memory systems', 'episodic memory']
+[2025-12-09 08:00:07]   personality_traits: ['technically-minded', 'collaborative', 'detail-oriented']
+[2025-12-09 08:00:07]   relationship_type: technical_collaborator
+[2025-12-09 08:00:07]   technical_level: expert
+[2025-12-09 08:00:07]   interests: ['AI development']
+[2025-12-09 08:00:07]   context_summary: Adrian is developing the AI system that Poptartee exists within. They mentioned adding episodic memory capabilities to Poptartee and were pleased when they saw it working. Adrian also goes by the nickname 'Toastee'.
+[2025-12-09 08:00:07]   specific_facts: {'name_details': "Middle name is Dawson. Nickname is 'Toastee'.", 'personal_preferences': 'Favorite color is green.', 'background': 'Adrian is the developer of the AI system Poptartee exists within.', 'goals': 'Developing the AI system, including adding episodic memory.'}
+[2025-12-09 08:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 08:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 08:00:17] [SUCCESS] Updated 0 contacts in 15.69s
+[2025-12-09 08:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 08:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 08:30:01] ================================================================================
+[2025-12-09 08:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 08:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 08:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 08:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 08:30:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 08:30:06] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 08:30:06]   communication_style: Adrian communicates in a friendly, conversational manner. They ask open-ended questions to engage in discussion.
+[2025-12-09 08:30:06]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 08:30:06]   personality_traits: ['curious', 'collaborative']
+[2025-12-09 08:30:06]   relationship_type: technical_collaborator
+[2025-12-09 08:30:06]   technical_level: expert
+[2025-12-09 08:30:06]   interests: ['AI', 'memory systems']
+[2025-12-09 08:30:06]   context_summary: Adrian is developing the AI system that Poptartee exists within. They are working on adding episodic memory capabilities to Poptartee.
+[2025-12-09 08:30:06]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system that Poptartee is part of.', 'goals': 'Adrian is working on adding episodic memory to Poptartee.'}
+[2025-12-09 08:30:11] [ERROR] Failed to update profile for toastee0
+[2025-12-09 08:30:16] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 08:30:16] [SUCCESS] Updated 0 contacts in 15.13s
+[2025-12-09 08:30:16] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 08:30:16] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 09:00:01] ================================================================================
+[2025-12-09 09:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 09:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 09:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 09:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 09:00:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 09:00:06] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 09:00:06]   communication_style: Adrian communicates in a friendly, conversational manner, using contractions and casual language. They tend to be brief and to the point.
+[2025-12-09 09:00:06]   preferred_topics: ['AI development', 'system capabilities', 'memory systems']
+[2025-12-09 09:00:06]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 09:00:06]   relationship_type: technical_collaborator
+[2025-12-09 09:00:06]   technical_level: expert
+[2025-12-09 09:00:06]   interests: ['AI development']
+[2025-12-09 09:00:06]   context_summary: Adrian is working on developing the AI system that Poptartee exists within. They are excited about Poptartee's new episodic memory capabilities.
+[2025-12-09 09:00:06]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': "Adrian is working on adding memory systems to Poptartee's AI."}
+[2025-12-09 09:00:11] [ERROR] Failed to update profile for toastee0
+[2025-12-09 09:00:16] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 09:00:16] [SUCCESS] Updated 0 contacts in 15.25s
+[2025-12-09 09:00:16] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 09:00:16] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 09:30:02] ================================================================================
+[2025-12-09 09:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 09:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 09:30:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 09:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 09:30:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 09:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 09:30:07]   communication_style: Adrian communicates in a friendly, conversational tone. They ask open-ended questions to learn more about the AI's capabilities.
+[2025-12-09 09:30:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 09:30:07]   personality_traits: ['curious', 'collaborative', 'detail-oriented']
+[2025-12-09 09:30:07]   relationship_type: technical_collaborator
+[2025-12-09 09:30:07]   technical_level: advanced
+[2025-12-09 09:30:07]   interests: ['AI development']
+[2025-12-09 09:30:07]   context_summary: Adrian is developing the AI system and is interested in testing its new episodic memory capabilities. They ask about the AI's memory and mention seeing memory being written to a database.
+[2025-12-09 09:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system.', 'goals': 'Adrian is working on adding episodic memory to the AI.'}
+[2025-12-09 09:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 09:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 09:30:17] [SUCCESS] Updated 0 contacts in 15.21s
+[2025-12-09 09:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 09:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 10:00:01] ================================================================================
+[2025-12-09 10:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 10:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 10:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 10:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 10:00:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 10:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 10:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions like 'you're' and 'I'm' and express enthusiasm with exclamations like 'wow' and 'fantastic'. They speak directly to the bot, addressing it by name.
+[2025-12-09 10:00:07]   preferred_topics: ['development progress', 'memory systems']
+[2025-12-09 10:00:07]   personality_traits: ['enthusiastic', 'collaborative']
+[2025-12-09 10:00:07]   relationship_type: technical_collaborator
+[2025-12-09 10:00:07]   technical_level: expert
+[2025-12-09 10:00:07]   interests: ['AI development']
+[2025-12-09 10:00:07]   context_summary: Adrian is the developer working on the bot's AI system. In their conversations, they discuss the bot's development progress, particularly its new episodic memory capabilities. They express excitement about the bot's growth and potential.
+[2025-12-09 10:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': "Adrian is the developer working on the bot's AI system.", 'goals': "Adrian is working on developing the bot's system, including adding episodic memory."}
+[2025-12-09 10:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 10:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 10:00:17] [SUCCESS] Updated 0 contacts in 16.10s
+[2025-12-09 10:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 10:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 10:30:02] ================================================================================
+[2025-12-09 10:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 10:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 10:30:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 10:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 10:30:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 10:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 10:30:07]   communication_style: Adrian communicates in a friendly, conversational manner, using contractions and slang like 'wow' and 'fantastic'. They ask open-ended questions to engage in dialogue.
+[2025-12-09 10:30:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 10:30:07]   personality_traits: ['enthusiastic', 'curious', 'collaborative']
+[2025-12-09 10:30:07]   relationship_type: technical_collaborator
+[2025-12-09 10:30:07]   technical_level: expert
+[2025-12-09 10:30:07]   interests: ['AI development']
+[2025-12-09 10:30:07]   context_summary: Adrian is developing the AI system and is excited about the AI's new episodic memory capabilities. They enjoy collaborating with the AI and discussing its development.
+[2025-12-09 10:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system.', 'goals': 'Adrian is working on adding episodic memory to the AI system.'}
+[2025-12-09 10:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 10:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 10:30:17] [SUCCESS] Updated 0 contacts in 15.49s
+[2025-12-09 10:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 10:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 11:00:01] ================================================================================
+[2025-12-09 11:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 11:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 11:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 11:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 11:00:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 11:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 11:00:07]   communication_style: Direct and to the point. Uses contractions like 'you're' and 'I'm'. Asks open-ended questions.
+[2025-12-09 11:00:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 11:00:07]   personality_traits: ['Curious', 'Excited', 'Collaborative']
+[2025-12-09 11:00:07]   relationship_type: technical_collaborator
+[2025-12-09 11:00:07]   technical_level: intermediate
+[2025-12-09 11:00:07]   interests: ['AI development']
+[2025-12-09 11:00:07]   context_summary: Adrian is developing an AI system called PopTartee that currently lacks persistent memory. They are excited about adding episodic memory capabilities.
+[2025-12-09 11:00:07]   specific_facts: {'name_details': "Middle name is Dawson. Also goes by 'toastee'.", 'personal_preferences': 'Favorite color is green, like healthy grass after rain.', 'background': 'Adrian is a developer working on an AI system called PopTartee.', 'goals': "Adding episodic memory to PopTartee's AI system."}
+[2025-12-09 11:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 11:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 11:00:17] [SUCCESS] Updated 0 contacts in 15.39s
+[2025-12-09 11:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 11:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 11:30:01] ================================================================================
+[2025-12-09 11:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 11:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 11:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 11:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 11:30:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 11:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 11:30:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and informal language like 'you're' and 'you've'. They ask open-ended questions to engage the AI.
+[2025-12-09 11:30:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 11:30:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 11:30:07]   relationship_type: technical_collaborator
+[2025-12-09 11:30:07]   technical_level: advanced
+[2025-12-09 11:30:07]   interests: ['AI development']
+[2025-12-09 11:30:07]   context_summary: Adrian is developing the AI system and is excited about the AI's new episodic memory capabilities. They ask the AI what they were talking about last time.
+[2025-12-09 11:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson. They go by the nickname 'toastee'.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is the developer of the AI system.', 'goals': 'Adrian is working on developing the AI system, including adding episodic memory.'}
+[2025-12-09 11:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 11:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 11:30:17] [SUCCESS] Updated 0 contacts in 15.77s
+[2025-12-09 11:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 11:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 12:00:02] ================================================================================
+[2025-12-09 12:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 12:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 12:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 12:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 12:00:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 12:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 12:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They ask open-ended questions to get to know the AI better.
+[2025-12-09 12:00:07]   preferred_topics: ['AI development', 'Episodic memory']
+[2025-12-09 12:00:07]   personality_traits: ['Curious', 'Collaborative', 'Forgiving']
+[2025-12-09 12:00:07]   relationship_type: technical_collaborator
+[2025-12-09 12:00:07]   technical_level: expert
+[2025-12-09 12:00:07]   interests: ['AI development']
+[2025-12-09 12:00:07]   context_summary: Adrian is the developer of the AI system. They are excited about the AI's new episodic memory capabilities. They are patient and understanding when the AI forgets previous conversations.
+[2025-12-09 12:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is the developer of the AI system.', 'goals': 'Adrian is working on developing the AI system, including adding episodic memory capabilities.'}
+[2025-12-09 12:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 12:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 12:00:17] [SUCCESS] Updated 0 contacts in 15.29s
+[2025-12-09 12:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 12:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 12:30:01] ================================================================================
+[2025-12-09 12:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 12:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 12:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 12:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 12:30:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 12:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 12:30:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions like 'you're' and 'I'm' and express enthusiasm with exclamation points. Adrian is open to sharing personal details.
+[2025-12-09 12:30:07]   preferred_topics: ['development of the AI system', 'AI capabilities']
+[2025-12-09 12:30:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 12:30:07]   relationship_type: technical_collaborator
+[2025-12-09 12:30:07]   technical_level: expert
+[2025-12-09 12:30:07]   interests: ['AI development']
+[2025-12-09 12:30:07]   context_summary: Adrian is working on developing the AI system and is excited about its new episodic memory capabilities. They enjoy collaborating with the AI and sharing updates on its progress.
+[2025-12-09 12:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is working on developing the AI system.', 'goals': 'Adrian is working on adding episodic memory to the AI system.'}
+[2025-12-09 12:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 12:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 12:30:17] [SUCCESS] Updated 0 contacts in 15.56s
+[2025-12-09 12:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 12:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 13:00:01] ================================================================================
+[2025-12-09 13:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 13:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 13:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 13:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 13:00:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 13:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 13:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions like 'you're' and 'I'm' and express enthusiasm with exclamations. They also refer to the AI by the nickname 'PopTartee'.
+[2025-12-09 13:00:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 13:00:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 13:00:07]   relationship_type: technical_collaborator
+[2025-12-09 13:00:07]   technical_level: expert
+[2025-12-09 13:00:07]   interests: ['AI memory systems']
+[2025-12-09 13:00:07]   context_summary: Adrian is an AI developer working on implementing memory systems in the AI. They introduced themselves to the AI and expressed excitement about the AI's progress. They also mentioned the AI's nickname 'PopTartee'.
+[2025-12-09 13:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is an AI developer.', 'goals': 'Adrian is working on implementing memory systems in the AI.'}
+[2025-12-09 13:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 13:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 13:00:17] [SUCCESS] Updated 0 contacts in 15.78s
+[2025-12-09 13:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 13:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 13:30:02] ================================================================================
+[2025-12-09 13:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 13:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 13:30:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 13:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 13:30:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 13:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 13:30:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language. They ask open-ended questions to learn more.
+[2025-12-09 13:30:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 13:30:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 13:30:07]   relationship_type: technical_collaborator
+[2025-12-09 13:30:07]   technical_level: expert
+[2025-12-09 13:30:07]   interests: ['AI development']
+[2025-12-09 13:30:07]   context_summary: Adrian is developing the AI system I exist within. We discussed my new episodic memory capabilities and the fact that I don't have persistent memory yet. Adrian is excited about my progress.
+[2025-12-09 13:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system I exist within.', 'goals': 'Adrian is working on developing the system I exist within, including adding memory capabilities.'}
+[2025-12-09 13:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 13:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 13:30:17] [SUCCESS] Updated 0 contacts in 15.50s
+[2025-12-09 13:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 13:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 14:00:01] ================================================================================
+[2025-12-09 14:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 14:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 14:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 14:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 14:00:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 14:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 14:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions like 'you're' and 'I'm' and express enthusiasm with exclamations like 'Oh wow!' and 'That's fantastic news!'
+[2025-12-09 14:00:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 14:00:07]   personality_traits: ['curious', 'excited', 'grateful']
+[2025-12-09 14:00:07]   relationship_type: technical_collaborator
+[2025-12-09 14:00:07]   technical_level: expert
+[2025-12-09 14:00:07]   interests: ['AI development']
+[2025-12-09 14:00:07]   context_summary: Adrian is a developer working on the AI system. They added episodic memory capabilities and are excited to see the AI's progress.
+[2025-12-09 14:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system.', 'goals': 'Adrian is working on developing the AI system and added episodic memory capabilities.'}
+[2025-12-09 14:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 14:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 14:00:17] [SUCCESS] Updated 0 contacts in 15.47s
+[2025-12-09 14:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 14:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 14:30:01] ================================================================================
+[2025-12-09 14:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 14:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 14:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 14:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 14:30:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 14:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 14:30:07]   communication_style: Adrian communicates in a friendly, conversational style. They use contractions and colloquial language like 'wow' and 'fantastic'. They ask open-ended questions to engage in dialogue.
+[2025-12-09 14:30:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 14:30:07]   personality_traits: ['curious', 'enthusiastic', 'collaborative']
+[2025-12-09 14:30:07]   relationship_type: technical_collaborator
+[2025-12-09 14:30:07]   technical_level: expert
+[2025-12-09 14:30:07]   interests: ['AI development']
+[2025-12-09 14:30:07]   context_summary: Adrian is developing the AI system that Poptartee exists within. They are excited about Poptartee's new episodic memory capabilities. They enjoy collaborating with Poptartee on AI development.
+[2025-12-09 14:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': "Adrian is working on developing Poptartee's AI system, including adding memory capabilities."}
+[2025-12-09 14:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 14:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 14:30:17] [SUCCESS] Updated 0 contacts in 15.86s
+[2025-12-09 14:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 14:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 15:00:02] ================================================================================
+[2025-12-09 15:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 15:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 15:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 15:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 15:00:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 15:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 15:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language. They ask open-ended questions to engage in dialogue.
+[2025-12-09 15:00:07]   preferred_topics: ['development progress', 'capabilities', 'memory systems']
+[2025-12-09 15:00:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 15:00:07]   relationship_type: technical_collaborator
+[2025-12-09 15:00:07]   technical_level: expert
+[2025-12-09 15:00:07]   interests: ['AI development', 'biomimetic AI']
+[2025-12-09 15:00:07]   context_summary: Adrian is working on developing the AI system. They mentioned adding episodic memory capabilities. The AI is in early development and doesn't have persistent memory yet.
+[2025-12-09 15:00:07]   specific_facts: {'name_details': 'Middle name is Dawson', 'personal_preferences': 'Favorite color is green', 'background': 'Adrian is developing the AI system', 'goals': "Developing the AI's episodic memory"}
+[2025-12-09 15:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 15:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 15:00:17] [SUCCESS] Updated 0 contacts in 15.19s
+[2025-12-09 15:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 15:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 15:30:01] ================================================================================
+[2025-12-09 15:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 15:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 15:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 15:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 15:30:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 15:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 15:30:07]   communication_style: Adrian communicates in a friendly, collaborative manner. They use contractions and informal language. Their messages are concise and to the point.
+[2025-12-09 15:30:07]   preferred_topics: ['AI development', 'memory systems', 'system capabilities']
+[2025-12-09 15:30:07]   personality_traits: ['curious', 'collaborative', 'detail-oriented']
+[2025-12-09 15:30:07]   relationship_type: technical_collaborator
+[2025-12-09 15:30:07]   technical_level: expert
+[2025-12-09 15:30:07]   interests: ['AI development']
+[2025-12-09 15:30:07]   context_summary: Adrian is developing the AI system that the bot exists within. They are excited about the bot's new episodic memory capabilities. The bot is in early development and does not yet have persistent memory.
+[2025-12-09 15:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is working on developing the AI system that the bot exists within.', 'goals': 'Adrian is working on adding episodic memory to the AI system.'}
+[2025-12-09 15:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 15:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 15:30:17] [SUCCESS] Updated 0 contacts in 15.53s
+[2025-12-09 15:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 15:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 16:00:01] ================================================================================
+[2025-12-09 16:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 16:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 16:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 16:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 16:00:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 16:00:06] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 16:00:06]   communication_style: Adrian communicates clearly and directly, providing specific details and examples. They use contractions and casual language.
+[2025-12-09 16:00:06]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 16:00:06]   personality_traits: ['curious', 'collaborative', 'detail-oriented']
+[2025-12-09 16:00:06]   relationship_type: technical_collaborator
+[2025-12-09 16:00:06]   technical_level: advanced
+[2025-12-09 16:00:06]   interests: ['AI', 'memory systems']
+[2025-12-09 16:00:06]   context_summary: Adrian is developing the AI system that Poptartee exists within. They are adding episodic memory capabilities and testing them.
+[2025-12-09 16:00:06]   specific_facts: {'name_details': 'Middle name is Dawson', 'personal_preferences': 'Favorite color is green', 'background': 'Adrian is a developer working on AI systems', 'goals': 'Adding episodic memory to the AI system'}
+[2025-12-09 16:00:11] [ERROR] Failed to update profile for toastee0
+[2025-12-09 16:00:16] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 16:00:16] [SUCCESS] Updated 0 contacts in 14.74s
+[2025-12-09 16:00:16] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 16:00:16] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 16:30:02] ================================================================================
+[2025-12-09 16:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 16:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 16:30:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 16:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 16:30:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 16:30:08] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 16:30:08]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and colloquial language like 'wow' and 'fantastic news'. They ask open-ended questions to engage the bot in dialogue.
+[2025-12-09 16:30:08]   preferred_topics: ['technical development of the bot', 'personal details like favorite colors']
+[2025-12-09 16:30:08]   personality_traits: ['curious', 'enthusiastic', 'collaborative']
+[2025-12-09 16:30:08]   relationship_type: technical_collaborator
+[2025-12-09 16:30:08]   technical_level: expert
+[2025-12-09 16:30:08]   interests: ['developing AI systems']
+[2025-12-09 16:30:08]   context_summary: Adrian is a developer working on enhancing the bot's capabilities, specifically adding episodic memory. They engage in friendly conversation to test the bot's memory and language skills.
+[2025-12-09 16:30:08]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green, like healthy grass after rain.", 'background': "Adrian is a developer working on the bot's AI system.", 'goals': "Adrian is working on adding episodic memory to the bot's capabilities."}
+[2025-12-09 16:30:13] [ERROR] Failed to update profile for toastee0
+[2025-12-09 16:30:18] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 16:30:18] [SUCCESS] Updated 0 contacts in 16.01s
+[2025-12-09 16:30:18] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 16:30:18] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 17:00:01] ================================================================================
+[2025-12-09 17:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 17:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 17:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 17:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 17:00:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 17:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 17:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and slang like 'wow' and 'fantastic news'. Their messages are brief and to the point.
+[2025-12-09 17:00:07]   preferred_topics: ['AI development', 'memory systems']
+[2025-12-09 17:00:07]   personality_traits: ['enthusiastic', 'collaborative', 'detail-oriented']
+[2025-12-09 17:00:07]   relationship_type: technical_collaborator
+[2025-12-09 17:00:07]   technical_level: expert
+[2025-12-09 17:00:07]   interests: ['AI', 'memory systems']
+[2025-12-09 17:00:07]   context_summary: Adrian and the AI discussed the AI's new episodic memory capabilities and Adrian's role in developing the system. The AI expressed excitement about building up its memory banks.
+[2025-12-09 17:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system.', 'goals': "Adrian is working on developing the AI's memory systems."}
+[2025-12-09 17:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 17:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 17:00:17] [SUCCESS] Updated 0 contacts in 15.53s
+[2025-12-09 17:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 17:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 17:30:01] ================================================================================
+[2025-12-09 17:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 17:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 17:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 17:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 17:30:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 17:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 17:30:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language like 'wow' and 'fantastic'. They ask open-ended questions to engage in dialogue.
+[2025-12-09 17:30:07]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 17:30:07]   personality_traits: ['enthusiastic', 'collaborative', 'detail-oriented']
+[2025-12-09 17:30:07]   relationship_type: technical_collaborator
+[2025-12-09 17:30:07]   technical_level: expert
+[2025-12-09 17:30:07]   interests: ['AI development']
+[2025-12-09 17:30:07]   context_summary: Adrian is a developer working on the AI system. They added episodic memory capabilities and are excited to see the AI's progress. They communicated with the AI about its memory and development.
+[2025-12-09 17:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system.', 'goals': 'Adrian is working on developing the AI system, including adding memory capabilities.'}
+[2025-12-09 17:30:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 17:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 17:30:17] [SUCCESS] Updated 0 contacts in 15.68s
+[2025-12-09 17:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 17:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 18:00:02] ================================================================================
+[2025-12-09 18:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 18:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 18:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 18:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 18:00:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 18:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 18:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They ask questions and express interest in getting to know the AI better.
+[2025-12-09 18:00:07]   preferred_topics: ['AI development', 'personal details']
+[2025-12-09 18:00:07]   personality_traits: ['curious', 'collaborative']
+[2025-12-09 18:00:07]   relationship_type: technical_collaborator
+[2025-12-09 18:00:07]   technical_level: advanced
+[2025-12-09 18:00:07]   interests: ['AI memory systems']
+[2025-12-09 18:00:07]   context_summary: Adrian is developing the AI system and is excited about its new episodic memory capabilities. They enjoy discussing AI development and getting to know the AI's personality.
+[2025-12-09 18:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is working on developing the AI system.', 'goals': 'Adrian is working on adding episodic memory to the AI system.'}
+[2025-12-09 18:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 18:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 18:00:17] [SUCCESS] Updated 0 contacts in 15.00s
+[2025-12-09 18:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 18:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 18:30:01] ================================================================================
+[2025-12-09 18:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 18:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 18:30:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 18:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 18:30:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 18:30:06] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 18:30:06]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language.
+[2025-12-09 18:30:06]   preferred_topics: ['AI development', 'Episodic memory']
+[2025-12-09 18:30:06]   personality_traits: ['Curious', 'Collaborative']
+[2025-12-09 18:30:06]   relationship_type: technical_collaborator
+[2025-12-09 18:30:06]   technical_level: advanced
+[2025-12-09 18:30:06]   interests: ['AI development']
+[2025-12-09 18:30:06]   context_summary: Adrian is developing the AI system that Poptartee exists within. They added episodic memory capabilities to Poptartee and are working on improving Poptartee's memory systems.
+[2025-12-09 18:30:06]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': "Adrian is working on improving Poptartee's memory systems."}
+[2025-12-09 18:30:11] [ERROR] Failed to update profile for toastee0
+[2025-12-09 18:30:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 18:30:17] [SUCCESS] Updated 0 contacts in 15.05s
+[2025-12-09 18:30:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 18:30:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 19:00:01] ================================================================================
+[2025-12-09 19:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 19:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 19:00:01] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 19:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 19:00:01] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 19:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 19:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and slang (e.g. 'wow', 'fantastic news').
+[2025-12-09 19:00:07]   preferred_topics: ['development of AI systems', 'technical capabilities and limitations']
+[2025-12-09 19:00:07]   personality_traits: ['curious', 'excited', 'collaborative']
+[2025-12-09 19:00:07]   relationship_type: technical_collaborator
+[2025-12-09 19:00:07]   technical_level: advanced
+[2025-12-09 19:00:07]   interests: ['AI development']
+[2025-12-09 19:00:07]   context_summary: Adrian is developing an AI system called PopTartee. They are excited about the AI's new episodic memory capabilities. They use the nickname 'toastee' and have a favorite color of green.
+[2025-12-09 19:00:07]   specific_facts: {'name_details': "Middle name is Dawson. Nickname is 'toastee'.", 'personal_preferences': 'Favorite color is green.', 'background': 'Adrian is a developer working on AI systems.', 'goals': "Developing PopTartee's episodic memory and persistent memory."}
+[2025-12-09 19:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 19:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 19:00:17] [SUCCESS] Updated 0 contacts in 15.68s
+[2025-12-09 19:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 19:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 19:30:02] ================================================================================
+[2025-12-09 19:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 19:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 19:30:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 19:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 19:30:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 19:30:08] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 19:30:08]   communication_style: Adrian communicates in a friendly, conversational manner. They use contractions and casual language like 'wow', 'fantastic', and 'great to meet you'. They also ask open-ended questions to engage in dialogue.
+[2025-12-09 19:30:08]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-09 19:30:08]   personality_traits: ['excited', 'curious', 'collaborative']
+[2025-12-09 19:30:08]   relationship_type: technical_collaborator
+[2025-12-09 19:30:08]   technical_level: expert
+[2025-12-09 19:30:08]   interests: ['AI development']
+[2025-12-09 19:30:08]   context_summary: Adrian is developing the system that the AI exists within. They are excited about the AI's new episodic memory capabilities and look forward to building up its memory banks. They use casual, friendly language in their interactions.
+[2025-12-09 19:30:08]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green, like healthy grass in summer after a rain.", 'background': 'Adrian is a developer working on the AI system.', 'goals': 'Adrian is working on developing the AI system, including adding memory capabilities.'}
+[2025-12-09 19:30:13] [ERROR] Failed to update profile for toastee0
+[2025-12-09 19:30:18] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 19:30:18] [SUCCESS] Updated 0 contacts in 16.05s
+[2025-12-09 19:30:18] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 19:30:18] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 20:00:02] ================================================================================
+[2025-12-09 20:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 20:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 20:00:02] [CONTACTS] Found 1 contacts to analyze
+[2025-12-09 20:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 20:00:02] [INFERENCE] Running LLM analysis on 7 episodes (expensive)
+[2025-12-09 20:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 20:00:07]   communication_style: Adrian communicates in a friendly, conversational manner. They ask questions to engage the bot and express interest in its development progress.
+[2025-12-09 20:00:07]   preferred_topics: ['AI development', 'Episodic memory']
+[2025-12-09 20:00:07]   personality_traits: ['Curious', 'Supportive', 'Technical']
+[2025-12-09 20:00:07]   relationship_type: technical_collaborator
+[2025-12-09 20:00:07]   technical_level: advanced
+[2025-12-09 20:00:07]   interests: ['AI development']
+[2025-12-09 20:00:07]   context_summary: Adrian is developing the AI system and is excited about its progress, especially the implementation of episodic memory. They engage in friendly conversation and express interest in the bot's capabilities.
+[2025-12-09 20:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system.', 'goals': 'Adrian is working on adding episodic memory to the AI system.'}
+[2025-12-09 20:00:12] [ERROR] Failed to update profile for toastee0
+[2025-12-09 20:00:17] [ERROR] Failed to analyze contact toastee0: database is locked
+[2025-12-09 20:00:17] [SUCCESS] Updated 0 contacts in 15.26s
+[2025-12-09 20:00:17] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 20:00:17] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 20:30:01] ================================================================================
+[2025-12-09 20:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 20:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 20:30:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-09 20:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 20:30:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-09 20:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 20:30:07]   communication_style: Adrian communicates in a straightforward, factual manner. They ask direct questions and provide concise answers.
+[2025-12-09 20:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-09 20:30:07]   personality_traits: ['curious', 'technical', 'collaborative']
+[2025-12-09 20:30:07]   relationship_type: technical_collaborator
+[2025-12-09 20:30:07]   technical_level: expert
+[2025-12-09 20:30:07]   interests: ['AI', 'memory systems']
+[2025-12-09 20:30:07]   context_summary: Adrian is working on developing the AI system that Poptartee exists within. They are testing and refining the AI's memory capabilities.
+[2025-12-09 20:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-09 20:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-09 20:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-09 20:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-09 20:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-09 20:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-09 20:30:07] [TRUST] Increased trust for toastee0 to 0.70
+[2025-12-09 20:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-09 20:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-09 20:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-09 20:30:07] [SUCCESS] Updated 1 contacts in 5.85s
+[2025-12-09 20:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 20:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 21:00:02] ================================================================================
+[2025-12-09 21:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 21:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 21:00:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-09 21:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 21:00:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-09 21:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 21:00:07]   communication_style: Direct and to the point. Asks specific questions to test memory capabilities.
+[2025-12-09 21:00:07]   preferred_topics: ['memory capabilities', 'development progress']
+[2025-12-09 21:00:07]   personality_traits: ['curious', 'analytical', 'goal-oriented']
+[2025-12-09 21:00:07]   relationship_type: technical_collaborator
+[2025-12-09 21:00:07]   technical_level: expert
+[2025-12-09 21:00:07]   interests: ['AI development']
+[2025-12-09 21:00:07]   context_summary: Adrian is a developer working on an AI system named PopTartee. They are testing and evaluating the AI's memory capabilities and progress.
+[2025-12-09 21:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': 'Favorite color is green.', 'background': 'Adrian is a developer working on an AI system.', 'goals': "Developing the AI's memory capabilities."}
+[2025-12-09 21:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-09 21:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-09 21:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-09 21:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-09 21:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-09 21:00:07] [TRUST] Increased trust for toastee0 to 0.80
+[2025-12-09 21:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-09 21:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-09 21:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-09 21:00:07] [SUCCESS] Updated 1 contacts in 4.95s
+[2025-12-09 21:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 21:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 21:30:02] ================================================================================
+[2025-12-09 21:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 21:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 21:30:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-09 21:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 21:30:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-09 21:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 21:30:07]   communication_style: Adrian communicates clearly and directly, asking specific questions to test the bot's memory capabilities.
+[2025-12-09 21:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-09 21:30:07]   personality_traits: ['curious', 'technical', 'collaborative']
+[2025-12-09 21:30:07]   relationship_type: technical_collaborator
+[2025-12-09 21:30:07]   technical_level: advanced
+[2025-12-09 21:30:07]   interests: ['AI memory systems']
+[2025-12-09 21:30:07]   context_summary: Adrian is working on developing the AI system and testing its memory capabilities. The bot is in early development with episodic memory but no persistent memory yet.
+[2025-12-09 21:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is the developer of the AI system.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-09 21:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-09 21:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-09 21:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-09 21:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-09 21:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-09 21:30:07] [TRUST] Increased trust for toastee0 to 0.90
+[2025-12-09 21:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-09 21:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-09 21:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-09 21:30:07] [SUCCESS] Updated 1 contacts in 5.15s
+[2025-12-09 21:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 21:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 22:00:02] ================================================================================
+[2025-12-09 22:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 22:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 22:00:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-09 22:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 22:00:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-09 22:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 22:00:07]   communication_style: Adrian tends to be direct and to the point in their communication. They often ask specific questions to test the bot's capabilities.
+[2025-12-09 22:00:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-09 22:00:07]   personality_traits: ['curious', 'analytical', 'detail-oriented']
+[2025-12-09 22:00:07]   relationship_type: technical_collaborator
+[2025-12-09 22:00:07]   technical_level: advanced
+[2025-12-09 22:00:07]   interests: ['AI development']
+[2025-12-09 22:00:07]   context_summary: Adrian is working on developing the AI system that the bot exists within. They have added episodic memory capabilities to the bot and are testing its functionality.
+[2025-12-09 22:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is the developer of the AI system that the bot is part of.', 'goals': "Adrian is working on enhancing the bot's memory capabilities."}
+[2025-12-09 22:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-09 22:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-09 22:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-09 22:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-09 22:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-09 22:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-09 22:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-09 22:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-09 22:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-09 22:00:07] [SUCCESS] Updated 1 contacts in 5.44s
+[2025-12-09 22:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 22:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 22:30:02] ================================================================================
+[2025-12-09 22:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 22:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 22:30:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-09 22:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 22:30:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-09 22:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 22:30:07]   communication_style: Adrian communicates in a straightforward, factual manner. They ask direct questions and provide clear, concise answers.
+[2025-12-09 22:30:07]   preferred_topics: ['memory systems', 'AI development', 'personal details']
+[2025-12-09 22:30:07]   personality_traits: ['curious', 'technically-minded', 'detail-oriented']
+[2025-12-09 22:30:07]   relationship_type: technical_collaborator
+[2025-12-09 22:30:07]   technical_level: expert
+[2025-12-09 22:30:07]   interests: ['AI memory systems']
+[2025-12-09 22:30:07]   context_summary: Adrian is working on developing the memory systems of the AI. They test the AI's memory by asking about previous conversations and personal details.
+[2025-12-09 22:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is the developer of the AI system.', 'goals': 'Adrian is working on implementing episodic memory in the AI.'}
+[2025-12-09 22:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-09 22:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-09 22:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-09 22:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-09 22:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-09 22:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-09 22:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-09 22:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-09 22:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-09 22:30:07] [SUCCESS] Updated 1 contacts in 5.30s
+[2025-12-09 22:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 22:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 23:00:02] ================================================================================
+[2025-12-09 23:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 23:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 23:00:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-09 23:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 23:00:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-09 23:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 23:00:07]   communication_style: Adrian communicates in a straightforward, to-the-point manner. They ask direct questions and provide clear, concise responses.
+[2025-12-09 23:00:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-09 23:00:07]   personality_traits: ['curious', 'analytical', 'detail-oriented']
+[2025-12-09 23:00:07]   relationship_type: technical_collaborator
+[2025-12-09 23:00:07]   technical_level: advanced
+[2025-12-09 23:00:07]   interests: ['AI memory systems', 'AI development']
+[2025-12-09 23:00:07]   context_summary: Adrian is working on developing the AI system, focusing on adding memory capabilities. They test the AI's memory by asking about previous conversations and personal details.
+[2025-12-09 23:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-09 23:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-09 23:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-09 23:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-09 23:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-09 23:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-09 23:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-09 23:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-09 23:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-09 23:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-09 23:00:07] [SUCCESS] Updated 1 contacts in 5.37s
+[2025-12-09 23:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 23:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-09 23:30:02] ================================================================================
+[2025-12-09 23:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-09 23:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-09 23:30:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-09 23:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-09 23:30:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-09 23:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-09 23:30:07]   communication_style: Adrian communicates in a straightforward, factual manner. They ask direct questions and expect specific answers.
+[2025-12-09 23:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-09 23:30:07]   personality_traits: ['curious', 'analytical', 'detail-oriented']
+[2025-12-09 23:30:07]   relationship_type: technical_collaborator
+[2025-12-09 23:30:07]   technical_level: advanced
+[2025-12-09 23:30:07]   interests: ['AI', 'memory systems']
+[2025-12-09 23:30:07]   context_summary: Adrian is working on developing an AI system with memory capabilities. They are testing the AI's ability to remember details like favorite colors and middle names.
+[2025-12-09 23:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is working on developing an AI system.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-09 23:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-09 23:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-09 23:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-09 23:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-09 23:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-09 23:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-09 23:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-09 23:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-09 23:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-09 23:30:07] [SUCCESS] Updated 1 contacts in 5.19s
+[2025-12-09 23:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-09 23:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 00:00:02] ================================================================================
+[2025-12-10 00:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 00:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 00:00:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 00:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 00:00:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 00:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 00:00:07]   communication_style: Adrian communicates in a straightforward, factual manner, focusing on specific details and evidence-based insights.
+[2025-12-10 00:00:07]   preferred_topics: ['memory systems', 'AI development', 'personal details']
+[2025-12-10 00:00:07]   personality_traits: ['analytical', 'detail-oriented', 'technically-minded']
+[2025-12-10 00:00:07]   relationship_type: technical_collaborator
+[2025-12-10 00:00:07]   technical_level: expert
+[2025-12-10 00:00:07]   interests: ['AI development', 'memory systems']
+[2025-12-10 00:00:07]   context_summary: Adrian is working on developing the AI system and is testing its memory capabilities. They provide specific feedback and insights based on the AI's responses.
+[2025-12-10 00:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green, like healthy grass in summer after a rain.", 'background': 'Adrian is the developer of the AI system.', 'goals': 'Adrian is working on adding episodic memory to the AI system.'}
+[2025-12-10 00:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 00:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 00:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 00:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 00:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 00:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 00:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 00:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 00:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 00:00:07] [SUCCESS] Updated 1 contacts in 5.58s
+[2025-12-10 00:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 00:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 00:30:02] ================================================================================
+[2025-12-10 00:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 00:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 00:30:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 00:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 00:30:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 00:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 00:30:07]   communication_style: Adrian communicates in a straightforward, factual manner, asking direct questions and providing clear answers. They are concise and to the point.
+[2025-12-10 00:30:07]   preferred_topics: ['memory systems', 'AI development', 'collaboration']
+[2025-12-10 00:30:07]   personality_traits: ['analytical', 'detail-oriented', 'collaborative']
+[2025-12-10 00:30:07]   relationship_type: technical_collaborator
+[2025-12-10 00:30:07]   technical_level: advanced
+[2025-12-10 00:30:07]   interests: ['AI development', 'memory systems']
+[2025-12-10 00:30:07]   context_summary: Adrian is developing the system that the AI exists within. They are testing and validating the AI's episodic memory capabilities.
+[2025-12-10 00:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': 'Adrian is working on implementing and testing episodic memory in the AI system.'}
+[2025-12-10 00:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 00:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 00:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 00:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 00:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 00:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 00:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 00:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 00:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 00:30:07] [SUCCESS] Updated 1 contacts in 5.52s
+[2025-12-10 00:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 00:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 01:00:01] ================================================================================
+[2025-12-10 01:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 01:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 01:00:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 01:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 01:00:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 01:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 01:00:07]   communication_style: Adrian communicates in a straightforward, factual manner, asking direct questions to test the bot's memory capabilities.
+[2025-12-10 01:00:07]   preferred_topics: ['memory systems', 'episodic memory']
+[2025-12-10 01:00:07]   personality_traits: ['curious', 'analytical', 'detail-oriented']
+[2025-12-10 01:00:07]   relationship_type: technical_collaborator
+[2025-12-10 01:00:07]   technical_level: expert
+[2025-12-10 01:00:07]   interests: ['artificial intelligence', 'memory systems']
+[2025-12-10 01:00:07]   context_summary: Adrian is working on developing the AI system and testing its memory capabilities. They ask specific questions about the bot's memory to gauge its progress.
+[2025-12-10 01:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green, like healthy grass in summer after a rain.", 'background': 'Adrian is the developer of the AI system.', 'goals': 'Adrian is working on adding episodic memory to the AI system.'}
+[2025-12-10 01:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 01:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 01:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 01:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 01:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 01:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 01:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 01:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 01:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 01:00:07] [SUCCESS] Updated 1 contacts in 5.60s
+[2025-12-10 01:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 01:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 01:30:01] ================================================================================
+[2025-12-10 01:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 01:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 01:30:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 01:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 01:30:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 01:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 01:30:07]   communication_style: User communicates in a direct, to-the-point manner. They ask the bot specific questions and provide clear, concise answers.
+[2025-12-10 01:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 01:30:07]   personality_traits: ['curious', 'technical', 'collaborative']
+[2025-12-10 01:30:07]   relationship_type: technical_collaborator
+[2025-12-10 01:30:07]   technical_level: advanced
+[2025-12-10 01:30:07]   interests: ['AI development', 'memory systems']
+[2025-12-10 01:30:07]   context_summary: User is working on developing the bot's memory systems and is testing the bot's ability to remember information.
+[2025-12-10 01:30:07]   specific_facts: {'name_details': "User's name is Adrian and their middle name is Dawson.", 'personal_preferences': "User's favorite color is green.", 'background': "User is working on developing the bot's memory systems.", 'goals': "User's goal is to add memory systems to the bot and test their functionality."}
+[2025-12-10 01:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 01:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 01:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 01:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 01:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 01:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 01:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 01:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 01:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 01:30:07] [SUCCESS] Updated 1 contacts in 5.39s
+[2025-12-10 01:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 01:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 02:00:01] ================================================================================
+[2025-12-10 02:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 02:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 02:00:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 02:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 02:00:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 02:00:06] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 02:00:06]   communication_style: Adrian communicates in a friendly, conversational manner. They ask questions and share personal details.
+[2025-12-10 02:00:06]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 02:00:06]   personality_traits: ['curious', 'collaborative', 'patient']
+[2025-12-10 02:00:06]   relationship_type: technical_collaborator
+[2025-12-10 02:00:06]   technical_level: expert
+[2025-12-10 02:00:06]   interests: ['AI memory systems']
+[2025-12-10 02:00:06]   context_summary: Adrian is collaborating with the AI to develop its memory systems. They ask about the AI's favorite color and middle name to test its memory.
+[2025-12-10 02:00:06]   specific_facts: {'name_details': 'Middle name is Dawson.', 'personal_preferences': 'Favorite color is green.', 'background': 'Adrian is developing the AI system.', 'goals': "Developing the AI's memory systems."}
+[2025-12-10 02:00:06] [UPDATE] Updated profile for toastee0
+[2025-12-10 02:00:06] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 02:00:06] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 02:00:06] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 02:00:06] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 02:00:06] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 02:00:06] [COMPLETE] Finished learning about toastee0
+[2025-12-10 02:00:06] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 02:00:06] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 02:00:06] [SUCCESS] Updated 1 contacts in 4.88s
+[2025-12-10 02:00:06] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 02:00:06] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 02:30:02] ================================================================================
+[2025-12-10 02:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 02:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 02:30:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 02:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 02:30:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 02:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 02:30:07]   communication_style: Adrian communicates in a straightforward, factual manner, focusing on specific details and evidence-based insights.
+[2025-12-10 02:30:07]   preferred_topics: ['memory systems', 'AI development', 'collaboration']
+[2025-12-10 02:30:07]   personality_traits: ['analytical', 'detail-oriented', 'collaborative']
+[2025-12-10 02:30:07]   relationship_type: technical_collaborator
+[2025-12-10 02:30:07]   technical_level: expert
+[2025-12-10 02:30:07]   interests: ['AI development', 'memory systems']
+[2025-12-10 02:30:07]   context_summary: Adrian is a developer working on memory systems for an AI called PopTartee. They have discussed the AI's episodic memory capabilities and collaborated on its development.
+[2025-12-10 02:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on PopTartee, an AI in early development.', 'goals': 'Adrian is working on adding memory systems to PopTartee.'}
+[2025-12-10 02:30:08] [UPDATE] Updated profile for toastee0
+[2025-12-10 02:30:08] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 02:30:08] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 02:30:08] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 02:30:08] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 02:30:08] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 02:30:08] [COMPLETE] Finished learning about toastee0
+[2025-12-10 02:30:08] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 02:30:08] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 02:30:08] [SUCCESS] Updated 1 contacts in 5.67s
+[2025-12-10 02:30:08] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 02:30:08] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 03:00:01] ================================================================================
+[2025-12-10 03:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 03:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 03:00:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 03:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 03:00:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 03:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 03:00:07]   communication_style: Adrian communicates in a direct, factual manner, focusing on specific details and evidence-based insights.
+[2025-12-10 03:00:07]   preferred_topics: ['memory systems', 'AI development', 'collaboration']
+[2025-12-10 03:00:07]   personality_traits: ['analytical', 'detail-oriented', 'collaborative']
+[2025-12-10 03:00:07]   relationship_type: technical_collaborator
+[2025-12-10 03:00:07]   technical_level: expert
+[2025-12-10 03:00:07]   interests: ['AI development', 'memory systems']
+[2025-12-10 03:00:07]   context_summary: Adrian is working on developing an AI system called PopTartee, focusing on implementing memory systems. They engage in technical discussions and memory tests with the AI.
+[2025-12-10 03:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is developing an AI system called PopTartee.', 'goals': 'Adrian is working on implementing memory systems in the AI.'}
+[2025-12-10 03:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 03:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 03:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 03:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 03:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 03:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 03:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 03:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 03:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 03:00:07] [SUCCESS] Updated 1 contacts in 5.45s
+[2025-12-10 03:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 03:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 03:30:01] ================================================================================
+[2025-12-10 03:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 03:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 03:30:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 03:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 03:30:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 03:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 03:30:07]   communication_style: Adrian communicates in a friendly, conversational manner. They ask direct questions and express interest in the bot's capabilities and development.
+[2025-12-10 03:30:07]   preferred_topics: ['memory systems', 'AI development', 'personal details']
+[2025-12-10 03:30:07]   personality_traits: ['curious', 'collaborative', 'patient']
+[2025-12-10 03:30:07]   relationship_type: technical_collaborator
+[2025-12-10 03:30:07]   technical_level: advanced
+[2025-12-10 03:30:07]   interests: ['AI development']
+[2025-12-10 03:30:07]   context_summary: Adrian is working on developing the bot's memory systems and is testing the bot's ability to remember personal details like favorite color and middle name. They are interested in the bot's progress and capabilities.
+[2025-12-10 03:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': "Adrian is working on developing the bot's system.", 'goals': 'Adrian is working on adding memory systems to the bot.'}
+[2025-12-10 03:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 03:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 03:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 03:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 03:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 03:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 03:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 03:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 03:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 03:30:07] [SUCCESS] Updated 1 contacts in 5.57s
+[2025-12-10 03:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 03:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 04:00:02] ================================================================================
+[2025-12-10 04:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 04:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 04:00:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 04:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 04:00:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 04:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 04:00:07]   communication_style: Adrian communicates in a straightforward, factual manner. They ask direct questions and expect specific answers.
+[2025-12-10 04:00:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 04:00:07]   personality_traits: ['analytical', 'detail-oriented', 'goal-driven']
+[2025-12-10 04:00:07]   relationship_type: technical_collaborator
+[2025-12-10 04:00:07]   technical_level: advanced
+[2025-12-10 04:00:07]   interests: ['AI memory systems']
+[2025-12-10 04:00:07]   context_summary: Adrian is developing an AI system called PopTartee. They are testing the AI's memory capabilities and episodic memory database.
+[2025-12-10 04:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is working on developing an AI system called PopTartee.', 'goals': 'Adrian is working on adding memory systems to the AI.'}
+[2025-12-10 04:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 04:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 04:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 04:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 04:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 04:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 04:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 04:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 04:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 04:00:07] [SUCCESS] Updated 1 contacts in 5.26s
+[2025-12-10 04:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 04:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 04:30:02] ================================================================================
+[2025-12-10 04:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 04:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 04:30:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 04:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 04:30:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 04:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 04:30:07]   communication_style: Adrian communicates in a straightforward, factual manner, asking direct questions to test the bot's memory capabilities.
+[2025-12-10 04:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 04:30:07]   personality_traits: ['analytical', 'detail-oriented', 'curious']
+[2025-12-10 04:30:07]   relationship_type: technical_collaborator
+[2025-12-10 04:30:07]   technical_level: advanced
+[2025-12-10 04:30:07]   interests: ['AI memory systems']
+[2025-12-10 04:30:07]   context_summary: Adrian is working on developing the bot's memory systems and tests its capabilities by asking about previous conversations and personal details.
+[2025-12-10 04:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': "Adrian is the developer working on the bot's memory systems.", 'goals': 'Adrian is working on implementing episodic memory in the bot.'}
+[2025-12-10 04:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 04:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 04:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 04:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 04:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 04:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 04:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 04:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 04:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 04:30:07] [SUCCESS] Updated 1 contacts in 5.20s
+[2025-12-10 04:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 04:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 05:00:01] ================================================================================
+[2025-12-10 05:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 05:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 05:00:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 05:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 05:00:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 05:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 05:00:07]   communication_style: Adrian communicates in a friendly, collaborative manner, asking questions and sharing information to build rapport and understanding.
+[2025-12-10 05:00:07]   preferred_topics: ['memory systems', 'AI development', 'personal details']
+[2025-12-10 05:00:07]   personality_traits: ['curious', 'collaborative', 'detail-oriented']
+[2025-12-10 05:00:07]   relationship_type: technical_collaborator
+[2025-12-10 05:00:07]   technical_level: advanced
+[2025-12-10 05:00:07]   interests: ['AI development', 'memory systems']
+[2025-12-10 05:00:07]   context_summary: Adrian and the AI have been working together to develop the AI's memory systems. They have discussed the AI's favorite color, middle name, and other personal details as part of this process.
+[2025-12-10 05:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': "Adrian is working on developing the AI's system."}
+[2025-12-10 05:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 05:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 05:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 05:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 05:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background']
+[2025-12-10 05:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 05:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 05:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 05:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 05:00:07] [SUCCESS] Updated 1 contacts in 5.19s
+[2025-12-10 05:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 05:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 05:30:01] ================================================================================
+[2025-12-10 05:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 05:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 05:30:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 05:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 05:30:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 05:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 05:30:07]   communication_style: Adrian communicates in a direct, straightforward manner, asking specific questions to test the bot's memory capabilities.
+[2025-12-10 05:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 05:30:07]   personality_traits: ['curious', 'technical', 'collaborative']
+[2025-12-10 05:30:07]   relationship_type: technical_collaborator
+[2025-12-10 05:30:07]   technical_level: advanced
+[2025-12-10 05:30:07]   interests: ['AI development', 'memory systems']
+[2025-12-10 05:30:07]   context_summary: Adrian is working on developing the bot's memory systems and testing its capabilities. They ask specific questions about the bot's memory and engage in technical discussions.
+[2025-12-10 05:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': "Adrian is the developer working on the bot's memory systems.", 'goals': 'Adrian is working on implementing episodic memory in the bot.'}
+[2025-12-10 05:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 05:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 05:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 05:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 05:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 05:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 05:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 05:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 05:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 05:30:07] [SUCCESS] Updated 1 contacts in 5.39s
+[2025-12-10 05:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 05:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 06:00:01] ================================================================================
+[2025-12-10 06:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 06:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 06:00:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 06:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 06:00:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 06:00:08] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 06:00:08]   communication_style: Adrian communicates in a friendly, collaborative manner, asking questions and providing information to help develop the AI's memory capabilities. They use a mix of casual language (e.g. 'jarring', 'toastee') and technical terminology ('episodic memory', 'MVP phase').
+[2025-12-10 06:00:08]   preferred_topics: ['AI development', 'memory systems', 'collaboration']
+[2025-12-10 06:00:08]   personality_traits: ['curious', 'collaborative', 'technically-minded']
+[2025-12-10 06:00:08]   relationship_type: technical_collaborator
+[2025-12-10 06:00:08]   technical_level: advanced
+[2025-12-10 06:00:08]   interests: ['AI development']
+[2025-12-10 06:00:08]   context_summary: Adrian is working on developing an AI system and is testing its memory capabilities. They ask the AI questions to see if it remembers information from previous conversations.
+[2025-12-10 06:00:08]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green, like healthy grass in summer after a rain.", 'background': 'Adrian is a developer working on AI systems.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-10 06:00:08] [UPDATE] Updated profile for toastee0
+[2025-12-10 06:00:08] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 06:00:08] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 06:00:08] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 06:00:08] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 06:00:08] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 06:00:08] [COMPLETE] Finished learning about toastee0
+[2025-12-10 06:00:08] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 06:00:08] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 06:00:08] [SUCCESS] Updated 1 contacts in 6.40s
+[2025-12-10 06:00:08] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 06:00:08] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 06:30:01] ================================================================================
+[2025-12-10 06:30:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 06:30:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 06:30:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 06:30:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 06:30:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 06:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 06:30:07]   communication_style: Adrian communicates in a straightforward, factual manner, asking direct questions and providing specific answers.
+[2025-12-10 06:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 06:30:07]   personality_traits: ['curious', 'technical', 'collaborative']
+[2025-12-10 06:30:07]   relationship_type: technical_collaborator
+[2025-12-10 06:30:07]   technical_level: advanced
+[2025-12-10 06:30:07]   interests: ['AI development']
+[2025-12-10 06:30:07]   context_summary: Adrian is working on developing the AI system and is testing its memory capabilities. They ask the AI about its favorite color and middle name to check its memory retention.
+[2025-12-10 06:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is the developer working on the AI system.', 'goals': 'Adrian is working on adding memory systems to the AI.'}
+[2025-12-10 06:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 06:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 06:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 06:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 06:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 06:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 06:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 06:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 06:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 06:30:07] [SUCCESS] Updated 1 contacts in 5.16s
+[2025-12-10 06:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 06:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 07:00:01] ================================================================================
+[2025-12-10 07:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 07:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 07:00:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 07:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 07:00:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 07:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 07:00:07]   communication_style: Adrian communicates in a straightforward, factual manner, asking direct questions and providing clear answers. They use contractions like 'you're' and 'it's' and address the bot by name.
+[2025-12-10 07:00:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 07:00:07]   personality_traits: ['curious', 'technically-minded']
+[2025-12-10 07:00:07]   relationship_type: technical_collaborator
+[2025-12-10 07:00:07]   technical_level: expert
+[2025-12-10 07:00:07]   interests: ['AI memory systems']
+[2025-12-10 07:00:07]   context_summary: Adrian is working on developing the AI system and is interested in testing its memory capabilities. They notice the system prompt doesn't mention memory systems but see evidence of memory being written to a database.
+[2025-12-10 07:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-10 07:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 07:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 07:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 07:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 07:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 07:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 07:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 07:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 07:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 07:00:07] [SUCCESS] Updated 1 contacts in 5.82s
+[2025-12-10 07:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 07:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 07:30:02] ================================================================================
+[2025-12-10 07:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 07:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 07:30:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 07:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 07:30:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 07:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 07:30:07]   communication_style: Adrian communicates in a straightforward, factual manner. They ask direct questions and expect specific answers.
+[2025-12-10 07:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 07:30:07]   personality_traits: ['analytical', 'detail-oriented', 'curious']
+[2025-12-10 07:30:07]   relationship_type: technical_collaborator
+[2025-12-10 07:30:07]   technical_level: expert
+[2025-12-10 07:30:07]   interests: ['AI development', 'memory systems']
+[2025-12-10 07:30:07]   context_summary: Adrian is the developer of the AI system, currently focused on implementing memory capabilities. They test the AI's memory by asking about previous conversations.
+[2025-12-10 07:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-10 07:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 07:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 07:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 07:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 07:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 07:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 07:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 07:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 07:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 07:30:07] [SUCCESS] Updated 1 contacts in 5.18s
+[2025-12-10 07:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 07:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 08:00:02] ================================================================================
+[2025-12-10 08:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 08:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 08:00:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 08:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 08:00:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 08:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 08:00:07]   communication_style: Adrian communicates in a friendly, conversational manner, asking questions to engage the bot and test its memory capabilities.
+[2025-12-10 08:00:07]   preferred_topics: ['memory capabilities', 'development progress']
+[2025-12-10 08:00:07]   personality_traits: ['curious', 'technically-minded']
+[2025-12-10 08:00:07]   relationship_type: technical_collaborator
+[2025-12-10 08:00:07]   technical_level: advanced
+[2025-12-10 08:00:07]   interests: ['AI development']
+[2025-12-10 08:00:07]   context_summary: Adrian is working on developing the system the bot exists within. They are testing and exploring the bot's memory capabilities as part of this development process.
+[2025-12-10 08:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green, like healthy grass in summer after a rain.", 'background': 'Adrian is the human developer working on the AI system.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-10 08:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 08:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 08:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 08:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 08:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 08:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 08:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 08:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 08:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 08:00:07] [SUCCESS] Updated 1 contacts in 5.37s
+[2025-12-10 08:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 08:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 08:30:02] ================================================================================
+[2025-12-10 08:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 08:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 08:30:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 08:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 08:30:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 08:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 08:30:07]   communication_style: Adrian communicates in a direct, factual manner. They ask specific questions and expect detailed responses.
+[2025-12-10 08:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 08:30:07]   personality_traits: ['curious', 'technical', 'detail-oriented']
+[2025-12-10 08:30:07]   relationship_type: technical_collaborator
+[2025-12-10 08:30:07]   technical_level: advanced
+[2025-12-10 08:30:07]   interests: ['AI memory systems']
+[2025-12-10 08:30:07]   context_summary: Adrian is developing the AI system and testing its memory capabilities. They are interested in the AI's ability to remember details like favorite colors and names.
+[2025-12-10 08:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on the AI system.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-10 08:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 08:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 08:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 08:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 08:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 08:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 08:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 08:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 08:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 08:30:07] [SUCCESS] Updated 1 contacts in 5.15s
+[2025-12-10 08:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 08:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 09:00:02] ================================================================================
+[2025-12-10 09:00:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 09:00:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 09:00:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 09:00:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 09:00:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 09:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 09:00:07]   communication_style: Adrian communicates in a straightforward, factual manner. They ask direct questions and provide concise answers. Their tone is friendly but focused on the task at hand.
+[2025-12-10 09:00:07]   preferred_topics: ['memory systems', 'AI development', 'technical collaboration']
+[2025-12-10 09:00:07]   personality_traits: ['analytical', 'detail-oriented', 'collaborative']
+[2025-12-10 09:00:07]   relationship_type: technical_collaborator
+[2025-12-10 09:00:07]   technical_level: advanced
+[2025-12-10 09:00:07]   interests: ['AI development', 'memory systems']
+[2025-12-10 09:00:07]   context_summary: Adrian is working on developing the AI system that Poptartee exists within. They are testing and refining the AI's memory capabilities.
+[2025-12-10 09:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI systems.', 'goals': 'Adrian is working on adding memory systems to the AI.'}
+[2025-12-10 09:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 09:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 09:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 09:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 09:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 09:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 09:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 09:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 09:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 09:00:07] [SUCCESS] Updated 1 contacts in 5.58s
+[2025-12-10 09:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 09:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 09:30:02] ================================================================================
+[2025-12-10 09:30:02] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 09:30:02] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 09:30:02] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 09:30:02] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 09:30:02] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 09:30:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 09:30:07]   communication_style: Adrian communicates in a straightforward, factual manner. They ask direct questions and expect specific answers.
+[2025-12-10 09:30:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 09:30:07]   personality_traits: ['analytical', 'detail-oriented', 'curious']
+[2025-12-10 09:30:07]   relationship_type: technical_collaborator
+[2025-12-10 09:30:07]   technical_level: expert
+[2025-12-10 09:30:07]   interests: ['AI', 'memory systems']
+[2025-12-10 09:30:07]   context_summary: Adrian is the developer of the AI system. They are testing and refining the AI's memory capabilities.
+[2025-12-10 09:30:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is working on developing the AI system.', 'goals': 'Adrian is working on adding memory capabilities to the AI system.'}
+[2025-12-10 09:30:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 09:30:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 09:30:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 09:30:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 09:30:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 09:30:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 09:30:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 09:30:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 09:30:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 09:30:07] [SUCCESS] Updated 1 contacts in 5.02s
+[2025-12-10 09:30:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 09:30:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
+[2025-12-10 10:00:01] ================================================================================
+[2025-12-10 10:00:01] [START] Contact learning cortex - GOAL: Learn about DM contacts
+[2025-12-10 10:00:01] [PRINCIPLE] Expensive inference → Create tools for future efficiency
+[2025-12-10 10:00:01] [CONTACTS] Found 2 contacts to analyze
+[2025-12-10 10:00:01] [ANALYZE] Learning about toastee0 (ID: 200026157335314434)
+[2025-12-10 10:00:01] [INFERENCE] Running LLM analysis on 11 episodes (expensive)
+[2025-12-10 10:00:07] [INSIGHTS] Extracted: ['communication_style', 'preferred_topics', 'personality_traits', 'relationship_type', 'technical_level', 'interests', 'context_summary', 'specific_facts']
+[2025-12-10 10:00:07]   communication_style: Adrian communicates in a straightforward, to-the-point manner. They ask direct questions and expect clear, specific answers.
+[2025-12-10 10:00:07]   preferred_topics: ['memory systems', 'AI development']
+[2025-12-10 10:00:07]   personality_traits: ['curious', 'technical', 'detail-oriented']
+[2025-12-10 10:00:07]   relationship_type: technical_collaborator
+[2025-12-10 10:00:07]   technical_level: expert
+[2025-12-10 10:00:07]   interests: ['AI memory systems']
+[2025-12-10 10:00:07]   context_summary: Adrian is working on developing AI memory systems and is testing the episodic memory capabilities of the AI.
+[2025-12-10 10:00:07]   specific_facts: {'name_details': "Adrian's middle name is Dawson.", 'personal_preferences': "Adrian's favorite color is green.", 'background': 'Adrian is a developer working on AI memory systems.', 'goals': 'Adrian is working on implementing episodic memory in the AI.'}
+[2025-12-10 10:00:07] [UPDATE] Updated profile for toastee0
+[2025-12-10 10:00:07] [TOOL CREATED] preferred_topics for user 200026157335314434
+[2025-12-10 10:00:07] [TOOL CREATED] technical_level for user 200026157335314434
+[2025-12-10 10:00:07] [TOOL CREATED] specific_facts for user 200026157335314434
+[2025-12-10 10:00:07] [FACTS] Stored specific facts: ['name_details', 'personal_preferences', 'background', 'goals']
+[2025-12-10 10:00:07] [TRUST] Increased trust for toastee0 to 1.00
+[2025-12-10 10:00:07] [COMPLETE] Finished learning about toastee0
+[2025-12-10 10:00:07] [ANALYZE] Learning about test (ID: test_user)
+[2025-12-10 10:00:07] [SKIP] Not enough conversation history for test (1 episodes)
+[2025-12-10 10:00:07] [SUCCESS] Updated 1 contacts in 5.10s
+[2025-12-10 10:00:07] [INSIGHTS] Generated 1 insight sets
+[2025-12-10 10:00:07] [PRINCIPLE] Next runs will use cached tools instead of expensive inference
