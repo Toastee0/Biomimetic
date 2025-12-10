@@ -3,21 +3,65 @@
 import sqlite3
 import time
 from typing import List, Dict, Optional
+from functools import wraps
 import os
+
+
+def retry_on_lock(max_attempts=3, backoff=1.5):
+    """Decorator to retry database operations on lock errors
+
+    Args:
+        max_attempts: Maximum number of retry attempts
+        backoff: Exponential backoff multiplier
+    """
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            attempt = 0
+            wait_time = 0.1
+
+            while attempt < max_attempts:
+                try:
+                    return func(*args, **kwargs)
+                except sqlite3.OperationalError as e:
+                    if "locked" in str(e).lower() and attempt < max_attempts - 1:
+                        attempt += 1
+                        time.sleep(wait_time)
+                        wait_time *= backoff
+                    else:
+                        raise
+
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
 
 
 class EpisodicMemory:
     """Manages episodic memory (recent conversations)"""
-    
+
     def __init__(self, db_path: str = None):
         if db_path is None:
             db_path = os.getenv("DATABASE_PATH", "/home/toastee/BioMimeticAi/data/biomim.db")
         self.db_path = db_path
-    
+        self._init_wal_mode()
+
+    def _init_wal_mode(self):
+        """Initialize WAL mode for better concurrent access"""
+        try:
+            conn = sqlite3.connect(self.db_path)
+            conn.execute("PRAGMA journal_mode=WAL")
+            conn.execute("PRAGMA busy_timeout=5000")
+            conn.close()
+        except Exception as e:
+            print(f"[EPISODIC WARNING] Could not enable WAL mode: {e}")
+
     def _get_connection(self):
-        """Get database connection"""
-        return sqlite3.connect(self.db_path)
+        """Get database connection with proper settings"""
+        conn = sqlite3.connect(self.db_path, timeout=10.0)
+        conn.execute("PRAGMA busy_timeout=5000")
+        return conn
     
+    @retry_on_lock(max_attempts=3, backoff=1.5)
     def store_episode(
         self,
         user_id: str,
@@ -28,7 +72,7 @@ class EpisodicMemory:
         salience_score: float = 1.0
     ) -> int:
         """Store a conversation episode
-        
+
         Args:
             user_id: Discord user ID
             username: Discord username
@@ -36,26 +80,26 @@ class EpisodicMemory:
             bot_response: How the bot responded
             hemisphere: Which model was used ('analytical' or 'social')
             salience_score: Importance score (0.0 to 1.0)
-            
+
         Returns:
             episode_id of the stored episode
         """
         conn = self._get_connection()
         cursor = conn.cursor()
-        
+
         now = int(time.time())
-        
+
         cursor.execute("""
             INSERT INTO episodes (
                 timestamp, user_id, username, user_message, bot_response,
                 hemisphere, salience_score, created_at
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, (now, user_id, username, user_message, bot_response, hemisphere, salience_score, now))
-        
+
         episode_id = cursor.lastrowid
         conn.commit()
         conn.close()
-        
+
         return episode_id
     
     def get_recent_episodes(
@@ -97,6 +141,65 @@ class EpisodicMemory:
         
         return episodes
     
+    @retry_on_lock(max_attempts=3, backoff=1.5)
+    def update_salience(self, episode_id: int, new_score: float) -> bool:
+        """Update the salience score of an episode
+
+        Args:
+            episode_id: Episode to update
+            new_score: New salience score (0.0 to 1.0)
+
+        Returns:
+            Success boolean
+        """
+        conn = self._get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            UPDATE episodes
+            SET salience_score = ?
+            WHERE episode_id = ?
+        """, (new_score, episode_id))
+
+        success = cursor.rowcount > 0
+        conn.commit()
+        conn.close()
+
+        return success
+
+    @retry_on_lock(max_attempts=3, backoff=1.5)
+    def mark_consolidated(self, episode_ids: List[int]) -> bool:
+        """Mark episodes as consolidated into semantic memory
+
+        Args:
+            episode_ids: List of episode IDs to mark (or single int)
+
+        Returns:
+            Success boolean
+        """
+        # Handle single int or list
+        if isinstance(episode_ids, int):
+            episode_ids = [episode_ids]
+
+        if not episode_ids:
+            return False
+
+        conn = self._get_connection()
+        cursor = conn.cursor()
+
+        placeholders = ",".join("?" * len(episode_ids))
+        cursor.execute(f"""
+            UPDATE episodes
+            SET consolidated = 1
+            WHERE episode_id IN ({placeholders})
+        """, episode_ids)
+
+        success = cursor.rowcount > 0
+        conn.commit()
+        conn.close()
+
+        return success
+    
     def get_context_window(
         self,
         user_id: str,
@@ -122,42 +225,6 @@ class EpisodicMemory:
             context_parts.append(f"Assistant: {ep['bot_response']}")
         
         return "\n".join(context_parts)
-    
-    def mark_consolidated(self, episode_ids: List[int]):
-        """Mark episodes as consolidated into semantic memory
-        
-        Args:
-            episode_ids: List of episode IDs to mark
-        """
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        
-        placeholders = ",".join("?" * len(episode_ids))
-        cursor.execute(f"""
-            UPDATE episodes
-            SET consolidated = 1
-            WHERE episode_id IN ({placeholders})
-        """, episode_ids)
-        
-        conn.commit()
-        conn.close()
-    
-    def update_salience(self, episode_id: int, new_score: float):
-        """Update the salience score of an episode
-        
-        Args:
-            episode_id: Episode to update
-            new_score: New salience score (0.0 to 1.0)
-        """
-        conn = self._get_connection()
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            UPDATE episodes
-            SET salience_score = ?
-            WHERE episode_id = ?
-        """, (new_score, episode_id))
-        
 
     def retrieve_by_cue(self, cue_message: str, user_id: Optional[str] = None, limit: int = 5) -> List[Dict]:
         """Retrieve episodes triggered by environmental cues (biomimetic recall)
@@ -205,9 +272,6 @@ class EpisodicMemory:
         
         return episodes if episodes else self.get_recent_episodes(limit=limit, user_id=user_id)
 
-        conn.commit()
-        conn.close()
-    
     def get_episode_count(self, user_id: Optional[str] = None) -> int:
         """Get total number of episodes
         

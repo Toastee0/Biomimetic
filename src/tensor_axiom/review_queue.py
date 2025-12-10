@@ -26,6 +26,11 @@ class ReviewItem:
     timestamp: str
     status: str = "pending"  # pending, approved, rejected, modified
     reviewer_notes: str = ""
+    clarification_questions: List[str] = None  # Questions to ask human
+    
+    def __post_init__(self):
+        if self.clarification_questions is None:
+            self.clarification_questions = []
     
     def to_dict(self):
         return asdict(self)
@@ -75,8 +80,9 @@ class ReviewQueue:
         self,
         axiom_id: str,
         reason: str,
-        failed_tests: Optional[List[TestResult]] = None,
-        priority: Optional[float] = None
+        failed_tests: Optional[List] = None,
+        priority: Optional[float] = None,
+        clarification_questions: Optional[List[str]] = None
     ):
         """
         Add an axiom to the review queue.
@@ -86,6 +92,7 @@ class ReviewQueue:
             reason: Reason for review
             failed_tests: Optional list of failed test results
             priority: Optional priority override
+            clarification_questions: Questions to ask human for clarification
         """
         if not self.library:
             raise ValueError("Library not set, cannot add to review queue")
@@ -112,12 +119,16 @@ class ReviewQueue:
         failed_test_dicts = []
         if failed_tests:
             for test in failed_tests:
-                failed_test_dicts.append({
-                    'scenario_index': test.scenario_index,
-                    'confidence': test.confidence,
-                    'explanation': test.explanation,
-                    'timestamp': test.timestamp
-                })
+                # Handle both dict and object formats
+                if isinstance(test, dict):
+                    failed_test_dicts.append(test)
+                else:
+                    failed_test_dicts.append({
+                        'input': getattr(test, 'input', ''),
+                        'confidence': getattr(test, 'confidence', 0.0),
+                        'reasoning': getattr(test, 'reasoning', ''),
+                        'success': getattr(test, 'success', False)
+                    })
         
         item = ReviewItem(
             axiom_id=axiom_id,
@@ -126,11 +137,14 @@ class ReviewQueue:
             priority=priority,
             failed_tests=failed_test_dicts,
             metrics=axiom_data.get('performance_metrics', {}),
-            timestamp=datetime.now().isoformat()
+            timestamp=datetime.now().isoformat(),
+            clarification_questions=clarification_questions or []
         )
         
         self.queue.append(item)
         print(f"Added {axiom_id} to review queue (priority: {priority:.2f})")
+        if clarification_questions:
+            print(f"  - Clarification questions: {len(clarification_questions)}")
     
     def scan_library_for_issues(self):
         """
@@ -185,6 +199,69 @@ class ReviewQueue:
                 return
         
         print(f"No pending review found for {axiom_id}")
+    
+    def approve(self, axiom_id: str, notes: str = "") -> bool:
+        """
+        Approve an axiom and remove it from the queue.
+        
+        Args:
+            axiom_id: ID of the axiom
+            notes: Optional reviewer notes
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        for i, item in enumerate(self.queue):
+            if item.axiom_id == axiom_id and item.status == "pending":
+                self.queue.pop(i)
+                self.save()
+                print(f"Approved and removed {axiom_id} from queue")
+                return True
+        
+        print(f"No pending review found for {axiom_id}")
+        return False
+    
+    def reject(self, axiom_id: str, reason: str) -> bool:
+        """
+        Reject an axiom (mark for rework but keep in queue).
+        
+        Args:
+            axiom_id: ID of the axiom
+            reason: Rejection reason
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        for item in self.queue:
+            if item.axiom_id == axiom_id and item.status == "pending":
+                item.status = "rejected"
+                item.reviewer_notes = reason
+                self.save()
+                print(f"Rejected {axiom_id}: {reason}")
+                return True
+        
+        print(f"No pending review found for {axiom_id}")
+        return False
+    
+    def remove(self, axiom_id: str) -> bool:
+        """
+        Remove an axiom from the queue entirely.
+        
+        Args:
+            axiom_id: ID of the axiom
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        for i, item in enumerate(self.queue):
+            if item.axiom_id == axiom_id:
+                self.queue.pop(i)
+                self.save()
+                print(f"Removed {axiom_id} from queue")
+                return True
+        
+        print(f"Axiom {axiom_id} not found in queue")
+        return False
     
     def display_queue(self, limit: int = 10):
         """

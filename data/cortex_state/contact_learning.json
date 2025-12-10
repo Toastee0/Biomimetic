@@ -1,0 +1,11 @@
+{
+  "last_run": 1765328417,
+  "status": "success",
+  "duration_seconds": 15.26,
+  "contacts_updated": 0,
+  "insights_generated": 1,
+  "errors": [
+    "Failed to analyze contact toastee0: database is locked"
+  ],
+  "next_scheduled": 1765330217
+}

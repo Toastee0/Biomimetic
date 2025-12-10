@@ -1,0 +1,11 @@
+{
+  "last_run": 1765328403,
+  "status": "error",
+  "duration_seconds": 0.0,
+  "axioms_tested": 0,
+  "problematic_found": 0,
+  "errors": [
+    "Fatal error in phase initialization: Axiom library not found: data/axioms/base_axioms.json"
+  ],
+  "next_scheduled": 1765342803
+}

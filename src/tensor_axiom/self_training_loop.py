@@ -24,6 +24,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from src.daemon.textgen_client import TextGenClient
 from src.tensor_axiom.axiom_library import AxiomLibrary
 from src.tensor_axiom.review_queue import ReviewQueue
+from src.core.prompts import (
+    get_axiom_evaluation_prompt,
+    get_axiom_refinement_prompt,
+    get_axiom_improvement_prompt
+)
 
 
 class SelfTrainingLoop:
@@ -101,7 +106,8 @@ TASK: Evaluate if this axiom would handle this scenario correctly.
 Respond in JSON format:
 {{"applies": true/false, "correct_behavior": true/false, "meets_criteria": true/false, "confidence": 0.0-1.0, "reasoning": "..."}}"""
 
-        system_prompt = """You are an axiom evaluation system. You analyze whether axioms in a reasoning system would correctly handle test scenarios. Be precise and critical."""
+        # Use centralized system prompt
+        system_prompt = get_axiom_evaluation_prompt()
         
         try:
             response = self.textgen.generate(
@@ -239,12 +245,125 @@ Respond in JSON format:
             # Flag if success rate < 70% or confidence < 0.6
             if result['total_scenarios'] > 0:
                 success_rate = result['passed'] / result['total_scenarios']
-                if success_rate < 0.7 or result['avg_confidence'] < 0.6:
-                    reason = f"Success: {success_rate:.1%}, Confidence: {result['avg_confidence']:.2f}"
-                    self.queue.add_for_review(axiom_id, reason, priority=3 if success_rate < 0.5 else 2)
+                
+                # Collect failed and low-confidence test details
+                failed_tests = [r for r in result['results'] if not r['success']]
+                low_confidence_tests = [r for r in result['results'] if r['confidence'] < 0.6]
+                
+                # Build detailed reason with LLM explanations
+                reasons = []
+                if success_rate < 0.5:
+                    reasons.append(f"Critical: {result['failed']}/{result['total_scenarios']} scenarios failing")
+                elif success_rate < 0.7:
+                    reasons.append(f"Low success: {result['failed']}/{result['total_scenarios']} scenarios failing")
+                
+                if result['avg_confidence'] < 0.6:
+                    reasons.append(f"Low confidence: {result['avg_confidence']:.2f}/1.0")
+                
+                # Add specific failure explanations from LLM
+                if failed_tests:
+                    example = failed_tests[0]
+                    llm_reason = example['reasoning'][:150].replace('\n', ' ')
+                    reasons.append(f"Example failure: {llm_reason}")
+                elif low_confidence_tests:
+                    example = low_confidence_tests[0]
+                    llm_reason = example['reasoning'][:150].replace('\n', ' ')
+                    reasons.append(f"Uncertainty: {llm_reason}")
+                
+                if reasons:
+                    reason = "; ".join(reasons)
+                    
+                    # Generate clarification questions for problematic axioms
+                    questions = self.generate_clarification_questions(
+                        axiom_id, 
+                        result, 
+                        failed_tests, 
+                        low_confidence_tests
+                    )
+                    
+                    self.queue.add_for_review(
+                        axiom_id, 
+                        reason, 
+                        priority=3 if success_rate < 0.5 else 2,
+                        failed_tests=failed_tests,
+                        clarification_questions=questions
+                    )
                     problematic.append(axiom_id)
         
         return problematic
+    
+    def generate_clarification_questions(
+        self, 
+        axiom_id: str, 
+        result: Dict, 
+        failed_tests: List[Dict],
+        low_confidence_tests: List[Dict]
+    ) -> List[str]:
+        """
+        Generate specific questions to ask human for clarification.
+        
+        Args:
+            axiom_id: ID of the axiom
+            result: Test result summary
+            failed_tests: List of failed test results
+            low_confidence_tests: List of low confidence results
+            
+        Returns:
+            List of clarification questions
+        """
+        axiom = self.library.axioms.get(axiom_id)
+        if not axiom:
+            return []
+        
+        # Build context for question generation
+        context = f"""Axiom: {axiom['name']}
+Description: {axiom['description']}
+Formula: {axiom.get('formula', 'N/A')}
+
+Test Performance:
+- Success Rate: {result['passed']}/{result['total_scenarios']}
+- Confidence: {result['avg_confidence']:.2f}
+
+"""
+        
+        if failed_tests:
+            context += "\nFailed Scenarios:\n"
+            for i, test in enumerate(failed_tests[:2], 1):
+                context += f"{i}. Input: {test['input']}\n"
+                context += f"   LLM Reasoning: {test['reasoning'][:200]}\n\n"
+        
+        if low_confidence_tests:
+            context += "\nUncertain Scenarios:\n"
+            for i, test in enumerate(low_confidence_tests[:2], 1):
+                context += f"{i}. Input: {test['input']}\n"
+                context += f"   LLM Reasoning: {test['reasoning'][:200]}\n\n"
+        
+        prompt = f"""{context}
+
+Generate 2-3 specific questions to ask the human developer to clarify this axiom's behavior.
+Focus on the ambiguities or edge cases that caused test failures or low confidence.
+Make questions concise and actionable."""
+        
+        try:
+            response = self.textgen.generate(
+                prompt,
+                system_prompt=get_axiom_refinement_prompt(),
+                max_tokens=300,
+                temperature=0.7
+            )
+            
+            if response:
+                # Parse questions (assuming they're numbered or bulleted)
+                questions = [
+                    q.strip() 
+                    for q in response.split('\n') 
+                    if q.strip() and any(c in q for c in ['?', '1.', '2.', '3.', '-', '•'])
+                ]
+                return questions[:3]
+        except Exception as e:
+            print(f"Error generating clarification questions: {e}")
+        
+        return []
     
     def generate_improvement_suggestions(self, axiom_id: str, test_result: Dict) -> str:
         """
@@ -296,7 +415,8 @@ Consider:
 
 Provide 2-3 specific, actionable suggestions."""
 
-        system_prompt = """You are an axiom improvement advisor. Suggest precise modifications to axioms to improve their performance."""
+        # Use centralized system prompt
+        system_prompt = get_axiom_improvement_prompt()
         
         try:
             suggestions = self.textgen.generate(

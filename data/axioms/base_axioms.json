@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.0.0",
-    "last_updated": "2025-12-08T15:42:53.742203",
+    "last_updated": "2025-12-08T19:38:00.378982",
     "description": "Biomimetic AI Axiom Graph - Complete Architecture Implementation",
     "architecture_ref": "src/biomimetic_ai_axiom_graph.md",
     "layers": {
@@ -78,8 +78,8 @@
       "performance_metrics": {
         "success_rate": 1.0,
         "avg_confidence": 0.95,
-        "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:41:35.768840",
+        "human_approval_rate": 0.1,
+        "last_tested": "2025-12-08T15:56:46.375043",
         "test_count": 6
       }
     },
@@ -438,8 +438,8 @@
       "performance_metrics": {
         "success_rate": 1.0,
         "avg_confidence": 0.9,
-        "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:41:50.888143",
+        "human_approval_rate": 0.1,
+        "last_tested": "2025-12-08T19:37:02.106619",
         "test_count": 3
       }
     },
@@ -633,8 +633,8 @@
       "performance_metrics": {
         "success_rate": 0.0,
         "avg_confidence": 0.3,
-        "human_approval_rate": 0.0,
-        "last_tested": "2025-12-08T15:42:00.850751",
+        "human_approval_rate": 0.1,
+        "last_tested": "2025-12-08T19:38:00.378952",
         "test_count": 3
       }
     },
