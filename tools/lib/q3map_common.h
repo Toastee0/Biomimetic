@@ -72,6 +72,7 @@ void CreateBrushPlanepts(vec3_t mins, vec3_t maxs, side_t *sides, const char *te
 brush_t *BrushFromBounds(vec3_t mins, vec3_t maxs, const char *texture);
 brush_t **MakeBrushHollow(brush_t *solid, vec_t thickness, const char *texture, int *numbrushes);
 void WriteBrush(FILE *f, brush_t *brush);
+void WriteBrushNumbered(FILE *f, brush_t *brush, int brush_num);
 void WriteMapHeader(FILE *f, const char *comment);
 void WriteMapFooter(FILE *f);
 void FreeBrush(brush_t *brush);

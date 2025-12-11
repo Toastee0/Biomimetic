@@ -163,6 +163,7 @@ brush_t **MakeBrushHollow(brush_t *solid, vec_t thickness, const char *texture, 
 }
 
 // Write brush to .map file in standard Quake 3 format
+// brush_num: brush number for comment (use -1 to skip comment)
 void WriteBrush(FILE *f, brush_t *brush) {
     int i;
 
@@ -179,9 +180,16 @@ void WriteBrush(FILE *f, brush_t *brush) {
     fprintf(f, "}\n");
 }
 
-// Write .map file header
+// Write brush with number comment for q3map2 parser
+void WriteBrushNumbered(FILE *f, brush_t *brush, int brush_num) {
+    fprintf(f, "// brush %d\n", brush_num);
+    WriteBrush(f, brush);
+}
+
+// Write .map file header with entity marker
 void WriteMapHeader(FILE *f, const char *comment) {
     fprintf(f, "// %s\n", comment);
+    fprintf(f, "\n// entity 0\n");
     fprintf(f, "{\n");
     fprintf(f, "\"classname\" \"worldspawn\"\n");
 }

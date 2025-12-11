@@ -49,6 +49,7 @@ int main(int argc, char **argv) {
     }
 
     fprintf(output, "// Merged map: %s + %s\n\n", base_file, entity_file ? entity_file : "");
+    fprintf(output, "// entity 0\n");
     fprintf(output, "{\n\"classname\" \"worldspawn\"\n");
 
     // Copy structure brushes
@@ -78,8 +79,17 @@ void copy_worldspawn_brushes(FILE *in, FILE *out) {
     char line[1024];
     ParseState state = INIT;
     int depth = 0;
+    int brush_num = 0;
+    int in_brush_comment = 0;
 
     while (fgets(line, sizeof(line), in)) {
+        // Copy brush comments or add them
+        if (strstr(line, "// brush")) {
+            fprintf(out, "// brush %d\n", brush_num++);
+            in_brush_comment = 1;
+            continue;
+        }
+
         switch (state) {
             case INIT:
                 if (strchr(line, '{')) state = IN_WORLDSPAWN;
@@ -88,10 +98,15 @@ void copy_worldspawn_brushes(FILE *in, FILE *out) {
                 if (strchr(line, '{')) {
                     state = IN_BRUSH;
                     depth = 1;
+                    // Add brush comment if not already present
+                    if (!in_brush_comment) {
+                        fprintf(out, "// brush %d\n", brush_num++);
+                    }
+                    in_brush_comment = 0;
                     fprintf(out, "%s", line);
                 } else if (strchr(line, '}')) {
                     return; // Done
-                } else if (line[0] != '"') {
+                } else if (line[0] != '"' && line[0] != '/') {
                     fprintf(out, "%s", line);
                 }
                 break;
@@ -111,8 +126,16 @@ void copy_worldspawn_brushes(FILE *in, FILE *out) {
 void copy_entities_only(FILE *in, FILE *out) {
     char line[1024];
     int in_entity = 0, depth = 0;
+    int entity_num = 1; // Start at 1 (worldspawn is 0)
+    int need_entity_comment = 0;
 
     while (fgets(line, sizeof(line), in)) {
+        // Skip brush comments in entity files
+        if (strstr(line, "// brush")) continue;
+
+        // Handle entity comments
+        if (strstr(line, "// entity")) continue;
+
         if (!in_entity && strchr(line, '{')) {
             // Check if not worldspawn
             long pos = ftell(in);
@@ -125,6 +148,7 @@ void copy_entities_only(FILE *in, FILE *out) {
             if (!is_worldspawn) {
                 in_entity = 1;
                 depth = 1;
+                fprintf(out, "// entity %d\n", entity_num++);
                 fprintf(out, "%s", line);
             }
         } else if (in_entity) {

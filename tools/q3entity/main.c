@@ -206,18 +206,37 @@ void write_entity(FILE *f, entity_t *entity) {
     vec3_t qpos;
     float r, g, b;
     const char *model;
+    const char *classname;
 
     WorldToQuake(entity->position, qpos);
     ImportanceToColor(entity->importance, &r, &g, &b);
     model = GetModelForEntityType(entity->entity_type);
 
+    // Determine classname based on label or entity type
+    if (strstr(entity->label, "spawn") || strstr(entity->label, "player")) {
+        classname = "info_player_deathmatch";
+    } else if (strcmp(entity->entity_type, "HUMAN") == 0) {
+        classname = "info_player_deathmatch";  // Default humans to spawn points
+    } else {
+        classname = "misc_model";
+    }
+
     fprintf(f, "// %s (%s)\n", entity->label, entity->entity_type);
     fprintf(f, "{\n");
-    fprintf(f, "\"classname\" \"misc_model\"\n");
-    fprintf(f, "\"model\" \"%s\"\n", model);
-    fprintf(f, "\"origin\" \"%.1f %.1f %.1f\"\n", qpos[0], qpos[1], qpos[2]);
-    fprintf(f, "\"modelscale\" \"%.2f\"\n", entity->scale[0]);
-    fprintf(f, "\"_color\" \"%.2f %.2f %.2f\"\n", r, g, b);
-    fprintf(f, "\"targetname\" \"%s\"\n", entity->label);
+    fprintf(f, "\"classname\" \"%s\"\n", classname);
+
+    if (strcmp(classname, "info_player_deathmatch") == 0) {
+        // Spawn point format
+        fprintf(f, "\"origin\" \"%.1f %.1f %.1f\"\n", qpos[0], qpos[1], qpos[2]);
+        fprintf(f, "\"angle\" \"0\"\n");
+    } else {
+        // Model entity format
+        fprintf(f, "\"model\" \"%s\"\n", model);
+        fprintf(f, "\"origin\" \"%.1f %.1f %.1f\"\n", qpos[0], qpos[1], qpos[2]);
+        fprintf(f, "\"modelscale\" \"%.2f\"\n", entity->scale[0]);
+        fprintf(f, "\"_color\" \"%.2f %.2f %.2f\"\n", r, g, b);
+        fprintf(f, "\"targetname\" \"%s\"\n", entity->label);
+    }
+
     fprintf(f, "}\n");
 }

@@ -1,0 +1,15 @@
+{
+  "entities": [
+    {
+      "id": "spawn-center",
+      "label": "player_spawn",
+      "entity_type": "HUMAN",
+      "primitive": "CAPSULE",
+      "position": [0.0, 1.0, 0.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [1.0, 1.0, 1.0],
+      "velocity": [0.0, 0.0, 0.0],
+      "importance": 1.0
+    }
+  ]
+}

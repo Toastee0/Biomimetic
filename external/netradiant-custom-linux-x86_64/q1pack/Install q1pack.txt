@@ -1,0 +1,13 @@
+
+Set of files to map for Q1 and mods.
+Place folder contents to ID1 or mod (if radiant is configured to a mod) directory.
+
+netModels.pak..............a few entity models for editor
+netCommon.wad..............common textures (trigger, clip, hint etc.)
+commonQ1trans.shader.......shader, making common textures to look transparent
+shaderlist.txt
+
+
+**build menu is configured with ericw-tools compiler in mind;
+  (https://ericwa.github.io/ericw-tools/)
+  just drop binaries to radiant folder

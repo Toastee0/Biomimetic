@@ -1,0 +1,14 @@
+
+// entity 0
+{
+"classname" "worldspawn"
+// brush 0
+{
+( 448 448 192 ) ( 448 192 192 ) ( 256 448 192 ) base_floor/achtung_clang 0 0 0 0.5 0.5 0 0 0
+( 256 256 0 ) ( 64 256 0 ) ( 256 256 -64 ) base_floor/achtung_clang 0 0 0 0.5 0.5 0 0 0
+( 256 256 0 ) ( 256 256 -64 ) ( 256 0 0 ) base_floor/achtung_clang 0 0 0 0.5 0.5 0 0 0
+( 64 0 -64 ) ( 256 0 -64 ) ( 64 256 -64 ) base_floor/achtung_clang 0 0 0 0.5 0.5 0 0 0
+( 0 0 -64 ) ( 0 0 0 ) ( 192 0 -64 ) base_floor/achtung_clang 0 0 0 0.5 0.5 0 0 0
+( 0 0 -64 ) ( 0 256 -64 ) ( 0 0 0 ) base_floor/achtung_clang 0 0 0 0.5 0.5 0 0 0
+}
+}

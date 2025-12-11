@@ -1,0 +1,189 @@
+// BioMimetic AI World Model
+// Generated from spatial database
+// Origin: (0.0, 0.0, 0.0)
+// Entity count: 2
+
+{
+"classname" "worldspawn"
+"message" "BioMimetic AI World Model"
+"_color" "0.8 0.8 0.9"
+
+// Floor
+{
+( -1024 -1024 0 ) ( 1024 -1024 0 ) ( 1024 1024 0 ) textures/base_floor/techfloor2 0 0 0 0.5 0.5
+( -1024 -1024 -16 ) ( -1024 1024 -16 ) ( 1024 1024 -16 ) common/caulk 0 0 0 0.5 0.5
+( -1024 -1024 -16 ) ( -1024 -1024 0 ) ( -1024 1024 0 ) common/caulk 0 0 0 0.5 0.5
+( 1024 -1024 -16 ) ( 1024 1024 -16 ) ( 1024 1024 0 ) common/caulk 0 0 0 0.5 0.5
+( -1024 -1024 -16 ) ( 1024 -1024 -16 ) ( 1024 -1024 0 ) common/caulk 0 0 0 0.5 0.5
+( -1024 1024 -16 ) ( -1024 1024 0 ) ( 1024 1024 0 ) common/caulk 0 0 0 0.5 0.5
+}
+
+// Walls and ceiling
+{
+( -1024 1024 256 ) ( 1024 1024 256 ) ( 1024 1040 256 ) textures/base_wall/basewall01 0 0 0 0.5 0.5
+( -1024 1024 0 ) ( -1024 1040 0 ) ( 1024 1040 0 ) common/caulk 0 0 0 0.5 0.5
+( -1024 1024 0 ) ( -1024 1024 256 ) ( -1024 1040 256 ) common/caulk 0 0 0 0.5 0.5
+( 1024 1024 0 ) ( 1024 1040 0 ) ( 1024 1040 256 ) common/caulk 0 0 0 0.5 0.5
+( -1024 1024 0 ) ( 1024 1024 0 ) ( 1024 1024 256 ) textures/base_wall/basewall01 0 0 0 0.5 0.5
+( -1024 1040 0 ) ( -1024 1040 256 ) ( 1024 1040 256 ) common/caulk 0 0 0 0.5 0.5
+}
+
+{
+( -1024 -1040 256 ) ( 1024 -1040 256 ) ( 1024 -1024 256 ) textures/base_wall/basewall01 0 0 0 0.5 0.5
+( -1024 -1040 0 ) ( -1024 -1024 0 ) ( 1024 -1024 0 ) common/caulk 0 0 0 0.5 0.5
+( -1024 -1040 0 ) ( -1024 -1040 256 ) ( -1024 -1024 256 ) common/caulk 0 0 0 0.5 0.5
+( 1024 -1040 0 ) ( 1024 -1024 0 ) ( 1024 -1024 256 ) common/caulk 0 0 0 0.5 0.5
+( -1024 -1040 0 ) ( 1024 -1040 0 ) ( 1024 -1040 256 ) common/caulk 0 0 0 0.5 0.5
+( -1024 -1024 0 ) ( -1024 -1024 256 ) ( 1024 -1024 256 ) textures/base_wall/basewall01 0 0 0 0.5 0.5
+}
+
+{
+( 1024 -1024 256 ) ( 1040 -1024 256 ) ( 1040 1024 256 ) textures/base_wall/basewall01 0 0 0 0.5 0.5
+( 1024 -1024 0 ) ( 1024 1024 0 ) ( 1040 1024 0 ) common/caulk 0 0 0 0.5 0.5
+( 1024 -1024 0 ) ( 1024 -1024 256 ) ( 1024 1024 256 ) textures/base_wall/basewall01 0 0 0 0.5 0.5
+( 1040 -1024 0 ) ( 1040 1024 0 ) ( 1040 1024 256 ) common/caulk 0 0 0 0.5 0.5
+( 1024 -1024 0 ) ( 1040 -1024 0 ) ( 1040 -1024 256 ) common/caulk 0 0 0 0.5 0.5
+( 1024 1024 0 ) ( 1024 1024 256 ) ( 1040 1024 256 ) common/caulk 0 0 0 0.5 0.5
+}
+
+{
+( -1040 -1024 256 ) ( -1024 -1024 256 ) ( -1024 1024 256 ) textures/base_wall/basewall01 0 0 0 0.5 0.5
+( -1040 -1024 0 ) ( -1040 1024 0 ) ( -1024 1024 0 ) common/caulk 0 0 0 0.5 0.5
+( -1040 -1024 0 ) ( -1040 -1024 256 ) ( -1040 1024 256 ) common/caulk 0 0 0 0.5 0.5
+( -1024 -1024 0 ) ( -1024 1024 0 ) ( -1024 1024 256 ) textures/base_wall/basewall01 0 0 0 0.5 0.5
+( -1040 -1024 0 ) ( -1024 -1024 0 ) ( -1024 -1024 256 ) common/caulk 0 0 0 0.5 0.5
+( -1040 1024 0 ) ( -1040 1024 256 ) ( -1024 1024 256 ) common/caulk 0 0 0 0.5 0.5
+}
+
+{
+( -1024 -1024 272 ) ( 1024 -1024 272 ) ( 1024 1024 272 ) common/caulk 0 0 0 0.5 0.5
+( -1024 -1024 256 ) ( -1024 1024 256 ) ( 1024 1024 256 ) textures/base_wall/basewall01 0 0 0 0.5 0.5
+( -1024 -1024 256 ) ( -1024 -1024 272 ) ( -1024 1024 272 ) common/caulk 0 0 0 0.5 0.5
+( 1024 -1024 256 ) ( 1024 1024 256 ) ( 1024 1024 272 ) common/caulk 0 0 0 0.5 0.5
+( -1024 -1024 256 ) ( 1024 -1024 256 ) ( 1024 -1024 272 ) common/caulk 0 0 0 0.5 0.5
+( -1024 1024 256 ) ( -1024 1024 272 ) ( 1024 1024 272 ) common/caulk 0 0 0 0.5 0.5
+}
+
+}
+
+// AI Observer Camera
+{
+"classname" "info_player_intermission"
+"origin" "0.0 0.0 64.0"
+"angle" "0"
+"target" "ai_focus"
+"notfree" "1"
+"notsingle" "1"
+}
+
+// AI focus point marker
+{
+"classname" "target_position"
+"targetname" "ai_focus"
+"origin" "0.0 0.0 0.0"
+}
+
+// AI viewpoint indicator (visible model)
+{
+"classname" "misc_model"
+"model" "models/mapobjects/teleporter/energy.md3"
+"origin" "0.0 0.0 64.0"
+"modelscale" "2.0"
+"_color" "0.2 0.8 1.0"
+"notfree" "1"
+"notsingle" "1"
+}
+
+// Player spawn 1
+{
+"classname" "info_player_deathmatch"
+"origin" "200.0 0.0 40.0"
+"angle" "180.0"
+}
+
+// Player spawn 2
+{
+"classname" "info_player_deathmatch"
+"origin" "141.4 141.4 40.0"
+"angle" "225.0"
+}
+
+// Player spawn 3
+{
+"classname" "info_player_deathmatch"
+"origin" "0.0 200.0 40.0"
+"angle" "270.0"
+}
+
+// Player spawn 4
+{
+"classname" "info_player_deathmatch"
+"origin" "-141.4 141.4 40.0"
+"angle" "315.0"
+}
+
+// Player spawn 5
+{
+"classname" "info_player_deathmatch"
+"origin" "-200.0 0.0 40.0"
+"angle" "0.0"
+}
+
+// Player spawn 6
+{
+"classname" "info_player_deathmatch"
+"origin" "-141.4 -141.4 40.0"
+"angle" "45.0"
+}
+
+// Player spawn 7
+{
+"classname" "info_player_deathmatch"
+"origin" "-0.0 -200.0 40.0"
+"angle" "90.0"
+}
+
+// Player spawn 8
+{
+"classname" "info_player_deathmatch"
+"origin" "141.4 -141.4 40.0"
+"angle" "135.0"
+}
+
+// Ambient light at AI origin
+{
+"classname" "light"
+"origin" "0.0 0.0 200.0"
+"light" "300"
+"_color" "0.9 0.9 1.0"
+}
+
+// Furniture: desk_main
+{
+"classname" "func_group"
+{
+( -24.0 -12.8 27.200000000000003 ) ( 24.0 -12.8 27.200000000000003 ) ( 24.0 12.8 27.200000000000003 ) textures/base_wall/chrome_env 0 0 0 0.5 0.5
+( -24.0 -12.8 24.0 ) ( -24.0 12.8 24.0 ) ( 24.0 12.8 24.0 ) textures/base_wall/chrome_env 0 0 0 0.5 0.5
+( -24.0 -12.8 24.0 ) ( -24.0 -12.8 27.200000000000003 ) ( -24.0 12.8 27.200000000000003 ) textures/base_wall/chrome_env 0 0 0 0.5 0.5
+( 24.0 -12.8 24.0 ) ( 24.0 12.8 24.0 ) ( 24.0 12.8 27.200000000000003 ) textures/base_wall/chrome_env 0 0 0 0.5 0.5
+( -24.0 -12.8 24.0 ) ( 24.0 -12.8 24.0 ) ( 24.0 -12.8 27.200000000000003 ) textures/base_wall/chrome_env 0 0 0 0.5 0.5
+( -24.0 12.8 24.0 ) ( -24.0 12.8 27.200000000000003 ) ( 24.0 12.8 27.200000000000003 ) textures/base_wall/chrome_env 0 0 0 0.5 0.5
+}
+}
+
+// Human: human_partner
+{
+"classname" "misc_model"
+"model" "models/players/sarge/upper.md3"
+"origin" "64.0 0.0 32.0"
+"modelscale" "1.0"
+"_color" "1.00 0.20 0.20"
+"message" "human_partner"
+"importance" "1.00"
+}
+{
+"classname" "light"
+"origin" "64.0 0.0 96.0"
+"light" "150"
+"_color" "1.00 0.20 0.20"
+}

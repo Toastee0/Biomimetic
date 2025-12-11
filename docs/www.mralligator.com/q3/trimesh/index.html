@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>
+Triangle Meshes in Q3
+</title>
+</head>
+<body vlink="#001e73" link="#001e73" bgcolor="#ffffff" text="#000000">
+
+<h2>Triangle Meshes in Q3</h2>
+
+<h3>Intro</h3>
+
+<p>
+This is a short page to illustrate some concepts relating to triangle
+meshes in q3.  It was put together to help answer a Usenet post regarding
+such meshes.
+
+<h3>Images</h3>
+
+<p>
+<center>
+<table width=80%>
+<tr><td align=center>
+<img src="gargoyle1.jpg">
+</td>
+<tr><td>
+<b>Gargoyle from q3dm7.</b>  This image was captured using a q3 map
+rendering tool I developed to decode the q3 .bsp file format.
+</td>
+</table>
+</center>
+
+<p>
+<center>
+<table width=80%>
+<tr><td align=center>
+<img src="gargoyle2.jpg">
+</td>
+<tr><td>
+
+<b>Selected leaf.</b> I have selected the leaf containing the gargoyle by
+pointing at the gargoyle and clicking on it.  A ray is traced from the
+viewer through the BSP tree in the direction of the mouse click.  BSP
+leaves are walked along the ray, and brushes in each leaf are intersected
+with the ray to check for collision.  This is a form of ray tracing, only
+not in the rendering sense, but in the collision detection sense.
+<p>
+The ray intersected a brush representing the gargoyle's head; the brush is
+shown in a later image.  Highlighted in purple are the faces referenced by
+the leaf containing the ray/brush intersection; the red glyph indicates the
+point of intersection.
+</td>
+</table>
+</center>
+
+<p>
+<center>
+<table width=80%>
+<tr><td align=center>
+<img src="gargoyle3.jpg">
+</td>
+<tr><td>
+<b>Highlighted triangle mesh.</b>  After selecting the gargoyle, I
+cycled through the faces in the selected leaf and stopped when the gargoyle
+was highlighted.  The gargoyle is a single face with type 3 (triangle
+mesh).  Triangle meshes consist of an unordered collection of vertices with
+an associated but separate list of vertex indices that indicate triangle
+connectivity.
+</td>
+</table>
+</center>
+
+<p>
+<center>
+<table width=80%>
+<tr><td align=center>
+<img src="gargoyle4.sm.jpg">
+<img src="gargoyle5.sm.jpg">
+<img src="gargoyle6.sm.jpg">
+<img src="gargoyle7.sm.jpg">
+<img src="gargoyle8.sm.jpg">
+<img src="gargoyle9.sm.jpg">
+</td>
+<tr><td> <b>Six images showing highlighted brushes.</b> Finally, I cycled
+through the brushes in the selected leaf to show in particular the brushes
+that bound the gargoyle.  Notice how the brushes form a very rough bound.
+<p>
+A larger brush surrounds the pillar below the gargoyle in addition to the
+gargoyle itself.  This brush blocks players in particular, helping them
+navigate around the pillar without getting stuck easily.
+</td>
+</table>
+</center>
+
+
+
+<p>
+<hr>
+<em>Copyright &copy; 2000 <a href="http://graphics.stanford.edu/~kekoa/">Kekoa Proudfoot</a>.  All rights reserved.</em>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2558573-2";
+urchinTracker();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+// Merged map: data/world_model/maps/room_2m.map + data/world_model/maps/spawn_entity.map
+
+{
+"classname" "worldspawn"
+{
+( -256 256 8 ) ( -256 -256 8 ) ( -256 -256 0 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 256 256 8 ) ( -256 256 8 ) ( -256 256 0 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 256 -256 8 ) ( 256 256 8 ) ( 256 256 0 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -256 -256 8 ) ( 256 -256 8 ) ( 256 -256 0 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -256 -256 0 ) ( -256 256 0 ) ( 256 256 0 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 256 256 8 ) ( -256 256 8 ) ( -256 -256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+}
+{
+( -256 256 256 ) ( -256 -256 256 ) ( -256 -256 248 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 256 256 256 ) ( -256 256 256 ) ( -256 256 248 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 256 -256 256 ) ( 256 256 256 ) ( 256 256 248 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -256 -256 256 ) ( 256 -256 256 ) ( 256 -256 248 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -256 -256 248 ) ( -256 256 248 ) ( 256 256 248 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 256 256 256 ) ( -256 256 256 ) ( -256 -256 256 ) base_wall/concrete 0 0 0 1 1 0 0 0
+}
+{
+( -256 256 248 ) ( -256 -256 248 ) ( -256 -256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -248 256 248 ) ( -256 256 248 ) ( -256 256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -248 -256 248 ) ( -248 256 248 ) ( -248 256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -256 -256 248 ) ( -248 -256 248 ) ( -248 -256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -256 -256 8 ) ( -256 256 8 ) ( -248 256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -248 256 248 ) ( -256 256 248 ) ( -256 -256 248 ) base_wall/concrete 0 0 0 1 1 0 0 0
+}
+{
+( 248 256 248 ) ( 248 -256 248 ) ( 248 -256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 256 256 248 ) ( 248 256 248 ) ( 248 256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 256 -256 248 ) ( 256 256 248 ) ( 256 256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 248 -256 248 ) ( 256 -256 248 ) ( 256 -256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 248 -256 8 ) ( 248 256 8 ) ( 256 256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 256 256 248 ) ( 248 256 248 ) ( 248 -256 248 ) base_wall/concrete 0 0 0 1 1 0 0 0
+}
+{
+( -248 -248 248 ) ( -248 -256 248 ) ( -248 -256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 248 -248 248 ) ( -248 -248 248 ) ( -248 -248 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 248 -256 248 ) ( 248 -248 248 ) ( 248 -248 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -248 -256 248 ) ( 248 -256 248 ) ( 248 -256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -248 -256 8 ) ( -248 -248 8 ) ( 248 -248 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 248 -248 248 ) ( -248 -248 248 ) ( -248 -256 248 ) base_wall/concrete 0 0 0 1 1 0 0 0
+}
+{
+( -248 256 248 ) ( -248 248 248 ) ( -248 248 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 248 256 248 ) ( -248 256 248 ) ( -248 256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 248 248 248 ) ( 248 256 248 ) ( 248 256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -248 248 248 ) ( 248 248 248 ) ( 248 248 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( -248 248 8 ) ( -248 256 8 ) ( 248 256 8 ) base_wall/concrete 0 0 0 1 1 0 0 0
+( 248 256 248 ) ( -248 256 248 ) ( -248 248 248 ) base_wall/concrete 0 0 0 1 1 0 0 0
+}
+}
+
+{
+"classname" "misc_model"
+"model" "models/players/sarge/default.md3"
+"origin" "0.0 0.0 32.0"
+"modelscale" "1.00"
+"_color" "1.00 0.20 0.20"
+"targetname" "player_spawn"
+}
+
