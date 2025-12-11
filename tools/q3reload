@@ -1,0 +1,178 @@
+#!/bin/bash
+#
+# q3reload - Hot reload Quake 3 map with fast entity-only mode
+#
+# Usage:
+#   q3reload world.map --entities-only
+#   q3reload world.map --full
+#   q3reload world.map --entities-only --rcon-password mypass
+#
+# Fast path (-entities-only): Uses q3map2 -onlyents (~100ms)
+# Full path (--full): Complete BSP compilation (~2000ms)
+
+set -e
+
+# Defaults
+MODE="entities"
+MAP_FILE=""
+RCON_HOST="localhost"
+RCON_PORT="27960"
+RCON_PASSWORD="worldmodel"
+FS_BASEPATH="${HOME}/.q3a"
+QUAKE_DIR="baseq3"
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --entities-only)
+            MODE="entities"
+            shift
+            ;;
+        --full)
+            MODE="full"
+            shift
+            ;;
+        --rcon-host)
+            RCON_HOST="$2"
+            shift 2
+            ;;
+        --rcon-port)
+            RCON_PORT="$2"
+            shift 2
+            ;;
+        --rcon-password)
+            RCON_PASSWORD="$2"
+            shift 2
+            ;;
+        --fs-basepath)
+            FS_BASEPATH="$2"
+            shift 2
+            ;;
+        --help|-h)
+            echo "Usage: $0 <map_file> [OPTIONS]"
+            echo ""
+            echo "Options:"
+            echo "  --entities-only        Fast reload (entities only, ~100ms)"
+            echo "  --full                 Full BSP compilation (~2000ms)"
+            echo "  --rcon-host HOST       RCON server host (default: localhost)"
+            echo "  --rcon-port PORT       RCON server port (default: 27960)"
+            echo "  --rcon-password PASS   RCON password (default: worldmodel)"
+            echo "  --fs-basepath PATH     Quake 3 base path (default: ~/.q3a)"
+            echo ""
+            echo "Examples:"
+            echo "  $0 world.map --entities-only"
+            echo "  $0 world.map --full"
+            exit 0
+            ;;
+        *)
+            if [ -z "$MAP_FILE" ]; then
+                MAP_FILE="$1"
+            else
+                echo "Error: Unknown option $1"
+                exit 1
+            fi
+            shift
+            ;;
+    esac
+done
+
+# Validation
+if [ -z "$MAP_FILE" ]; then
+    echo "Error: No map file specified"
+    echo "Usage: $0 <map_file> [--entities-only|--full]"
+    exit 1
+fi
+
+if [ ! -f "$MAP_FILE" ]; then
+    echo "Error: Map file not found: $MAP_FILE"
+    exit 1
+fi
+
+# Get map name (without path and extension)
+MAP_NAME=$(basename "$MAP_FILE" .map)
+MAP_DIR=$(dirname "$MAP_FILE")
+
+echo "=== Quake 3 Map Reload ==="
+echo "Map: $MAP_FILE"
+echo "Mode: $MODE"
+echo ""
+
+# Function to send RCON command
+send_rcon() {
+    local cmd="$1"
+    echo "RCON: $cmd"
+    # Use printf for proper formatting, pipe to netcat
+    printf "\xff\xff\xff\xffrcon $RCON_PASSWORD $cmd\n" | nc -u -w1 "$RCON_HOST" "$RCON_PORT" 2>/dev/null || true
+}
+
+if [ "$MODE" == "entities" ]; then
+    # Fast path: Entity-only update
+    echo "[1/2] Compiling entities only (fast path)..."
+    start_time=$(date +%s%3N)
+
+    q3map2 -onlyents \
+        -fs_basepath "$FS_BASEPATH" \
+        -game quake3 \
+        "$MAP_FILE" \
+        2>&1 | grep -E "(entities|seconds|\.bsp)" || true
+
+    end_time=$(date +%s%3N)
+    elapsed=$((end_time - start_time))
+    echo "✓ Entity compilation complete in ${elapsed}ms"
+
+    echo ""
+    echo "[2/2] Reloading map in engine..."
+    send_rcon "map_restart"
+
+    echo ""
+    echo "✓ Fast reload complete!"
+    echo "Total time: ${elapsed}ms"
+
+else
+    # Full path: Complete BSP compilation
+    echo "[1/4] Compiling BSP geometry..."
+    start_time=$(date +%s%3N)
+
+    q3map2 -bsp \
+        -fs_basepath "$FS_BASEPATH" \
+        -game quake3 \
+        "$MAP_FILE" \
+        2>&1 | grep -E "(surfaces|seconds|\.bsp)" || true
+
+    echo ""
+    echo "[2/4] Calculating visibility (VIS)..."
+    q3map2 -vis \
+        -fs_basepath "$FS_BASEPATH" \
+        -game quake3 \
+        "$MAP_FILE" \
+        2>&1 | grep -E "(portal|seconds|\.bsp)" || true
+
+    echo ""
+    echo "[3/4] Generating lightmaps..."
+    q3map2 -light \
+        -fs_basepath "$FS_BASEPATH" \
+        -game quake3 \
+        "$MAP_FILE" \
+        2>&1 | grep -E "(light|seconds|\.bsp)" || true
+
+    end_time=$(date +%s%3N)
+    elapsed=$((end_time - start_time))
+    echo "✓ Full compilation complete in ${elapsed}ms"
+
+    echo ""
+    echo "[4/4] Loading map in engine..."
+    send_rcon "map $MAP_NAME"
+
+    echo ""
+    echo "✓ Full reload complete!"
+    echo "Total time: ${elapsed}ms"
+fi
+
+# Check if BSP was created
+BSP_FILE="${MAP_DIR}/${MAP_NAME}.bsp"
+if [ -f "$BSP_FILE" ]; then
+    BSP_SIZE=$(du -h "$BSP_FILE" | cut -f1)
+    echo "BSP file: $BSP_FILE ($BSP_SIZE)"
+else
+    echo "Warning: BSP file not found at $BSP_FILE"
+fi
