@@ -39,13 +39,14 @@ class RTSPCapture:
         print(f"[RTSP] Initialized - Stream: {self.rtsp_url}")
         print(f"[RTSP] Snapshots will be saved to: {self.snapshot_dir}")
 
-    def capture_snapshot(self, filename: str = None, timeout: int = 10) -> Optional[Path]:
+    def capture_snapshot(self, filename: str = None, timeout: int = 20, debug: bool = False) -> Optional[Path]:
         """
         Capture a single frame from RTSP stream using ffmpeg
 
         Args:
             filename: Output filename (default: auto-generated with timestamp)
-            timeout: Maximum time to wait for capture (seconds)
+            timeout: Maximum time to wait for capture (seconds, default 20)
+            debug: Print ffmpeg output for debugging
 
         Returns:
             Path to saved image file, or None if capture failed
@@ -57,15 +58,24 @@ class RTSPCapture:
 
         output_path = self.snapshot_dir / filename
 
-        # ffmpeg command to capture single frame
+        # Improved ffmpeg command for RTSP streams
+        # -hide_banner -loglevel error: Reduce output noise
         # -rtsp_transport tcp: Use TCP for more reliable connection
+        # -timeout 5000000: Socket timeout 5 seconds (in microseconds)
+        # -analyzeduration 1000000: Reduce stream analysis time (1 second)
+        # -probesize 1000000: Reduce probe size for faster startup
         # -i {rtsp_url}: Input stream
         # -frames:v 1: Capture exactly 1 frame
         # -q:v 2: JPEG quality (2 = high quality)
         # -y: Overwrite output file if exists
         cmd = [
             "ffmpeg",
+            "-hide_banner",
+            "-loglevel", "error" if not debug else "info",
             "-rtsp_transport", "tcp",
+            "-timeout", "5000000",  # 5 second socket timeout
+            "-analyzeduration", "1000000",  # 1 second analyze duration
+            "-probesize", "1000000",  # Smaller probe size
             "-i", self.rtsp_url,
             "-frames:v", "1",
             "-q:v", "2",
@@ -74,6 +84,9 @@ class RTSPCapture:
         ]
 
         try:
+            if debug:
+                print(f"[RTSP] Command: {' '.join(cmd)}")
+
             print(f"[RTSP] Capturing snapshot: {filename}")
             start_time = time.time()
 
@@ -88,24 +101,51 @@ class RTSPCapture:
 
             duration = time.time() - start_time
 
-            if result.returncode == 0 and output_path.exists():
+            # Check if successful
+            if result.returncode == 0 and output_path.exists() and output_path.stat().st_size > 0:
                 file_size = output_path.stat().st_size
                 print(f"[RTSP] ✓ Snapshot captured in {duration:.2f}s ({file_size} bytes)")
                 return output_path
             else:
                 error_msg = result.stderr.decode('utf-8', errors='ignore')
                 print(f"[RTSP] ✗ Capture failed (exit code {result.returncode})")
-                print(f"[RTSP] Error: {error_msg[-500:]}")  # Last 500 chars of error
+
+                if error_msg.strip():
+                    print(f"[RTSP] Error: {error_msg[-500:]}")  # Last 500 chars of error
+
+                # Clean up failed output file
+                if output_path.exists():
+                    output_path.unlink()
+
                 return None
 
-        except subprocess.TimeoutExpired:
+        except subprocess.TimeoutExpired as e:
             print(f"[RTSP] ✗ Capture timed out after {timeout}s")
+
+            # Try to get partial stderr output
+            if e.stderr:
+                try:
+                    error_msg = e.stderr.decode('utf-8', errors='ignore')
+                    if error_msg.strip() and debug:
+                        print(f"[RTSP] Partial error output: {error_msg[-200:]}")
+                except:
+                    pass
+
+            # Clean up partial file
+            if output_path.exists():
+                output_path.unlink()
+
             return None
+
         except FileNotFoundError:
             print(f"[RTSP] ✗ ffmpeg not found - install with: sudo apt install ffmpeg")
             return None
+
         except Exception as e:
             print(f"[RTSP] ✗ Unexpected error: {e}")
+            import traceback
+            if debug:
+                traceback.print_exc()
             return None
 
     def capture_snapshot_base64(self, timeout: int = 10) -> Optional[str]:
