@@ -2,10 +2,13 @@
 
 A consciousness-mimetic AI system based on Axiomatic Modeling Architecture (AMA) - reasoning from first principles rather than statistical pattern matching alone.
 
+**Core Principle**: This Ubuntu server IS the BioMimeticAI system. Separate services gather sensory information independently and prepare it for the core AI to process.
+
 ## Overview
 
 BioMimeticAI mimics biological consciousness through:
 - **Distributed cortexes** (independent brain regions)
+- **Multi-modal perception** (camera manager with ADHD-like attention switching)
 - **Episodic and semantic memory systems**
 - **Contact-aware learning** (builds profiles of individuals)
 - **Self-training loops** with human-in-the-loop validation
@@ -116,7 +119,36 @@ python src/tensor_axiom/self_training_loop.py --iterations 0 --interval 300
 
 **Location**: `scripts/cron/`
 
-### 6. Dynamic Prompt System (✓)
+### 6. Camera Manager - Multi-Modal Perception (In Development 🔨)
+
+**File**: Extended from `/home/toastee/ai_led_mapper`
+
+**Purpose**: Unified dashboard for managing multiple camera streams with ADHD-like attention switching between sensory inputs.
+
+**Key Features**:
+- **Multi-camera management**: RTSP, DroidCam, V4L2 devices
+- **Ring buffers**: Each camera maintains 5 seconds of historical frames
+- **Salience-based switching**: Schedule + event-driven camera selection
+- **Integration**: Feeds into Vision API (port 8000) and episodic memory
+- **Network discovery**: Auto-detect cameras via nmap
+
+**Camera Types**:
+- reCamera E81 (RTSP + entrance/exit detection via Node-RED)
+- IP security cameras (RTSP)
+- DroidCam (phone cameras via WiFi)
+- USB webcams (V4L2)
+
+**Documentation**: `docs/CAMERA_MANAGER.md` (comprehensive 700+ line spec)
+
+**Architecture**:
+- Frontend: React + TypeScript + Tailwind (640x480 tiles, up to 6 visible)
+- Backend: FastAPI + Python (extended ai_led_mapper)
+- Ring buffers: Per-camera frame storage for "looking back" when events occur
+- Salience engine: Prioritizes which camera(s) deserve AI attention
+
+**Status**: Design complete, implementation in progress
+
+### 7. Dynamic Prompt System (✓)
 
 **File**: `src/core/dynamic_prompts.py`
 
@@ -139,11 +171,12 @@ Builds "living" system prompts that include:
 
 ## Architecture Layers
 
-1. **Discord Bot** (Real-time conversation interface)
-2. **Memory Systems** (Episodic, Contact, Semantic - SQLite backed)
-3. **Axiom Cortex** (Reasoning engine with 26 axioms)
-4. **Cron Cortexes** (Scheduled maintenance/learning tasks)
-5. **Dynamic Prompt Builder** (Context-aware AI state)
+1. **Perception Layer** (Camera Manager + Vision API)
+2. **Discord Bot** (Real-time conversation interface)
+3. **Memory Systems** (Episodic, Contact, Semantic - SQLite backed)
+4. **Axiom Cortex** (Reasoning engine with 26 axioms)
+5. **Cron Cortexes** (Scheduled maintenance/learning tasks)
+6. **Dynamic Prompt Builder** (Context-aware AI state)
 
 ## Key Files & Locations
 
@@ -164,6 +197,9 @@ Builds "living" system prompts that include:
 - `AXIOM_ARCHITECTURE_README.md` - Architecture overview
 - `AXIOM_REVIEW_BOT.md` - Bot usage guide
 - `TENSOR_AXIOM_ARCHITECTURE.md` - GPU acceleration design (785 lines)
+- `docs/CAMERA_MANAGER.md` - Multi-camera perception system (700+ lines)
+- `docs/VISION_SYSTEM.md` - Vision API integration
+- `docs/VISION_ARCHITECTURE.md` - Vision processing architecture
 - `docs/CORTEX_SCHEDULE.md` - Cortex schedules
 - `docs/CORTEX_INTEGRATION.md` - System integration
 

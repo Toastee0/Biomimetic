@@ -1,0 +1,116 @@
+[
+    {
+        "id": "biomimetic_vision_flow",
+        "type": "tab",
+        "label": "BioMimetic Vision Tracker",
+        "disabled": false,
+        "info": "Entrance/Exit tracking with YOLO metadata for BioMimetic AI vision system",
+        "env": []
+    },
+    {
+        "id": "sscma_input",
+        "type": "sscma",
+        "z": "biomimetic_vision_flow",
+        "name": "SSCMA Detection",
+        "host": "d4edfe2d22b78af8",
+        "topic": "sscma/invoke",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "entrance_exit_tracker"
+            ]
+        ]
+    },
+    {
+        "id": "entrance_exit_tracker",
+        "type": "function",
+        "z": "biomimetic_vision_flow",
+        "name": "Entrance/Exit Tracker with YOLO",
+        "func": "// Entrance/Exit Detection with Debouncing + YOLO Metadata\n// Enhanced version that sends YOLO detection metadata to vision system\n\nconst DEBOUNCE_TIME = 3000; // 3 seconds - object must be stable before triggering event\nconst CORE_API_URL = \"http://192.168.2.137:8000/api/vision/event\"; // BioMimeticAI core endpoint\n\n// Get current detection data\nconst detectionData = msg.payload?.data;\nif (!detectionData) {\n    return null;\n}\n\n// Extract labels and detection metadata\nconst labels = detectionData.labels ?? [];\nconst boxes = detectionData.boxes ?? [];      // YOLO bounding boxes\nconst scores = detectionData.scores ?? [];    // YOLO confidence scores\nconst target = detectionData.target ?? 0;     // Current tracked target index\n\nif (!Array.isArray(labels)) {\n    return null;\n}\n\n// Filter valid detections and build detection map with YOLO metadata\nconst detectionMap = {};\nlabels.forEach((label, idx) => {\n    const str = String(label);\n    if (str.length > 1) {\n        const bbox = boxes[idx] || null;\n        const confidence = scores[idx] || 0;\n        \n        detectionMap[str] = {\n            class: str,\n            confidence: confidence,\n            bbox: bbox,  // [x1, y1, x2, y2]\n            track_id: idx\n        };\n    }\n});\n\nconst currentDetections = Object.keys(detectionMap);\n\n// Get stored state from flow context\nlet sceneState = flow.get(\"scene_state\") || {};\nlet pendingChanges = flow.get(\"pending_changes\") || {};\n\nconst now = Date.now();\n\n// Initialize scene state structure if needed\nif (!sceneState.objects) {\n    sceneState = {\n        objects: {},        // Currently confirmed objects in scene\n        lastUpdate: now\n    };\n}\n\nif (!pendingChanges.enter) {\n    pendingChanges = {\n        enter: {},          // Objects waiting to be confirmed as entered\n        exit: {}            // Objects waiting to be confirmed as exited\n    };\n}\n\n// Track currently detected objects\nconst detectedSet = new Set(currentDetections);\n\n// Process each currently detected object\nfor (const obj of currentDetections) {\n    if (sceneState.objects[obj]) {\n        // Object already in scene - update last seen time and YOLO data\n        sceneState.objects[obj].lastSeen = now;\n        sceneState.objects[obj].lastYoloData = detectionMap[obj];\n\n        // Cancel any pending exit for this object (it's back!)\n        if (pendingChanges.exit[obj]) {\n            delete pendingChanges.exit[obj];\n        }\n    } else {\n        // New object detected - add to pending entrance\n        if (!pendingChanges.enter[obj]) {\n            pendingChanges.enter[obj] = {\n                firstSeen: now,\n                count: 1,\n                yoloData: detectionMap[obj]\n            };\n        } else {\n            pendingChanges.enter[obj].count++;\n            pendingChanges.enter[obj].yoloData = detectionMap[obj]; // Update with latest\n        }\n\n        // Check if object has been stable long enough to confirm entrance\n        if (now - pendingChanges.enter[obj].firstSeen >= DEBOUNCE_TIME) {\n            // Confirmed entrance!\n            sceneState.objects[obj] = {\n                enteredAt: now,\n                lastSeen: now,\n                lastYoloData: detectionMap[obj]\n            };\n\n            // Send entrance notification to core with YOLO metadata\n            const eventPayload = {\n                event: \"entrance\",\n                object: obj,\n                timestamp: now,\n                scene: Object.keys(sceneState.objects),\n                yolo_detection: detectionMap[obj]\n            };\n\n            // Send via HTTP request node (output 1)\n            node.send([{\n                url: CORE_API_URL,\n                method: \"POST\",\n                headers: { \"Content-Type\": \"application/json\" },\n                payload: eventPayload\n            }, null]);\n\n            node.warn(`✓ Entrance confirmed: ${obj} (confidence: ${detectionMap[obj].confidence})`);\n\n            // Clean up pending\n            delete pendingChanges.enter[obj];\n        }\n    }\n}\n\n// Check for objects that have exited the scene\nfor (const obj in sceneState.objects) {\n    if (!detectedSet.has(obj)) {\n        // Object no longer detected\n        if (!pendingChanges.exit[obj]) {\n            pendingChanges.exit[obj] = {\n                firstMissing: now,\n                count: 1\n            };\n        } else {\n            pendingChanges.exit[obj].count++;\n        }\n\n        // Check if object has been missing long enough to confirm exit\n        if (now - pendingChanges.exit[obj].firstMissing >= DEBOUNCE_TIME) {\n            // Confirmed exit!\n            const exitTime = now;\n            const duration = exitTime - sceneState.objects[obj].enteredAt;\n\n            // Send exit notification to core (with last known YOLO data)\n            const eventPayload = {\n                event: \"exit\",\n                object: obj,\n                timestamp: exitTime,\n                duration: duration,\n                scene: Object.keys(sceneState.objects).filter(o => o !== obj),\n                yolo_detection: sceneState.objects[obj].lastYoloData || null\n            };\n\n            // Send via HTTP request node (output 1)\n            node.send([{\n                url: CORE_API_URL,\n                method: \"POST\",\n                headers: { \"Content-Type\": \"application/json\" },\n                payload: eventPayload\n            }, null]);\n\n            node.warn(`✓ Exit confirmed: ${obj} (was present for ${(duration/1000).toFixed(1)}s)`);\n\n            // Remove from scene\n            delete sceneState.objects[obj];\n            delete pendingChanges.exit[obj];\n        }\n    } else {\n        // Object is still detected - cancel any pending exit\n        if (pendingChanges.exit[obj]) {\n            delete pendingChanges.exit[obj];\n        }\n    }\n}\n\n// Save state back to flow context\nsceneState.lastUpdate = now;\nflow.set(\"scene_state\", sceneState);\nflow.set(\"pending_changes\", pendingChanges);\n\n// Debug output with YOLO info\nconst debugInfo = {\n    currentDetections: currentDetections.map(obj => ({\n        object: obj,\n        confidence: detectionMap[obj].confidence,\n        bbox: detectionMap[obj].bbox\n    })),\n    confirmedObjects: Object.keys(sceneState.objects),\n    pendingEntrances: Object.keys(pendingChanges.enter),\n    pendingExits: Object.keys(pendingChanges.exit),\n    timestamp: now\n};\n\n// Return debug info to second output\nreturn [null, { payload: debugInfo }];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "http_request"
+            ],
+            [
+                "debug_output"
+            ]
+        ]
+    },
+    {
+        "id": "http_request",
+        "type": "http request",
+        "z": "biomimetic_vision_flow",
+        "name": "Send to BioMimetic API",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 710,
+        "y": 80,
+        "wires": [
+            [
+                "api_response_debug"
+            ]
+        ]
+    },
+    {
+        "id": "debug_output",
+        "type": "debug",
+        "z": "biomimetic_vision_flow",
+        "name": "Tracker Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "api_response_debug",
+        "type": "debug",
+        "z": "biomimetic_vision_flow",
+        "name": "API Response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d4edfe2d22b78af8",
+        "type": "sscma",
+        "host": "localhost",
+        "mqttport": "1883",
+        "apiport": "80",
+        "clientid": "recamera",
+        "username": "",
+        "password": ""
+    }
+]

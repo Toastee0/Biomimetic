@@ -1,0 +1,109 @@
+{
+  "models": {
+    "conversation": {
+      "name": "mistral-small-22b",
+      "display_name": "Mistral Small 22B",
+      "model_path": "/models/mistral-small-22b-instruct-2409-q4_k_m.gguf",
+      "vram_gb": 14,
+      "context_size": 32768,
+      "capabilities": ["chat", "reasoning", "general"],
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "description": "General conversation and reasoning model"
+    },
+    "coding": {
+      "name": "deepseek-coder-33b",
+      "display_name": "DeepSeek Coder 33B",
+      "model_path": "/models/deepseek-coder-33b-instruct-q4_k_m.gguf",
+      "vram_gb": 22,
+      "context_size": 16384,
+      "capabilities": ["code_generation", "code_review", "debugging", "architecture"],
+      "temperature": 0.3,
+      "top_p": 0.95,
+      "description": "Advanced code generation and architectural design"
+    },
+    "coding_alt": {
+      "name": "qwen-coder-32b",
+      "display_name": "Qwen2.5 Coder 32B",
+      "model_path": "/models/qwen2.5-coder-32b-instruct-q4_k_m.gguf",
+      "vram_gb": 20,
+      "context_size": 32768,
+      "capabilities": ["code_generation", "code_review", "long_context"],
+      "temperature": 0.3,
+      "top_p": 0.95,
+      "description": "Alternative coding model with longer context window"
+    },
+    "reasoning": {
+      "name": "mistral-large",
+      "display_name": "Mistral Large",
+      "model_path": "/models/mistral-large-instruct-2411-q4_k_m.gguf",
+      "vram_gb": 22,
+      "context_size": 131072,
+      "capabilities": ["deep_reasoning", "analysis", "long_context"],
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "description": "Deep reasoning and analysis with very long context"
+    },
+    "vision": {
+      "name": "llava-34b",
+      "display_name": "LLaVA 1.6 34B",
+      "model_path": "/models/llava-v1.6-34b-q4_k_m.gguf",
+      "mmproj_path": "/models/llava-v1.6-34b-mmproj-q4_0.gguf",
+      "vram_gb": 22,
+      "context_size": 4096,
+      "capabilities": ["vision", "image_understanding", "scene_description"],
+      "temperature": 0.5,
+      "top_p": 0.9,
+      "description": "Vision-language model for image understanding (future)"
+    }
+  },
+  "settings": {
+    "llama_server_url": "http://localhost:53307",
+    "llama_server_host": "0.0.0.0",
+    "llama_server_port": 53307,
+    "default_mode": "conversation",
+    "auto_duck_timeout": 900,
+    "startup_wait_timeout": 60,
+    "shutdown_wait_timeout": 30,
+    "health_check_interval": 1,
+    "health_check_retries": 60
+  },
+  "task_classification": {
+    "coding_keywords": [
+      "implement", "code", "function", "class", "method",
+      "debug", "error", "bug", "fix", "refactor",
+      "optimize", "review", "write", "create", "build",
+      "design", "architecture", "algorithm", "data structure",
+      "api", "endpoint", "test", "unittest"
+    ],
+    "vision_keywords": [
+      "what do you see", "describe the scene", "who is in",
+      "analyze the image", "what's happening", "camera shows",
+      "look at", "in the picture", "in the photo"
+    ],
+    "reasoning_keywords": [
+      "analyze", "compare", "evaluate", "explain why",
+      "what are the implications", "trade-offs", "pros and cons",
+      "deep dive", "comprehensive analysis"
+    ],
+    "min_message_length_for_reasoning": 100
+  },
+  "mode_switching_messages": {
+    "conversation": {
+      "loading": "💭 Switching to conversation mode...",
+      "ready": "✅ Ready to chat."
+    },
+    "coding": {
+      "loading": "🔧 Switching to coding mode, loading {model_name}...\nThis will take about 45 seconds. Time to grab coffee ☕",
+      "ready": "✅ Coding mode ready. Let's build something."
+    },
+    "reasoning": {
+      "loading": "🧠 Switching to deep reasoning mode, loading {model_name}...\nPreparing for analysis... (~45 seconds)",
+      "ready": "✅ Reasoning mode ready. Let's think deeply."
+    },
+    "vision": {
+      "loading": "👁️ Switching to vision mode, loading {model_name}...\nPreparing vision capabilities... (~45 seconds)",
+      "ready": "✅ Vision mode ready. Show me what you've got."
+    }
+  }
+}

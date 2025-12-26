@@ -1,0 +1,25 @@
+{
+  "models": {
+    "face_recognition": {
+      "enabled": true,
+      "model_name": "buffalo_l",
+      "vram_mb": 200
+    },
+    "emotion": {
+      "enabled": true,
+      "model_name": "fer",
+      "vram_mb": 100
+    },
+    "clip": {
+      "enabled": true,
+      "model_name": "ViT-B/32",
+      "vram_mb": 350
+    },
+    "age_gender": {
+      "enabled": true,
+      "model_name": "insightface",
+      "vram_mb": 50
+    }
+  },
+  "total_vram_budget_mb": 700
+}

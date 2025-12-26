@@ -1,17 +1,44 @@
-## Vision System Architecture - On-Demand Model Loading
+# Vision System Architecture - Complete Guide
 
-**Hardware**: Single RTX 3090 (24GB VRAM)
-**Constraint**: Cannot run large vision + text models simultaneously
-**Solution**: Cron-based processing with specialized small models
+**Hardware**: Single RTX 3090 (24GB VRAM)  
+**Text Model**: Mistral-Small-22B Q4 (~14GB VRAM)  
+**Vision Budget**: ~10GB VRAM available  
+**Solution**: Cron-based processing with small specialized models (~700MB total)
 
-## Architecture Overview
+---
+
+## Table of Contents
+1. [Overview](#overview)
+2. [Architecture Diagram](#architecture-diagram)
+3. [Data Flow](#data-flow)
+4. [Components](#components)
+5. [Installation](#installation)
+6. [Configuration](#configuration)
+7. [Usage](#usage)
+
+---
+
+## Overview
+
+This vision system is designed for a single-GPU constraint where a large text model (Mistral-Small-22B) is already running. Instead of competing for VRAM with large vision models, we use:
+
+✅ **Queue-based processing** - Capture now, analyze later  
+✅ **Small specialized models** - Face recognition, emotion, CLIP (~700MB total)  
+✅ **Cron scheduling** - Process in batches every 30 minutes  
+✅ **Two processing paths**:
+- Path A: YOLO detections (high priority person analysis)
+- Path B: Background scans (safety net for missed objects)
+
+---
+
+## Architecture Diagram
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                  reCamera (192.168.2.140)                   │
-│  - YOLO object detection                                   │
-│  - Entrance/exit tracking (3s debounce)                    │
-│  - RTSP stream (rtsp://192.168.2.140:8554/stream)         │
+│  ● YOLO object detection                                    │
+│  ● Entrance/exit tracking (3s debounce)                     │
+│  ● RTSP stream (rtsp://192.168.2.140:8554/stream)          │
 └─────────┬──────────────────────────────────┬────────────────┘
           │                                   │
           │ POST /api/vision/event            │ RTSP Stream
@@ -21,83 +48,526 @@
 ┌─────────────────────────┐         ┌────────────────────────┐
 │  Vision Event API       │         │ Background Scan        │
 │  (Always Running)       │         │ (Cron: Every 1min)     │
-│  - Port 8000            │         │ - Captures every 20s   │
-│  - Receives events      │         │ - Catches YOLO misses  │
-│  - Captures snapshots   │         │                        │
-│  - Queues for processing│         │                        │
+│  ● Port 8000            │         │ ● Captures every 20s   │
+│  ● Receives events      │         │ ● Uses CLIP analysis   │
+│  ● Captures snapshots   │         │ ● Catches YOLO misses  │
+│  ● Queues for processing│         │                        │
 └─────────┬───────────────┘         └──────────┬─────────────┘
           │                                    │
           │ Writes to queue                   │
           ▼                                    ▼
 ┌──────────────────────────────────────────────────────────────┐
-│           Snapshot Processing Queues (JSON)                  │
-│  - snapshot_queue.json (YOLO detections)                    │
-│  - background_scan_queue.json (full scene scans)            │
+│           Snapshot Processing Queue (JSON)                   │
+│  data/vision/snapshot_queue.json                            │
+│  ● YOLO detections with metadata                            │
+│  ● Background scans                                         │
+│  ● Marked processed: false → true                           │
 └────────────────────────┬─────────────────────────────────────┘
                          │
                          │ Processed by (Cron: Every 30min)
                          ▼
 ┌──────────────────────────────────────────────────────────────┐
 │            Vision Processing Cortex                          │
-│  - Load specialized models on-demand                         │
-│  - Process queued snapshots in batch                         │
-│  - Different processing for persons vs. general scans        │
+│  ● Loads models on-demand                                    │
+│  ● Batch processes queue                                     │
+│  ● Unloads models after completion                           │
 └────────┬─────────────────────────────────────────────────────┘
          │
-         ├─► Person Detection
-         │   └─► Small Specialized Models (can coexist):
-         │       ├─ Face Recognition (~200MB)  → Match contacts
-         │       ├─ Age Estimation (~50MB)     → Demographics
-         │       ├─ Emotion Detection (~100MB) → Mood/state
-         │       └─ Gender Detection (~50MB)   → Demographics
+         ├─► Person Detection (YOLO detections)
+         │   ├─ InsightFace: Face recognition (~200MB)
+         │   │  └─ 512-dim embeddings
+         │   │  └─ Match against contacts (cosine similarity)
+         │   ├─ FER: Emotion detection (~100MB)
+         │   │  └─ 7 emotions: happy, sad, angry, surprise, fear, disgust, neutral
+         │   ├─ Age/Gender: Estimation (~50MB)
+         │   │  └─ Built into InsightFace
+         │   └─ Total: ~350MB
          │
-         └─► Background Scans
-             └─► CLIP Model (~350MB) → "What did YOLO miss?"
-                 └─ General scene understanding
-                 └─ Anomaly detection
+         └─► General Scenes (Background scans)
+             └─ CLIP ViT-B/32 (~350MB)
+                └─ Scene understanding
+                └─ "What did YOLO miss?"
 
+         ↓
 ┌──────────────────────────────────────────────────────────────┐
-│               Results Stored In                               │
-│  - Episodic Memory (with high salience 0.85)                │
-│  - Contact Memory (if face matched)                          │
-│  - Queue marked as processed                                 │
+│               Results Storage                                 │
+│  ● Episodic Memory (salience 0.7-0.9)                       │
+│  ● Contact Memory (face matches)                             │
+│  ● Processed history (data/vision/processed.json)            │
 └──────────────────────────────────────────────────────────────┘
 ```
 
+---
+
 ## Data Flow
 
-### 1. YOLO Detection Path (High Priority)
+### Path A: YOLO Detection (High Priority)
 
 ```
-reCamera YOLO detects person
-    ↓
-3-second debounce (stable detection)
-    ↓
-POST /api/vision/event
-    {
-      "event": "entrance",
-      "object": "person",
-      "timestamp": 1234567890,
-      "scene": ["person"],
-      "yolo_detection": {
-        "class": "person",
-        "confidence": 0.95,
-        "bbox": [x1, y1, x2, y2],
-        "track_id": 123
-      }
+1. reCamera YOLO detects person
+   └─ Confidence: 0.95, BBox: [100, 150, 300, 450]
+
+2. 3-second debounce (stable detection)
+
+3. POST http://192.168.2.137:8000/api/vision/event
+   {
+     "event": "entrance",
+     "object": "person",
+     "timestamp": 1733850123456,
+     "scene": ["person"],
+     "yolo_detection": {
+       "class": "person",
+       "confidence": 0.95,
+       "bbox": [100, 150, 300, 450],
+       "track_id": 123
+     }
+   }
+
+4. Vision API:
+   ├─ Captures RTSP snapshot
+   ├─ Saves to: data/vision/snapshots/entrance_person_1733850123456.jpg
+   └─ Queues with YOLO metadata
+
+5. Queue Entry (snapshot_queue.json):
+   {
+     "snapshot_path": "/home/toastee/BioMimeticAi/data/vision/snapshots/entrance_person_1733850123456.jpg",
+     "event_type": "entrance",
+     "detected_object": "person",
+     "timestamp": 1733850123456,
+     "yolo_detection": { ... },
+     "processed": false
+   }
+
+6. (30 minutes later) Vision Cortex:
+   ├─ Loads InsightFace, FER models
+   ├─ Crops image to YOLO bbox
+   ├─ Analyzes face:
+   │  ├─ Embedding: [512-dim vector]
+   │  ├─ Matches against contacts: "John" (confidence: 0.87)
+   │  ├─ Age: ~32
+   │  ├─ Gender: Male
+   │  └─ Emotion: happy (0.82)
+   ├─ Updates contact memory for "John"
+   ├─ Stores in episodic memory (salience: 0.9)
+   └─ Marks processed: true
+
+7. Unloads models, frees VRAM
+```
+
+### Path B: Background Scan (Safety Net)
+
+```
+1. Every 20 seconds: Background scan runs
+
+2. Captures RTSP snapshot
+   └─ Saves to: data/vision/background_scans/background_scan_1733850200000.jpg
+
+3. Analyzes with CLIP:
+   Queries: ["empty room", "person in scene", "multiple people", "pet animal", ...]
+   
+   Results:
+   ├─ "normal everyday scene": 0.65
+   ├─ "empty room": 0.25
+   └─ "person in scene": 0.10
+
+4. If significant (confidence > 0.5):
+   └─ Stores in episodic memory (salience: 0.4)
+
+5. Cleanup: Deletes scans older than 24 hours
+```
+
+---
+
+## Components
+
+### 1. Model Manager (`src/core/model_manager.py`)
+**Purpose**: Load/unload specialized models on-demand
+
+**Features**:
+- VRAM monitoring
+- Load models: `load_face_recognition()`, `load_emotion_detector()`, `load_clip()`
+- Unload models: `unload_model(name)`, `unload_all()`
+- Analysis methods: `analyze_face()`, `detect_emotion()`, `analyze_scene_clip()`
+
+**Models**:
+| Model | Size | Purpose |
+|-------|------|---------|
+| InsightFace (buffalo_l) | ~200MB | Face recognition + age/gender |
+| FER | ~100MB | Emotion detection (7 classes) |
+| CLIP ViT-B/32 | ~350MB | Scene understanding |
+| **Total** | **~700MB** | **7% of 10GB budget** |
+
+**Test**:
+```bash
+python src/core/model_manager.py
+```
+
+### 2. Person Analyzer (`src/core/person_analyzer.py`)
+**Purpose**: Analyze people in images, match against contacts
+
+**Features**:
+- Face matching (cosine similarity, threshold: 0.6)
+- Contact registration
+- Observation tracking
+- Automatic contact memory updates
+
+**Usage**:
+```python
+from src.core.person_analyzer import PersonAnalyzer
+import numpy as np
+
+analyzer = PersonAnalyzer()
+
+# Analyze person
+result = analyzer.analyze_person(image_np, yolo_bbox=[100, 150, 300, 450])
+
+# Register new contact
+analyzer.register_new_contact("John Doe", image_np)
+
+# Check statistics
+stats = analyzer.get_statistics()
+```
+
+### 3. Vision API (`src/core/vision_api.py`)
+**Purpose**: Receive events from reCamera, queue snapshots
+
+**Endpoints**:
+- `POST /api/vision/event` - Receive entrance/exit events
+- `GET /api/vision/events` - Get recent events
+- `GET /api/vision/status` - System status
+
+**Start**:
+```bash
+bash scripts/start_vision_api.sh
+```
+
+### 4. Vision Processing Cortex (`scripts/cron/vision_processing.py`)
+**Purpose**: Process queued snapshots every 30 minutes
+
+**Schedule**: `*/30 * * * *` (every 30 minutes)
+
+**Process**:
+1. Load queue
+2. Load models (face, emotion, CLIP)
+3. Process each snapshot:
+   - Person: Face analysis, contact matching
+   - Other: CLIP scene understanding
+4. Update episodic memory
+5. Mark as processed
+6. Unload models
+
+**Run manually**:
+```bash
+python scripts/cron/vision_processing.py
+```
+
+### 5. Background Scan (`scripts/cron/background_vision_scan.py`)
+**Purpose**: Capture & analyze scene every 20 seconds (safety net)
+
+**Schedule**: `*/1 * * * *` (every minute, internal 20s loop)
+
+**Process**:
+1. Capture snapshot every 20s
+2. Analyze with CLIP
+3. Detect scene changes
+4. Store if significant
+5. Cleanup old scans (>24h)
+
+**Run manually**:
+```bash
+python scripts/cron/background_vision_scan.py
+```
+
+---
+
+## Installation
+
+### 1. Install Python Dependencies
+
+```bash
+cd /home/toastee/BioMimeticAi
+source venv/bin/activate
+
+# Face recognition (~200MB)
+pip install insightface onnxruntime-gpu
+
+# Emotion detection (~100MB)
+pip install fer tensorflow
+
+# CLIP (~350MB)
+pip install git+https://github.com/openai/CLIP.git
+
+# Image processing
+pip install pillow numpy torch torchvision
+```
+
+### 2. Configure Cron Jobs
+
+```bash
+crontab -e
+```
+
+Add these lines:
+```cron
+# Background vision scan (every minute, runs 20s loop)
+*/1 * * * * /home/toastee/BioMimeticAi/scripts/cron/background_vision_scan.py >> /home/toastee/BioMimeticAi/logs/cron.log 2>&1
+
+# Vision processing (every 30 minutes)
+*/30 * * * * /home/toastee/BioMimeticAi/scripts/cron/vision_processing.py >> /home/toastee/BioMimeticAi/logs/cron.log 2>&1
+```
+
+### 3. Start Vision API
+
+```bash
+bash scripts/start_vision_api.sh
+```
+
+Should see:
+```
+Starting Vision Event API on port 8000...
+Endpoints:
+  POST /api/vision/event - Receive entrance/exit events
+  GET  /api/vision/events - Get recent events
+  GET  /api/vision/status - Get system status
+```
+
+---
+
+## Configuration
+
+### Vision Models Config (`config/vision_models.json`)
+
+```json
+{
+  "models": {
+    "face_recognition": {
+      "enabled": true,
+      "model_name": "buffalo_l",
+      "vram_mb": 200
+    },
+    "emotion": {
+      "enabled": true,
+      "model_name": "fer",
+      "vram_mb": 100
+    },
+    "clip": {
+      "enabled": true,
+      "model_name": "ViT-B/32",
+      "vram_mb": 350
     }
-    ↓
-Vision API captures RTSP snapshot
-    ↓
-Queue snapshot with YOLO metadata
-    ↓
-(Later) Vision Cortex processes:
-    ├─ Load face recognition model
-    ├─ Crop to bbox from YOLO
-    ├─ Extract face embedding
-    ├─ Match against known contacts
-    ├─ Estimate age, emotion, gender
-    ├─ Update contact memory if matched
+  },
+  "total_vram_budget_mb": 700
+}
+```
+
+---
+
+## Usage
+
+### Update reCamera Node-RED Flow
+
+Modify your `entrance_exit_tracker.js` to send YOLO metadata:
+
+```javascript
+// In your entrance event
+const event = {
+    event: "entrance",
+    object: "person",
+    timestamp: Date.now(),
+    scene: Object.keys(sceneState.objects),
+    yolo_detection: {
+        class: msg.payload.data.class,
+        confidence: msg.payload.data.confidence,
+        bbox: msg.payload.data.bbox,  // [x1, y1, x2, y2]
+        track_id: msg.payload.data.track_id
+    }
+};
+
+// POST to vision API
+node.send({
+    url: "http://192.168.2.137:8000/api/vision/event",
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    payload: event
+});
+```
+
+### Register a New Contact
+
+```python
+from src.core.person_analyzer import PersonAnalyzer
+from PIL import Image
+import numpy as np
+
+# Load image with person's face
+image = Image.open("path/to/photo.jpg")
+image_np = np.array(image)
+
+# Register
+analyzer = PersonAnalyzer()
+success = analyzer.register_new_contact("John Doe", image_np, metadata={
+    "relationship": "friend",
+    "notes": "Likes coffee"
+})
+
+if success:
+    print("✓ Contact registered!")
+```
+
+### Check System Status
+
+```bash
+# Vision API status
+curl http://localhost:8000/api/vision/status
+
+# Recent events
+curl http://localhost:8000/api/vision/events?limit=10
+
+# Check cron logs
+tail -f logs/cron.log
+
+# Check vision processing log
+tail -f logs/vision_processing.log
+```
+
+### Monitor VRAM Usage
+
+```python
+from src.core.model_manager import ModelManager
+
+manager = ModelManager()
+
+# Load models
+manager.load_face_recognition()
+manager.load_emotion_detector()
+manager.load_clip()
+
+# Check usage
+print(f"Loaded: {manager.get_loaded_models()}")
+print(f"Estimated VRAM: {manager.estimate_vram_usage()}MB")
+
+# Unload
+manager.unload_all()
+```
+
+---
+
+## File Structure
+
+```
+BioMimeticAi/
+├── src/core/
+│   ├── model_manager.py         # Load/unload vision models
+│   ├── person_analyzer.py       # Face matching, demographics
+│   └── vision_api.py            # Flask API (always running)
+│
+├── scripts/
+│   ├── start_vision_api.sh      # Start API service
+│   └── cron/
+│       ├── vision_processing.py       # Process queue (30min)
+│       └── background_vision_scan.py  # Safety net (1min/20s)
+│
+├── data/
+│   ├── contacts.json            # Known contacts with embeddings
+│   └── vision/
+│       ├── snapshots/           # Event snapshots
+│       ├── background_scans/    # Background scans
+│       ├── snapshot_queue.json  # Processing queue
+│       └── processed.json       # Processing history
+│
+├── config/
+│   └── vision_models.json       # Model configuration
+│
+└── docs/
+    └── VISION_ARCHITECTURE.md   # This file
+```
+
+---
+
+## VRAM Budget
+
+```
+Current Allocation:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total RTX 3090:     24GB
+Mistral-Small-22B:  ~14GB (Q4 quantization)
+Available:          ~10GB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Vision Models (loaded on-demand):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+InsightFace:        200MB  (2% of available)
+FER:                100MB  (1% of available)
+CLIP:               350MB  (3.5% of available)
+─────────────────────────────────────────────────────
+Total:              650MB  (6.5% of available)
+Safety Buffer:      ~50MB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Safe to run alongside Mistral-Small-22B!
+```
+
+---
+
+## Benefits
+
+✅ **No VRAM conflicts** - Small models coexist with text model  
+✅ **Scalable** - Process in batches, not real-time  
+✅ **Efficient** - Only analyze what matters (YOLO detections + 20s scans)  
+✅ **Contact matching** - Face recognition integrated with memory  
+✅ **Cron-based** - Fits existing cortex architecture  
+✅ **Placeholder-ready** - Framework complete, models optional  
+
+---
+
+## Troubleshooting
+
+### Models not loading?
+```bash
+# Check installations
+pip list | grep -E "insightface|fer|clip"
+
+# Test individually
+python -c "import insightface; print('InsightFace OK')"
+python -c "from fer import FER; print('FER OK')"
+python -c "import clip; print('CLIP OK')"
+```
+
+### RTSP capture failing?
+```bash
+# Test RTSP stream
+ffmpeg -i rtsp://192.168.2.140:8554/stream -frames:v 1 test.jpg
+
+# Check vision API logs
+tail -f logs/vision_api.log
+```
+
+### Cron jobs not running?
+```bash
+# Check cron logs
+tail -f logs/cron.log
+
+# Run manually
+python scripts/cron/vision_processing.py
+python scripts/cron/background_vision_scan.py
+
+# Verify crontab
+crontab -l
+```
+
+---
+
+**System ready!** 🎯
+
+The vision system will now:
+1. Receive YOLO detections from reCamera
+2. Queue snapshots for processing  
+3. Process every 30 minutes with specialized models
+4. Match faces against contacts
+5. Catch YOLO misses with background scans
+6. Store everything in episodic memory
+
+Install the models when ready to activate full analysis!
     └─ Store in episodic memory (salience: 0.85)
 ```
 

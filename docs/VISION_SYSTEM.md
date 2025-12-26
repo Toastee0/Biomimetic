@@ -1,27 +1,36 @@
 # Vision System Integration
 
-Integration of reCamera with BioMimeticAI for entrance/exit detection and snapshot capture.
+Integration of multiple camera sources with BioMimeticAI for entrance/exit detection and snapshot capture.
 
 ## Architecture
 
 ```
-┌─────────────┐     RTSP Stream      ┌──────────────────┐
-│  reCamera   │◄─────────────────────┤ RTSP Capture     │
-│ 192.168.2.140│                      │ (ffmpeg)         │
-└──────┬──────┘                       └────────┬─────────┘
-       │                                       │
-       │ Node-RED                              │
-       │ Entrance/Exit                         │
-       │ Detection                             │
-       │                                       │
-       ▼                                       │
+┌─────────────┐     RTSP Stream      ┌──────────────────────────┐
+│  reCamera   │◄─────────────────────┤ Camera Source Manager    │
+│192.168.2.140│                      │                          │
+└─────────────┘                      │  ┌─────────────────┐     │
+                                     │  │ RTSP Capture    │     │
+┌─────────────┐     DroidCam         │  │ (ffmpeg)        │     │
+│ Phone Cam   │─────(virtual dev)────┤  ├─────────────────┤     │
+│192.168.2.39 │                      │  │ DroidCam Capture│     │
+└─────────────┘                      │  │ (cv2)           │     │
+                                     │  └─────────────────┘     │
+       │                             └────────┬─────────────────┘
+       │ Node-RED                             │
+       │ Entrance/Exit                        │
+       │ Detection                            │
+       │                                      │
+       ▼                                      │
 ┌──────────────────┐    Trigger               │
-│ Vision Event API │◄──────────────────────────┘
+│ Vision Event API │◄─────────────────────────┘
 │ Port 8000        │
 └────────┬─────────┘
          │
          ├──► Snapshot Capture (on entrance)
-         │    └──► RTSP stream → JPEG file
+         │    └──► Active camera source → JPEG file
+         │
+         ├──► Camera Source Switching
+         │    └──► Switch attention between cameras
          │
          ├──► Vision Processing
          │    └──► Analyze with LLM (future)

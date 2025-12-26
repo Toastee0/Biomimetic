@@ -1,0 +1,40 @@
+{
+  "active_source": "recamera_1",
+  "sources": {
+    "recamera_1": {
+      "type": "rtsp",
+      "enabled": true,
+      "name": "reCamera 1 (192.168.2.140)",
+      "description": "Seeed reCamera - Primary monitoring",
+      "rtsp_url": "rtsp://admin:admin@192.168.2.140:554/live",
+      "http_url": "http://192.168.2.140/",
+      "snapshot_dir": "data/vision/snapshots"
+    },
+    "recamera_2": {
+      "type": "rtsp",
+      "enabled": true,
+      "name": "reCamera 2 (192.168.2.143)",
+      "description": "Seeed reCamera - Secondary monitoring",
+      "rtsp_url": "rtsp://admin:admin@192.168.2.143:554/live",
+      "http_url": "http://192.168.2.143/",
+      "ssh_user": "recamera",
+      "ssh_password": "Watson64!",
+      "snapshot_dir": "data/vision/snapshots"
+    },
+    "droidcam_phone": {
+      "type": "droidcam",
+      "enabled": true,
+      "name": "DroidCam Phone",
+      "description": "Mobile phone camera via DroidCam for flexible viewing angles",
+      "phone_ip": "192.168.2.39",
+      "port": 4747,
+      "snapshot_dir": "data/vision/snapshots"
+    }
+  },
+  "metadata": {
+    "description": "Camera sources for BioMimeticAI vision system",
+    "note": "The AI can shift attention between sources based on context",
+    "rtsp_format": "rtsp://admin:admin@<ip>:554/live",
+    "usage": "Change 'active_source' to switch default camera, or use API to switch dynamically"
+  }
+}

@@ -8,6 +8,12 @@ BioMimeticAI v2.0 is a consciousness-mimetic AI system built on Axiomatic Modeli
 
 **Core Philosophy**: Reasoning from first principles rather than statistical pattern matching alone.
 
+**System Architecture**: This Ubuntu server (192.168.2.137) IS the BioMimeticAI system. Separate services gather sensory information independently and prepare it for the core AI to process. We do not maintain backwards compatibility - we are the only user, so APIs can change freely.
+
+**Related Projects**:
+- `/home/toastee/BioMimeticAi` - Core AI system (this repo)
+- `/home/toastee/ai_led_mapper` - Being extended into Camera Manager (perception dashboard)
+
 ## Quick Start Commands
 
 ### Running the System
@@ -87,8 +93,25 @@ tail -n 100 logs/*.log
 
 The system mimics biological brain architecture with independent "cortexes" (brain regions) that run autonomously. Each cortex is isolated - failures don't cascade. All cortexes follow RTOS-style timeouts with hard limits.
 
+### Perception Layer - Camera Manager
+
+**Location**: `/home/toastee/ai_led_mapper` (extended into perception dashboard)
+
+Multi-camera management system with ADHD-like attention switching:
+- **Multiple cameras**: RTSP (reCamera, IP cams), DroidCam (phones), V4L2 (USB webcams)
+- **Ring buffers**: Each camera maintains 5 seconds of frames (25 frames @ 5fps)
+- **Salience engine**: Schedule-based + event-driven camera prioritization
+- **AI focus**: Only 1-2 cameras actively processed at a time (stereo vision optional)
+- **Integration**: Feeds into Vision API (port 8000) and episodic memory
+
+**Key Insight**: When an event triggers (e.g., person enters workshop), AI retrieves *previous* seconds from ring buffer because we "think slow like a human" - the notification arrives after the interesting thing happened.
+
+**Documentation**: `/home/toastee/BioMimeticAi/docs/CAMERA_MANAGER.md` (700+ line comprehensive spec)
+
 **Real-Time Processes** (always running):
 - Discord Bot: `src/discord/bot_axiom_review.py` - Main conversation interface
+- Vision API: `src/core/vision_api.py` - Port 8000 (receives camera events)
+- Camera Manager: `/home/toastee/ai_led_mapper` - Port 8001 (perception dashboard)
 - LLM Server: `llama-server` on port 53307 (external dependency)
 
 **High-Frequency Cron Jobs** (every 10-30 minutes):
@@ -331,10 +354,15 @@ BioMimeticAi/
 │   │   └── review_queue.json     # Axioms needing review
 │   ├── biomim.db            # SQLite database (episodes, contacts)
 │   ├── cortex_state/        # Cortex status JSON files
-│   └── micro_tools/         # Cached user patterns (JSON)
+│   ├── micro_tools/         # Cached user patterns (JSON)
+│   └── vision/
+│       └── snapshots/       # Camera snapshots from events
 ├── docs/                    # Documentation
+│   ├── CAMERA_MANAGER.md    # Multi-camera perception system (700+ lines)
 │   ├── CORTEX_SCHEDULE.md   # Cortex schedules and timeouts
-│   └── CORTEX_INTEGRATION.md # System integration guide
+│   ├── CORTEX_INTEGRATION.md # System integration guide
+│   ├── VISION_SYSTEM.md     # Vision API integration
+│   └── VISION_ARCHITECTURE.md # Vision processing architecture
 ├── logs/                    # Runtime logs
 │   ├── axiom_evaluation.log
 │   ├── episodic_consolidation.log
@@ -352,7 +380,9 @@ BioMimeticAi/
 ├── src/
 │   ├── core/                # Core functionality
 │   │   ├── dynamic_prompts.py   # Context-aware prompt builder
-│   │   └── prompts.py           # Static prompts
+│   │   ├── prompts.py           # Static prompts
+│   │   ├── vision_api.py        # Vision event API (port 8000)
+│   │   └── rtsp_capture.py      # RTSP snapshot capture
 │   ├── daemon/              # Background services
 │   │   └── textgen_client.py    # LLM inference client
 │   ├── discord/             # Discord bot
@@ -434,6 +464,8 @@ No `requirements.txt` exists yet - dependencies installed manually.
 1. **Database Locking**: Under heavy load, concurrent cortexes can experience SQLite locking. Always use WAL mode and retry logic.
 
 2. **LLM Server Dependency**: System requires `llama-server` running on port 53307. Bot will fail if server is down. No graceful degradation yet.
+
+3. **No Backwards Compatibility**: We are the only user. APIs can change freely without migration paths or deprecation warnings. Just update and move forward.
 
 3. **Cron Job Isolation**: Cron jobs must be idempotent - if a job runs twice simultaneously (shouldn't happen but could), it shouldn't corrupt state.
 
