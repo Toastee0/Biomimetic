@@ -2,6 +2,8 @@
 """
 Vision Processing Cortex - Processes queued snapshots every 30 minutes
 Runs as a cron job to analyze queued snapshots with specialized models
+
+NOW WITH: Database integration for autonomous vision pool
 """
 
 import sys
@@ -12,6 +14,7 @@ from datetime import datetime
 from typing import Dict, Any, List
 import numpy as np
 from PIL import Image
+import sqlite3
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
@@ -37,32 +40,80 @@ class VisionProcessingCortex:
     def __init__(self):
         self.queue_path = Path("/home/toastee/BioMimeticAi/data/vision/snapshot_queue.json")
         self.processed_path = Path("/home/toastee/BioMimeticAi/data/vision/processed.json")
-        
+        self.db_path = Path("/home/toastee/BioMimeticAi/data/biomim.db")
+
         self.model_manager = ModelManager()
         self.person_analyzer = PersonAnalyzer(self.model_manager)
         self.episodic = EpisodicMemory()
-        
+
         print("[VISION CORTEX] Initialized")
     
+    def get_db_connection(self):
+        """Get database connection with WAL mode and timeout"""
+        conn = sqlite3.connect(str(self.db_path), timeout=10.0)
+        conn.execute("PRAGMA journal_mode=WAL")
+        conn.execute("PRAGMA busy_timeout=5000")
+        conn.row_factory = sqlite3.Row  # Access columns by name
+        return conn
+
     def load_queue(self) -> List[Dict[str, Any]]:
-        """Load unprocessed snapshots from queue"""
-        if not self.queue_path.exists():
-            print("[VISION CORTEX] No queue file found")
-            return []
-        
+        """
+        Load unprocessed snapshots from queue
+
+        NOW ALSO: Query database for unprocessed segments
+        """
+        queue = []
+
+        # Load from JSON queue (legacy support)
+        if self.queue_path.exists():
+            try:
+                with open(self.queue_path, 'r') as f:
+                    json_queue = json.load(f)
+
+                # Filter unprocessed
+                unprocessed = [item for item in json_queue if not item.get("processed", False)]
+                queue.extend(unprocessed)
+                print(f"[VISION CORTEX] Found {len(unprocessed)} unprocessed snapshots in JSON queue")
+
+            except Exception as e:
+                print(f"[VISION CORTEX ERROR] Failed to load JSON queue: {e}")
+
+        # Load from database (new autonomous pool)
         try:
-            with open(self.queue_path, 'r') as f:
-                queue = json.load(f)
-            
-            # Filter unprocessed
-            unprocessed = [item for item in queue if not item.get("processed", False)]
-            
-            print(f"[VISION CORTEX] Found {len(unprocessed)} unprocessed snapshots")
-            return unprocessed
-            
+            with self.get_db_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT segment_id, file_path, event_type, camera_id,
+                           urgency_score, yolo_metadata, timestamp
+                    FROM vision_segments
+                    WHERE processed = 0
+                    ORDER BY urgency_score DESC, timestamp ASC
+                """)
+
+                db_segments = cursor.fetchall()
+
+                for row in db_segments:
+                    # Convert database row to queue item format
+                    yolo_metadata = json.loads(row['yolo_metadata']) if row['yolo_metadata'] else None
+
+                    queue.append({
+                        "segment_id": row['segment_id'],
+                        "snapshot_path": row['file_path'],
+                        "event_type": row['event_type'],
+                        "detected_object": yolo_metadata.get('class', 'unknown') if yolo_metadata else 'unknown',
+                        "timestamp": row['timestamp'] * 1000,  # Convert s to ms
+                        "yolo_detection": yolo_metadata,
+                        "urgency_score": row['urgency_score'],
+                        "from_database": True  # Flag to distinguish from JSON queue
+                    })
+
+                print(f"[VISION CORTEX] Found {len(db_segments)} unprocessed segments in database")
+
         except Exception as e:
-            print(f"[VISION CORTEX ERROR] Failed to load queue: {e}")
-            return []
+            print(f"[VISION CORTEX ERROR] Failed to load database segments: {e}")
+
+        print(f"[VISION CORTEX] Total unprocessed: {len(queue)}")
+        return queue
     
     def save_queue(self, queue: List[Dict[str, Any]]):
         """Save updated queue"""
@@ -242,10 +293,14 @@ class VisionProcessingCortex:
             item["processed"] = True
             item["processed_at"] = datetime.now().isoformat()
             item["analysis_summary"] = self._summarize_analysis(analysis)
-            
+
             # Save to processed history
             self.save_processed(item, analysis)
-            
+
+            # Update database if this segment came from database
+            if item.get("from_database"):
+                self._update_database_segment(item["segment_id"], analysis)
+
             processed_count += 1
             print(f"[VISION CORTEX] ✓ Processed ({processed_count}/{len(queue)})")
         
@@ -312,9 +367,9 @@ class VisionProcessingCortex:
             event_type = item.get("event_type", "unknown")
             detected_object = item.get("detected_object", "unknown")
             summary = self._summarize_analysis(analysis)
-            
+
             message = f"Vision analysis: {detected_object} {event_type} - {summary}"
-            
+
             self.episodic.store_episode(
                 user_id="system_vision",
                 username="VisionCortex",
@@ -323,121 +378,108 @@ class VisionProcessingCortex:
                 hemisphere="cognitive",
                 salience_score=salience
             )
-            
+
             print(f"[VISION CORTEX] Stored in episodic memory (salience: {salience:.2f})")
-            
+
         except Exception as e:
             print(f"[VISION CORTEX ERROR] Failed to store episode: {e}")
 
+    def _update_database_segment(self, segment_id: int, analysis: Dict[str, Any]):
+        """
+        Update database segment after processing
 
-def main():
-    """Run vision processing cortex"""
-    try:
-        cortex = VisionProcessingCortex()
-        cortex.process_queue()
-    except Exception as e:
-        print(f"[VISION CORTEX FATAL] {e}")
-        sys.exit(1)
+        Args:
+            segment_id: Database segment ID
+            analysis: Complete analysis results
+        """
+        try:
+            with self.get_db_connection() as conn:
+                cursor = conn.cursor()
 
+                # Mark segment as processed
+                cursor.execute("""
+                    UPDATE vision_segments
+                    SET processed = 1, processed_at = ?
+                    WHERE segment_id = ?
+                """, (int(time.time()), segment_id))
 
-if __name__ == "__main__":
-    main()
-    """Main vision processing loop"""
-    start_time = time.time()
-    log("[START] Vision Processing Cortex")
+                # Add analysis tags to segment_tags table
+                timestamp = int(time.time())
 
-    # Set up timeout handler
-    signal.signal(signal.SIGALRM, timeout_handler)
-    signal.alarm(TIMEOUT_SECONDS)
+                # Emotion tag (if person detected)
+                if analysis.get("emotion"):
+                    emotion = analysis["emotion"]
+                    cursor.execute("""
+                        INSERT INTO segment_tags (
+                            segment_id, tag_type, tag_value, confidence,
+                            model_name, created_at
+                        ) VALUES (?, ?, ?, ?, ?, ?)
+                    """, (
+                        segment_id,
+                        'emotion',
+                        emotion.get('dominant', 'unknown'),
+                        emotion.get('confidence', 0.0),
+                        'fer',
+                        timestamp
+                    ))
 
-    try:
-        episodic = EpisodicMemory()
-        items_processed = 0
-        errors = []
+                # Age/gender tags (if available)
+                if analysis.get("age"):
+                    cursor.execute("""
+                        INSERT INTO segment_tags (
+                            segment_id, tag_type, tag_value, confidence,
+                            metadata_json, model_name, created_at
+                        ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                    """, (
+                        segment_id,
+                        'custom',
+                        f"age_{analysis['age']}",
+                        1.0,
+                        json.dumps({"age": analysis['age'], "gender": analysis.get('gender')}),
+                        'insightface',
+                        timestamp
+                    ))
 
-        # Load snapshot queue
-        if not SNAPSHOT_QUEUE_PATH.exists():
-            log("[INFO] No snapshot queue found - nothing to process")
-            save_state(status="success", items_processed=0)
-            return
+                # Scene tag (from CLIP)
+                if analysis.get("scene_type"):
+                    cursor.execute("""
+                        INSERT INTO segment_tags (
+                            segment_id, tag_type, tag_value, confidence,
+                            model_name, created_at
+                        ) VALUES (?, ?, ?, ?, ?, ?)
+                    """, (
+                        segment_id,
+                        'scene',
+                        analysis['scene_type'],
+                        analysis.get('confidence', 0.0),
+                        'clip_vit_b32',
+                        timestamp
+                    ))
 
-        with open(SNAPSHOT_QUEUE_PATH, 'r') as f:
-            queue = json.load(f)
+                # Identity tag (if recognized)
+                if analysis.get("identity"):
+                    cursor.execute("""
+                        INSERT INTO segment_tags (
+                            segment_id, tag_type, tag_value, confidence,
+                            model_name, created_at
+                        ) VALUES (?, ?, ?, ?, ?, ?)
+                    """, (
+                        segment_id,
+                        'custom',
+                        f"identity_{analysis['identity']}",
+                        analysis.get('confidence', 0.0),
+                        'insightface',
+                        timestamp
+                    ))
 
-        # Filter unprocessed snapshots
-        unprocessed = [item for item in queue if not item.get('processed', False)]
+                conn.commit()
+                print(f"[DATABASE] Updated segment {segment_id} with analysis tags")
 
-        if not unprocessed:
-            log("[INFO] No unprocessed snapshots in queue")
-            save_state(status="success", items_processed=0)
-            return
-
-        log(f"[INFO] Found {len(unprocessed)} snapshots to process")
-
-        # TODO: Load vision model here if needed
-        # log("[MODEL] Loading vision model...")
-        # vision_model = load_vision_model()
-
-        # Process each snapshot
-        for item in unprocessed:
-            snapshot_path = Path(item['snapshot_path'])
-
-            if not snapshot_path.exists():
-                log(f"[WARN] Snapshot not found: {snapshot_path}")
-                item['processed'] = True
-                item['error'] = "File not found"
-                errors.append(f"Snapshot not found: {snapshot_path}")
-                continue
-
-            # Process with vision LLM
-            analysis = process_snapshot_with_vision_llm(snapshot_path, item)
-
-            # Update queue item
-            item['processed'] = True
-            item['analysis'] = analysis
-            item['processed_at'] = int(time.time() * 1000)
-
-            # Store in episodic memory with analysis
-            snapshot_info = {
-                **item,
-                "analysis": analysis
-            }
-
-            episodic.store_episode(
-                user_id="system_vision",
-                username="CameraVision",
-                user_message=f"Vision analysis: {item['detected_object']} {item['event_type']}",
-                bot_response=json.dumps(analysis),
-                hemisphere="sensory",
-                salience_score=0.85  # High salience - visual evidence
-            )
-
-            items_processed += 1
-            log(f"[PROGRESS] Processed {items_processed}/{len(unprocessed)}")
-
-        # Save updated queue
-        with open(SNAPSHOT_QUEUE_PATH, 'w') as f:
-            json.dump(queue, f, indent=2)
-
-        # TODO: Unload vision model if needed
-        # log("[MODEL] Unloading vision model...")
-        # unload_vision_model()
-
-        duration = time.time() - start_time
-        log(f"[COMPLETE] Processed {items_processed} snapshots in {duration:.2f}s")
-
-        save_state(status="success", items_processed=items_processed, errors=errors)
-
-    except Exception as e:
-        log(f"[ERROR] {e}")
-        import traceback
-        log(f"[TRACEBACK] {traceback.format_exc()}")
-        save_state(status="error", items_processed=items_processed, errors=[str(e)])
-        sys.exit(1)
-
-    finally:
-        signal.alarm(0)  # Cancel alarm
+        except Exception as e:
+            print(f"[DATABASE ERROR] Failed to update segment: {e}")
 
 
 if __name__ == "__main__":
-    main()
+    cortex = VisionProcessingCortex()
+    cortex.process_queue()
+
