@@ -318,19 +318,26 @@ class TaggingPipeline:
 
         logger.info(f"Processing {len(segments)} segments through tagging pipeline")
 
-        # Stage 1: YOLO Object Detection
-        logger.info("Stage 1: Loading YOLO for object detection...")
-        if self.model_manager.load_yolo():
-            for segment in segments:
-                tag_count = self.process_segment_yolo(segment)
-                stats["yolo_tags"] += tag_count
+        # Stage 1: YOLO Object Detection (SKIP if reCamera already provided metadata)
+        # Check if segments need YOLO processing
+        segments_needing_yolo = [s for s in segments if not s.get("yolo_metadata")]
 
-            # Unload YOLO before loading next model
-            self.model_manager.unload_model("yolo")
-            logger.info("Stage 1 complete, YOLO unloaded")
+        if segments_needing_yolo:
+            logger.info(f"Stage 1: Loading YOLO for {len(segments_needing_yolo)} segments without metadata...")
+            if self.model_manager.load_yolo():
+                for segment in segments_needing_yolo:
+                    tag_count = self.process_segment_yolo(segment)
+                    stats["yolo_tags"] += tag_count
+
+                # Unload YOLO before loading next model
+                self.model_manager.unload_model("yolo")
+                logger.info("Stage 1 complete, YOLO unloaded")
+            else:
+                logger.error("Failed to load YOLO, skipping object detection stage")
+                stats["errors"] += 1
         else:
-            logger.error("Failed to load YOLO, skipping object detection stage")
-            stats["errors"] += 1
+            logger.info("Stage 1: Skipping YOLO - all segments have reCamera metadata")
+            stats["yolo_skipped"] = len(segments)
 
         # Stage 2: CLIP Scene Understanding & Embeddings
         logger.info("Stage 2: Loading CLIP for scene understanding...")
